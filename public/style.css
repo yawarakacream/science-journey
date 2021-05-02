@@ -1,0 +1,9 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.katex-display .katex {
+  text-align: left !important;
+  padding-left: inherit;
+}
