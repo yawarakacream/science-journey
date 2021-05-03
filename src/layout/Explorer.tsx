@@ -11,14 +11,14 @@ interface Props {
 export default function Explorer({ noteMap, bookName }: Props) {
   const book = noteMap.books.find((b) => b.name === bookName);
   return (
-    !!book?.categories && (
+    !!book?.units && (
       <Container>
-        {book.categories.map((c, i) => (
-          <CategoryContainer key={i}>
-            <CategoryData>
+        {book.units.map((c, i) => (
+          <UnitContainer key={i}>
+            <UnitData>
               <FontAwesome type={c.icon} fixed={true} style={{ fontSize: height - 8, marginRight: 4, padding: 4 }} />
-              <CategoryTitle>{c.title}</CategoryTitle>
-            </CategoryData>
+              <UnitTitle>{c.title}</UnitTitle>
+            </UnitData>
             {!!c.sections &&
               c.sections.map((s, i) => (
                 <SectionContainer key={i}>
@@ -31,7 +31,7 @@ export default function Explorer({ noteMap, bookName }: Props) {
                     ))}
                 </SectionContainer>
               ))}
-          </CategoryContainer>
+          </UnitContainer>
         ))}
       </Container>
     )
@@ -48,16 +48,16 @@ const Container = styled.div`
   padding: 8px;
 `;
 
-const CategoryContainer = styled.div`
+const UnitContainer = styled.div`
   padding: 8px 0;
   border-bottom: 2px lightsteelblue dotted;
 `;
 
-const CategoryData = styled.div`
+const UnitData = styled.div`
   display: flex;
   flex-direction: row;
 `;
-const CategoryTitle = styled.div`
+const UnitTitle = styled.div`
   padding: 0;
   margin: 0;
   height: ${height}px;

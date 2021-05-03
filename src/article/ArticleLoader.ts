@@ -3,7 +3,7 @@ import {
   Article,
   ArticleMetadata,
   BookMetadata,
-  CategoryMetadata,
+  UnitMetadata,
   fromMarkdown,
   HomeArticle,
   NoteMetadata,
@@ -21,11 +21,11 @@ export const getHomeArticle = (): HomeArticle => ({
 const indexMd = "index.md";
 export const getNoteArticle = <T extends ArticleMetadata>(
   book?: string,
-  category?: string,
+  unit?: string,
   section?: string,
   note?: string
 ): Article<T> => {
-  const array = [book, category, section].filter((p) => p);
+  const array = [book, unit, section].filter((p) => p);
   return {
     name: array[array.length - 1],
     ...getMarkdown<T>(...array, note ? `${note}.md` : `${indexMd}`),
@@ -33,9 +33,9 @@ export const getNoteArticle = <T extends ArticleMetadata>(
 };
 
 export interface NoteMap {
-  books: (Omit<BookMetadata, "categories"> & {
+  books: (Omit<BookMetadata, "units"> & {
     name: string;
-    categories: (Omit<CategoryMetadata, "sections"> & {
+    units: (Omit<UnitMetadata, "sections"> & {
       name: string;
       sections: (Omit<SectionMetadata, "notes"> & {
         name: string;
@@ -54,21 +54,21 @@ const getNoteMap = (): NoteMap => {
       books.push({
         ...bookMetadata,
         name: bookName,
-        categories:
-          bookMetadata.categories?.reduce((categories, categoryName) => {
-            const categoryMetadata = getNoteArticle<CategoryMetadata>(bookName, categoryName).metadata;
-            categories.push({
-              ...categoryMetadata,
-              name: categoryName,
+        units:
+          bookMetadata.units?.reduce((units, unitName) => {
+            const unitMetadata = getNoteArticle<UnitMetadata>(bookName, unitName).metadata;
+            units.push({
+              ...unitMetadata,
+              name: unitName,
               sections:
-                categoryMetadata.sections?.reduce((sections, sectionName) => {
-                  const sectionMetadata = getNoteArticle<SectionMetadata>(bookName, categoryName, sectionName).metadata;
+                unitMetadata.sections?.reduce((sections, sectionName) => {
+                  const sectionMetadata = getNoteArticle<SectionMetadata>(bookName, unitName, sectionName).metadata;
                   sections.push({
                     ...sectionMetadata,
                     name: sectionName,
                     notes:
                       sectionMetadata.notes?.reduce((notes, noteName) => {
-                        const noteMetadata = getNoteArticle<NoteMetadata>(bookName, categoryName, sectionName, noteName)
+                        const noteMetadata = getNoteArticle<NoteMetadata>(bookName, unitName, sectionName, noteName)
                           .metadata;
                         notes.push({
                           ...noteMetadata,
@@ -80,7 +80,7 @@ const getNoteMap = (): NoteMap => {
                   return sections;
                 }, []) ?? [],
             });
-            return categories;
+            return units;
           }, []) ?? [],
       });
       return books;

@@ -27,23 +27,17 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
   props: {
     noteMap,
     bookName: params.book as string,
-    sectionTitle: getNoteArticle(params.book as string, params.category as string, params.section as string).metadata
-      .title,
-    note: getNoteArticle(
-      params.book as string,
-      params.category as string,
-      params.section as string,
-      params.note as string
-    ),
+    sectionTitle: getNoteArticle(params.book as string, params.unit as string, params.section as string).metadata.title,
+    note: getNoteArticle(params.book as string, params.unit as string, params.section as string, params.note as string),
   },
 });
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: noteMap.books.flatMap((b) =>
-      b.categories.flatMap((c) =>
+      b.units.flatMap((c) =>
         c.sections.flatMap((s) =>
-          s.notes.map((n) => ({ params: { book: b.name, category: c.name, section: s.name, note: n.name } }))
+          s.notes.map((n) => ({ params: { book: b.name, unit: c.name, section: s.name, note: n.name } }))
         )
       )
     ),

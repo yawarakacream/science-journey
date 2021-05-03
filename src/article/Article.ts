@@ -23,11 +23,11 @@ export interface HomeArticleMetadata extends ArticleMetadata {
 export type Book = Article<BookMetadata>;
 export interface BookMetadata extends ArticleMetadata {
   subTitle: string;
-  categories?: string[];
+  units?: string[];
 }
 
-export type Category = Article<CategoryMetadata>;
-export interface CategoryMetadata extends ArticleMetadata {
+export type Unit = Article<UnitMetadata>;
+export interface UnitMetadata extends ArticleMetadata {
   icon: string;
   sections?: string[];
 }
