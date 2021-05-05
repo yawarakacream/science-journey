@@ -1,9 +1,55 @@
 body {
   margin: 0px;
   padding: 0px;
+  overflow-y: scroll;
 }
 
-.katex-display .katex {
+.markdown h1 {
+  margin-top: 32px;
+  font-size: 24px;
+  border-bottom: solid 2px lightblue;
+}
+
+.markdown h2 {
+  margin-top: 32px;
+  font-size: 20px;
+  border-bottom: dotted 2px lightsteelblue;
+}
+
+.markdown h3 {
+  margin-top: 24px;
+  border-bottom: dashed 2px lightgray;
+}
+
+.markdown h4 {
+  margin-bottom: 0px;
+}
+
+.markdown table {
+  display: block;
+  margin: 8px 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown table th {
+  font-weight: 600;
+}
+
+.markdown table td,
+.markdown table th {
+  padding: 4px 12px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown .katex-display .katex {
   text-align: left !important;
-  padding-left: inherit;
+  padding-left: 2rem;
 }

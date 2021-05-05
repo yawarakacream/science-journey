@@ -18,7 +18,7 @@ export interface Page {
 
 export default function ArticleElement({ title, header, noteMap, bookName, content }: Page) {
   return (
-    <>
+    <html lang="ja">
       <Head>
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
@@ -31,7 +31,7 @@ export default function ArticleElement({ title, header, noteMap, bookName, conte
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css"></link>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css" />
         <link rel="stylesheet" type="text/css" href="/style.css" />
 
         <title>{title ? `${title} | 科学の旅` : "科学の旅 - 理系大学生の備忘録"}</title>
@@ -50,7 +50,7 @@ export default function ArticleElement({ title, header, noteMap, bookName, conte
         </Main>
         <Footer />
       </Body>
-    </>
+    </html>
   );
 }
 

@@ -19,25 +19,26 @@ const Container = styled.div<{ color: string }>`
   min-height: 64px;
 `;
 
-const Title = styled.h3`
+const Title = styled.span`
   position: absolute;
   margin: -24px 0 0 16px;
   padding: 0 8px;
   font-size: 20px;
+  font-weight: bold;
   background-color: white;
   z-index: 1;
 `;
 
 const ChildrenWrapper = styled.div`
   height: 100%;
-  width: 100%;
+  width: calc(100% - 8px * 2);
   padding: 8px;
 `;
 
 export function Definition({ title, children }: PropsWithChildren<{ title: string }>) {
-  return (
-    <TheoremBase name={`定義：${title}`} color="pink">
-      {children}
-    </TheoremBase>
-  );
+  return <TheoremBase name={`定義：${title}`} color="pink" children={children} />;
+}
+
+export function Theorem({ title, children }: PropsWithChildren<{ title: string }>) {
+  return <TheoremBase name={`定理：${title}`} color="orange" children={children} />;
 }
