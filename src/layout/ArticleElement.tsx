@@ -18,7 +18,7 @@ export interface Page {
 
 export default function ArticleElement({ title, header, noteMap, bookName, content }: Page) {
   return (
-    <html lang="ja">
+    <>
       <Head>
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
@@ -50,7 +50,7 @@ export default function ArticleElement({ title, header, noteMap, bookName, conte
         </Main>
         <Footer />
       </Body>
-    </html>
+    </>
   );
 }
 
