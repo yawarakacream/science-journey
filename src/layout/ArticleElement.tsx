@@ -7,6 +7,7 @@ import Explorer from "./Explorer";
 import { NoteMap } from "../article/ArticleLoader";
 import Markdown from "../components/Markdown";
 import katex from "katex";
+import Navigator from "./Navigator";
 
 export interface Page {
   header: string | undefined;
@@ -37,41 +38,51 @@ export default function ArticleElement({ title, header, noteMap, bookName, conte
         <title>{title ? `${title} | 科学の旅` : "科学の旅 - 理系大学生の備忘録"}</title>
       </Head>
 
-      <Body>
-        <Header noteMap={noteMap} />
-        {bookName && <Explorer noteMap={noteMap} bookName={bookName} />}
-        <Main>
-          {header && (
-            <TitleHeader
-              dangerouslySetInnerHTML={{ __html: katex.renderToString(header, { strict: false }) }}
-            ></TitleHeader>
-          )}
-          <Markdown children={content} />
-        </Main>
+      <Root>
+        <Header />
+        <Body>
+          <Navigator noteMap={noteMap} />
+          {bookName && <Explorer noteMap={noteMap} bookName={bookName} />}
+          <Main>
+            {header && (
+              <TitleHeader
+                dangerouslySetInnerHTML={{ __html: katex.renderToString(header, { strict: false }) }}
+              ></TitleHeader>
+            )}
+            <Markdown children={content} />
+          </Main>
+        </Body>
         <Footer />
-      </Body>
+      </Root>
     </>
   );
 }
 
-const Body = styled.div`
+const Root = styled.div`
   position: absolute;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+`;
+
+const Body = styled.div`
+  height: 10vh;
+  flex: 1;
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
   display: grid;
-  grid-row-gap: 8px;
   grid-template-areas:
-    "header   header header"
-    "explorer main   .  "
-    ".        footer .     ";
-  grid-template-rows: 128px 1fr 24px;
-  grid-template-columns: 24% 52% 24%;
+    "navigator navigator navigator"
+    "explorer  main      .        ";
+  grid-template-rows: 64px 1fr;
+  grid-template-columns: 24% 52%;
 `;
 
 const Main = styled.main`
   grid-area: main;
+  margin-top: 8px;
   padding: 8px 16px;
   border-left: 1px lightgray solid;
   border-right: 1px lightgray solid;

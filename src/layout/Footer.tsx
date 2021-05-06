@@ -15,7 +15,8 @@ export default function Footer() {
 }
 
 const Container = styled.footer`
-  grid-area: footer;
+  position: relative;
+  height: 24px;
   text-align: center;
 `;
 
