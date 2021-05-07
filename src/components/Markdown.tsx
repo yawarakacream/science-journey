@@ -3,6 +3,7 @@ import { Components } from "react-markdown/src/ast-to-react";
 import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
+import styled from "styled-components";
 import { Definition, Theorem } from "./Theorems";
 
 interface Props {
@@ -11,14 +12,14 @@ interface Props {
 
 export default function Markdown({ children }: Props) {
   return (
-    <div className="markdown">
+    <Container>
       <ReactMarkdown
         components={components}
         remarkPlugins={[remarkMath, remarkGfm]}
         rehypePlugins={[rehypeKatex]}
         children={children}
       />
-    </div>
+    </Container>
   );
 }
 
@@ -49,3 +50,55 @@ const components: Components = {
     }
   },
 };
+
+const Container = styled.div`
+  h1 {
+    margin-top: 32px;
+    font-size: 24px;
+    border-bottom: solid 2px lightblue;
+  }
+
+  h2 {
+    margin-top: 32px;
+    font-size: 20px;
+    border-bottom: dotted 2px lightsteelblue;
+  }
+
+  h3 {
+    margin-top: 24px;
+    border-bottom: dashed 2px lightgray;
+  }
+
+  h4 {
+    margin-bottom: 0px;
+  }
+
+  table {
+    display: block;
+    margin: 8px 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    overflow: auto;
+  }
+
+  table th {
+    font-weight: 600;
+  }
+
+  table td,
+  table th {
+    padding: 4px 12px;
+    border: 1px solid #dfe2e5;
+  }
+
+  table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+  }
+
+  .katex-display .katex {
+    text-align: left !important;
+    padding-left: 2rem;
+  }
+`;
