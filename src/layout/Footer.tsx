@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <Container>
       <Copyright>
-        <Anchor href="/" changeColorIfVisited={false}>
+        <Anchor href="/" underline={false} changeColorIfVisited={false}>
           (c) 2021 科学の旅
         </Anchor>
       </Copyright>
