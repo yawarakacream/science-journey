@@ -17,10 +17,17 @@ export default function Navigator({ noteMap }: { noteMap: NoteMap }) {
 
 const Container = styled.nav`
   grid-area: navigator;
+  height: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   flex: 1;
   background-color: lightblue;
+
+  @media (max-width: 600px) {
+    border-bottom: 2px solid lightgray;
+    background-color: white;
+  }
 `;
 
 function Item({ title, subTitle, path }: { title: string; subTitle: string; path: string }) {
@@ -37,11 +44,20 @@ function Item({ title, subTitle, path }: { title: string; subTitle: string; path
 
 const ItemContainer = styled.div`
   position: relative;
+  height: 100%;
+  width: min(256px, 25%);
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 256px;
+
+  @media (max-width: 600px) {
+    height: calc(100% - 2px * 2);
+    width: 100%;
+    padding: 2px 0;
+  }
 `;
 
 const ItemOverlay = styled(Anchor)`
@@ -49,7 +65,8 @@ const ItemOverlay = styled(Anchor)`
   height: calc(100% - 4px);
   width: 100%;
   z-index: 1;
-  border-bottom: solid rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
   transition: border-bottom 0.2s;
 
   &[data-selected="true"] {
@@ -58,12 +75,38 @@ const ItemOverlay = styled(Anchor)`
   &[data-selected="false"]:hover {
     border-bottom: 4px solid lightskyblue;
   }
+
+  @media (max-width: 600px) {
+    height: 100%;
+    width: calc(100% - 1px * 2);
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    &[data-selected="true"] {
+      border-bottom: none;
+      background-color: rgba(135, 206, 250, 0.1);
+    }
+    &[data-selected="false"]:hover {
+      border-bottom: none;
+    }
+  }
 `;
 
-const ItemTitle = styled.div`
+const ItemTitle = styled.span`
   font-size: 1.2rem;
+  @media (max-width: 600px) {
+    font-size: 0.75rem;
+  }
+  @media (max-width: 370px) {
+    font-size: 0.7rem;
+  }
 `;
 
-const ItemSubTitle = styled.div`
+const ItemSubTitle = styled.span`
   font-size: 0.9rem;
+  @media (max-width: 600px) {
+    font-size: 0.25rem;
+  }
+  @media (max-width: 370px) {
+    display: none;
+  }
 `;

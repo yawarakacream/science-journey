@@ -25,7 +25,7 @@ export default function ArticleElement({ title, header, noteMap, bookName, conte
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-        <meta name="description" content="理系大学生による高校大学の数学・計算機科学の備忘録です。" />
+        <meta name="description" content="理系大学生の数学・計算機科学の備忘録です。" />
 
         <link
           rel="stylesheet"
@@ -45,9 +45,7 @@ export default function ArticleElement({ title, header, noteMap, bookName, conte
           {bookName && <Explorer noteMap={noteMap} bookName={bookName} />}
           <Main>
             {header && (
-              <TitleHeader
-                dangerouslySetInnerHTML={{ __html: katex.renderToString(header, { strict: false }) }}
-              ></TitleHeader>
+              <TitleHeader dangerouslySetInnerHTML={{ __html: katex.renderToString(header, { strict: false }) }} />
             )}
             <Markdown children={content} />
           </Main>
@@ -73,23 +71,51 @@ const Body = styled.div`
   margin: 0;
   padding: 0;
   display: grid;
+
   grid-template-areas:
     "navigator navigator navigator"
     "explorer  main      .        ";
   grid-template-rows: 64px 1fr;
-  grid-template-columns: 24% 52%;
+  grid-template-columns: 24% 52% 24%;
+
+  @media (max-width: 1024px) {
+    grid-template-areas:
+      "navigator"
+      "main     "
+      "explorer ";
+    grid-template-rows: 64px 1fr 1fr;
+    grid-template-columns: 100%;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-areas:
+      "navigator"
+      "main     "
+      "explorer ";
+    grid-template-rows: 32px 1fr 1fr;
+    grid-template-columns: 100%;
+  }
 `;
 
 const Main = styled.main`
   grid-area: main;
-  margin-top: 8px;
+  margin: 8px 0;
   padding: 8px 16px;
   border-left: 1px lightgray solid;
   border-right: 1px lightgray solid;
+
+  @media (max-width: 1024px) {
+    border-left: none;
+    border-right: none;
+  }
 `;
 
-const TitleHeader = styled.h2`
+const TitleHeader = styled.h1`
   margin: 0 0 8px;
   font-size: 32px;
   border-bottom: 4px lightgreen solid;
+
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
 `;

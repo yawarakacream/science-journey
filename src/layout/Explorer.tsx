@@ -46,11 +46,19 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 8px;
+
+  @media (max-width: 1024px) {
+    border-top: 2px dotted black;
+  }
 `;
 
 const UnitContainer = styled.div`
   padding: 8px 0;
   border-bottom: 2px lightsteelblue dotted;
+
+  &:last-child {
+    border-bottom: none;
+  }
 `;
 
 const UnitData = styled.div`

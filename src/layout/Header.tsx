@@ -5,6 +5,7 @@ export default function Header() {
   return (
     <Container>
       <Title>科学の旅</Title>
+      <SubTitle>理系大学生の数学・計算機科学の備忘録</SubTitle>
     </Container>
   );
 }
@@ -12,14 +13,27 @@ export default function Header() {
 const Container = styled.header`
   position: relative;
   height: 64px;
+  padding-left: 4px;
   display: flex;
   flex-direction: column;
-  text-align: center;
   background-color: lightblue;
+
+  text-align: center;
+  @media (max-width: 600px) {
+    text-align: left;
+  }
 `;
 
 const Title = styled.h1`
-  padding: 4px;
-  font-size: calc(48px - 4px * 2);
+  padding-top: 4px;
+  font-family: "ヒラギノ明朝 Pro W3", serif;
+  font-size: calc(48px - 4px * 2 - 16px);
   margin: 0;
+`;
+
+const SubTitle = styled.span`
+  font-size: 16px;
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
