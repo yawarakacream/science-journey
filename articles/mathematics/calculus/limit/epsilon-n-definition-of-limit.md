@@ -12,7 +12,7 @@ title: "数列の極限：ε-N 論法"
 $\quad \overset{def}\iff {}^{\forall}\varepsilon > 0,\ {}^{\exists}N = N(\varepsilon) \in \N \quad \lbrack \ {}^{\forall}n \geq N \implies |a_{n} - \alpha| < \varepsilon \ \rbrack$  
 $\quad \iff$ 任意の $\varepsilon > 0$ に対して $\varepsilon$ に応じて決まる $N \in \N$ が存在し，任意の $n \geq N$ なる $n$ で $|a_{n} - \alpha| < \varepsilon$．
 
-このことを $\bm{\varepsilon - N}$ **論法** という．
+これを $\varepsilon - N$ 論法 という．
 ~~~
 
 ~~~definition:数列の発散
