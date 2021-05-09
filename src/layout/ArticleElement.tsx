@@ -12,12 +12,13 @@ import Navigator from "./Navigator";
 export interface Page {
   header: string | undefined;
   title?: string | undefined;
+  description?: string | undefined;
   noteMap: NoteMap;
   bookName?: string;
   content: string;
 }
 
-export default function ArticleElement({ title, header, noteMap, bookName, content }: Page) {
+export default function ArticleElement({ title, description, header, noteMap, bookName, content }: Page) {
   return (
     <>
       <Head>
@@ -25,7 +26,13 @@ export default function ArticleElement({ title, header, noteMap, bookName, conte
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-        <meta name="description" content="理系大学生の数学・計算機科学の備忘録です。" />
+        <meta
+          name="description"
+          content={
+            description ??
+            "理系大学生の数学・計算機科学の備忘録です。厳密にかつ行間を埋め、やさしく数学や計算機科学を考えていきます。"
+          }
+        />
 
         <link
           rel="stylesheet"

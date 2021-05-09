@@ -59,6 +59,10 @@ const Container = styled.div`
     color: blue;
   }
 
+  p {
+    font-family: sans-serif;
+  }
+
   h1 {
     margin-top: 32px;
     font-size: 24px;

@@ -1,5 +1,6 @@
 ---
 title: "極限"
+description: "微分積分をきちんと扱う準備として、大学らしい厳密な極限を導入します。"
 notes:
   - "epsilon-n-definition-of-limit"
 ---

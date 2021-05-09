@@ -16,6 +16,7 @@ export default function BookPage({ bookName, unitTitle, section, noteMap }: Prop
     <ArticleElement
       bookName={bookName}
       title={section.metadata.title + " - " + unitTitle}
+      description={section.metadata.description}
       header={section.metadata.title}
       content={section.content}
       noteMap={noteMap}
