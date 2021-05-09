@@ -66,7 +66,7 @@ const Root = styled.div`
 `;
 
 const Body = styled.div`
-  height: 10vh;
+  min-height: 100%;
   flex: 1;
   margin: 0;
   padding: 0;
@@ -83,7 +83,7 @@ const Body = styled.div`
       "navigator"
       "main     "
       "explorer ";
-    grid-template-rows: 64px 1fr 1fr;
+    grid-template-rows: 64px auto 1fr;
     grid-template-columns: 100%;
   }
 
@@ -92,7 +92,7 @@ const Body = styled.div`
       "navigator"
       "main     "
       "explorer ";
-    grid-template-rows: 32px 1fr 1fr;
+    grid-template-rows: 32px auto 1fr;
     grid-template-columns: 100%;
   }
 `;
