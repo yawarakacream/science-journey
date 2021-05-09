@@ -4,6 +4,7 @@ import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import styled from "styled-components";
+import Anchor from "./Anchor";
 import { Definition, Theorem } from "./Theorems";
 
 interface Props {
@@ -25,6 +26,8 @@ export default function Markdown({ children }: Props) {
 
 const components: Components = {
   pre: "div",
+
+  a: ({ ...props }) => <Anchor changeColorIfVisited={false} {...(props as any)} />,
 
   code: ({ node, inline, className, children, ...props }) => {
     if (typeof className !== "string") {
@@ -52,6 +55,10 @@ const components: Components = {
 };
 
 const Container = styled.div`
+  strong {
+    color: blue;
+  }
+
   h1 {
     margin-top: 32px;
     font-size: 24px;
