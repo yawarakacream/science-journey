@@ -55,14 +55,6 @@ const components: Components = {
 };
 
 const Container = styled.div`
-  strong {
-    color: blue;
-  }
-
-  p {
-    font-family: sans-serif;
-  }
-
   h1 {
     margin-top: 32px;
     font-size: 24px;
@@ -106,6 +98,23 @@ const Container = styled.div`
   table tr {
     background-color: #fff;
     border-top: 1px solid #c6cbd1;
+  }
+  p {
+    font-family: sans-serif;
+
+    @media (max-width: 600px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  strong {
+    color: blue;
+  }
+
+  .katex-display {
+    @media (max-width: 600px) {
+      font-size: 0.8rem;
+    }
   }
 
   .katex-display .katex {
