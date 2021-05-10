@@ -103,7 +103,7 @@ const Container = styled.div`
     font-family: sans-serif;
 
     @media (max-width: 600px) {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
     }
   }
 
@@ -117,8 +117,10 @@ const Container = styled.div`
   .katex-display .katex {
     text-align: left !important;
     padding-left: 2rem;
+
     @media (max-width: 600px) {
       font-size: 1.1rem;
+      padding-left: 0.5rem;
     }
   }
 `;
