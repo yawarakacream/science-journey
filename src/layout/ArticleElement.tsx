@@ -73,6 +73,7 @@ const Root = styled.div`
 `;
 
 const Body = styled.div`
+  height: 10vh;
   min-height: 100%;
   flex: 1;
   margin: 0;
@@ -86,6 +87,8 @@ const Body = styled.div`
   grid-template-columns: 24% 52% 24%;
 
   @media (max-width: 1024px) {
+    height: auto;
+    min-height: 100%;
     grid-template-areas:
       "navigator"
       "main     "
@@ -95,6 +98,8 @@ const Body = styled.div`
   }
 
   @media (max-width: 600px) {
+    height: auto;
+    min-height: 100%;
     grid-template-areas:
       "navigator"
       "main     "
