@@ -46,6 +46,7 @@ $$
 
 ${}^{\forall}A \in \mathscr{F} \implies 0 \leq P(A) \leq 1$
 
+$P(A \cup A^{c}) = P(\Omega) = 1$
 ~~~
 
 事象の包含関係はそのまま確率の大小関係です．  
@@ -53,19 +54,15 @@ ${}^{\forall}A \in \mathscr{F} \implies 0 \leq P(A) \leq 1$
 
 確率はどんな $A$ に対しても $0$ から $1$ の間です．
 
+ある事象の確率と余事象の確率の和は，$($事象$)$ $\cup$ $($余事象$)$ $= \Omega$ なので確率公理より $1$ です．
+
 ~~~theorem:加法定理
 
 $A,\ B \in \mathscr{F} \implies P(A \cup B) = P(A) + P(B) - P(A \cap B)$
 
-特に $B = A^{c}$ のとき，  
-$$
-P(A \cup A^{c}) = P(A) + P(A^{c}) - P(\varnothing) = P(\Omega) = 1
-$$
-
 ~~~
 
 $P$ の意味を考えれば明らかです．  
-ある事象の確率と余事象の確率の和は，$($事象$)$ $\cup$ $($余事象$)$ $= \Omega$ なので確率公理より $1$ です．
 
 # 表記揺れ
 
