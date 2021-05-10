@@ -112,13 +112,13 @@ const Container = styled.div`
   }
 
   .katex-display {
-    @media (max-width: 600px) {
-      font-size: 0.8rem;
-    }
   }
 
   .katex-display .katex {
     text-align: left !important;
     padding-left: 2rem;
+    @media (max-width: 600px) {
+      font-size: 1.1rem;
+    }
   }
 `;
