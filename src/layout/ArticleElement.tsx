@@ -127,7 +127,11 @@ const TitleHeader = styled.h1`
   font-size: 32px;
   border-bottom: 4px lightgreen solid;
 
-  @media (max-width: 600px) {
+  @media (max-width: 1024px) {
     font-size: 24px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 20px;
   }
 `;

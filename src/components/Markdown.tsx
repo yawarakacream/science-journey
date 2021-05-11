@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import styled from "styled-components";
 import Anchor from "./Anchor";
+import Spoiler from "./Spoiler";
 import { Definition, Theorem } from "./Theorems";
 
 interface Props {
@@ -44,6 +45,11 @@ const components: Components = {
     }
 
     switch (type) {
+      case "spoiler":
+        if (title !== "open" && title !== "close") {
+          throw new Error(`Unknown spoiler status: ${title}`);
+        }
+        return <Spoiler defaultStatus={title} children={<Markdown children={children[0].toString()} />} />;
       case "definition":
         return <Definition title={title} children={<Markdown children={children[0].toString()} />} />;
       case "theorem":
@@ -59,12 +65,22 @@ const Container = styled.div`
     margin-top: 32px;
     font-size: 24px;
     border-bottom: solid 2px lightblue;
+
+    @media (max-width: 600px) {
+      margin-top: 16px;
+      font-size: 20px;
+    }
   }
 
   h2 {
     margin-top: 32px;
     font-size: 20px;
     border-bottom: dotted 2px lightsteelblue;
+
+    @media (max-width: 600px) {
+      margin-top: 16px;
+      font-size: 16px;
+    }
   }
 
   h3 {

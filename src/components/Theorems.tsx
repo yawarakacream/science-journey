@@ -17,6 +17,19 @@ const Container = styled.div<{ color: string }>`
   border: 4px ${(props) => props.color} solid;
   border-radius: 16px;
   min-height: 64px;
+
+  p {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  p:first-child {
+    margin-top: 4px;
+  }
+
+  p:last-child {
+    margin-bottom: 4px;
+  }
 `;
 
 const Title = styled.span`
