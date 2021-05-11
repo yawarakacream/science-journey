@@ -7,7 +7,7 @@ export default function Spoiler({ defaultStatus, children }: PropsWithChildren<{
   const [status, setStatus] = useState(defaultStatus);
   return (
     <Container>
-      <Label onClick={() => setStatus(status === "open" ? "close" : "open")}>
+      <Label status={status} onClick={() => setStatus(status === "open" ? "close" : "open")}>
         {{ open: "▼ クリックで閉じる", close: "▶︎ クリックで開く" }[status]}
       </Label>
       {status === "open" && <Content children={children} />}
@@ -27,12 +27,12 @@ const Container = styled.div`
   }
 `;
 
-const Label = styled.p`
+const Label = styled.p<{ status: Status }>`
   cursor: pointer;
-  color: slateblue;
+  color: ${(p) => ({ open: "slateblue", close: "darkslateblue" }[p.status])};
 
   &:hover {
-    color: darkslateblue;
+    color: ${(p) => ({ open: "darkslateblue", close: "slateblue" }[p.status])};
     transition: color 0.2s;
   }
 `;
@@ -40,5 +40,5 @@ const Label = styled.p`
 const Content = styled.div`
   margin: 2px 0 0 calc(0.5rem - 2px);
   padding: 8px;
-  border-left: 4px solid purple;
+  border-left: 4px solid slateblue;
 `;
