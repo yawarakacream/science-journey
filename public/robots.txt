@@ -1,4 +1,3 @@
 User-Agent: *
 Allow: /*
-Disallow: /api/*
 Sitemap: https://science-journey.net/api/sitemap.xml
