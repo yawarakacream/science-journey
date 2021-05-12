@@ -9,7 +9,6 @@ import {
   SectionMetadata,
   NoteMetadata,
 } from "../../article/Article";
-import { noteMap } from "../../article/ArticleLoader";
 import fs from "fs";
 
 type SitemapUrl = { loc: string };
@@ -112,6 +111,8 @@ const getNoteMap = (): NoteMap => {
     }, []),
   };
 };
+
+const noteMap = getNoteMap();
 
 export default async (_: NextApiRequest, res: NextApiResponse) => {
   const builder = new SitemapBuilder();
