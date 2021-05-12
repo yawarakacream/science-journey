@@ -112,7 +112,7 @@ const getNoteMap = (): NoteMap => {
   };
 };
 
-const noteMap = getNoteMap();
+// const noteMap = getNoteMap();
 
 export default async (_: NextApiRequest, res: NextApiResponse) => {
   const builder = new SitemapBuilder();
