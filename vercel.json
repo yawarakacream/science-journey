@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/sitemap.xml.ts": {
+      "includeFiles": "./articles"
+    }
+  }
+}
