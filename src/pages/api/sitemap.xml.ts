@@ -31,7 +31,7 @@ class SitemapBuilder {
 }
 
 const getMarkdown = <T extends ArticleMetadata>(...path: string[]) =>
-  fromMarkdown<T>(fs.readFileSync(__dirname + "/articles/" + path.join("/")).toString());
+  fromMarkdown<T>(fs.readFileSync(process.cwd() + "/articles/" + path.join("/")).toString());
 
 export const getHomeArticle = (): HomeArticle => ({
   name: "home",
@@ -116,16 +116,18 @@ const noteMap = getNoteMap();
 
 export default async (_: NextApiRequest, res: NextApiResponse) => {
   const builder = new SitemapBuilder();
-  noteMap.books.forEach((b) => {
-    builder.add({ loc: `/${b.name}` });
-    b.units.forEach((u) => {
-      u.sections.forEach((s) => {
-        builder.add({ loc: `/${b.name}/${u.name}/${s.name}` });
-        s.notes.forEach((n) => builder.add({ loc: `/${b.name}/${u.name}/${s.name}/${n.name}` }));
-      });
-    });
-  });
+  // noteMap.books.forEach((b) => {
+  //   builder.add({ loc: `/${b.name}` });
+  //   b.units.forEach((u) => {
+  //     u.sections.forEach((s) => {
+  //       builder.add({ loc: `/${b.name}/${u.name}/${s.name}` });
+  //       s.notes.forEach((n) => builder.add({ loc: `/${b.name}/${u.name}/${s.name}/${n.name}` }));
+  //     });
+  //   });
+  // });
   builder.add({ loc: fs.existsSync("./articles") + "" });
+  builder.add({ loc: fs.existsSync(__dirname + "/articles") + "" });
+  builder.add({ loc: fs.existsSync(process.cwd() + "/articles") + "" });
 
   res.setHeader("Content-Type", "application/xml");
   res.end(builder.build());
