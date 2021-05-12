@@ -19,21 +19,22 @@ export interface Page {
 }
 
 export default function ArticleElement({ title, description, header, noteMap, bookName, content }: Page) {
+  const displayTitle = title ? `${title} | 科学の旅` : "科学の旅 - 理系大学生の備忘録";
+  const displayDescription =
+    description ??
+    "理系大学生の数学・計算機科学の備忘録です。厳密にかつ行間を埋め、やさしく数学や計算機科学を考えていきます。";
+
   return (
     <>
       <Head>
         <meta charSet="utf-8" />
-        <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-        <meta
-          name="description"
-          content={
-            description ??
-            "理系大学生の数学・計算機科学の備忘録です。厳密にかつ行間を埋め、やさしく数学や計算機科学を考えていきます。"
-          }
-        />
 
+        <meta name="title" content={displayTitle} />
+        <meta name="description" content={displayDescription} />
+
+        <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
           type="text/css"
@@ -42,7 +43,7 @@ export default function ArticleElement({ title, description, header, noteMap, bo
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css" />
         <link rel="stylesheet" type="text/css" href="/style.css" />
 
-        <title>{title ? `${title} | 科学の旅` : "科学の旅 - 理系大学生の備忘録"}</title>
+        <title children={displayTitle} />
       </Head>
 
       <Root>
