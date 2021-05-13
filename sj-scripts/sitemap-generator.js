@@ -5,6 +5,7 @@
  */
 
 const fs = require("fs");
+const { exec } = require("child_process");
 
 class SitemapBuilder {
   urls = [];
@@ -40,3 +41,9 @@ const addHtmls = (dir) => {
 addHtmls("./out");
 
 fs.writeFileSync("./public/sitemap.xml", builder.build());
+
+exec("git add ./public/sitemap.xml", (_, stdout) => {
+  if (stdout) {
+    exec("git commit -m 'Update sitemap.xml (sitemap-generator)'");
+  }
+});
