@@ -1,5 +1,5 @@
 /**
- * Science Journey postbuild script
+ * Science Journey sitemap-generator
  *
  * sitemap.xml を作成する
  */
@@ -17,9 +17,9 @@ class SitemapBuilder {
     return `
         <?xml version="1.0" encoding="UTF-8"?>
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        ${this.urls.map((u) => `<url><loc>https://science-journey.net${u.loc}</loc></url>`.trim()).join("")}
+        ${this.urls.map((u) => `<url><loc>https://science-journey.net${u.loc}</loc></url>`).join("")}
         </urlset>
-    `.trim();
+    `.replace(/(\s|\n)/g, "");
   }
 }
 
