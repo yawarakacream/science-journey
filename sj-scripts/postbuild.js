@@ -1,5 +1,5 @@
 /**
- * prebuild script
+ * Science Journey postbuild script
  *
  * sitemap.xml を作成する
  */

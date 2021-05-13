@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "prebuild": "node ./pre-scripts/prebuild.js",
+    "postbuild": "node ./sj-scripts/postbuild.js",
     "start": "next start",
     "export": "next build && next export"
   },
