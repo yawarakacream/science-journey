@@ -22,9 +22,10 @@ ${this.urls.map((u) => `<url><loc>https://science-journey.net${u.loc}</loc></url
   }
 }
 
-const builder = new SitemapBuilder();
-
 const createSitemap = () => {
+  const builder = new SitemapBuilder();
+  builder.add({ loc: "" });
+
   const addHtmls = (dir) => {
     fs.readdirSync(dir)
       .filter((f) => !f.includes("_next") && (!f.includes(".") || f.endsWith(".html")) && f !== "404.html")
@@ -33,7 +34,11 @@ const createSitemap = () => {
         if (fs.lstatSync(f).isDirectory()) {
           addHtmls(f);
         } else {
-          builder.add({ loc: f.slice("./out".length, -".html".length) });
+          const loc = f.slice("./out".length, -".html".length);
+          if (loc === "/index") {
+            return;
+          }
+          builder.add({ loc });
         }
       });
   };
