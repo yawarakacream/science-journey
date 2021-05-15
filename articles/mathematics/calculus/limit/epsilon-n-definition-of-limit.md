@@ -54,7 +54,7 @@ $\varepsilon = 100000000$ のような値であっても $N$ が存在する必�
 
 ### 厳密な証明
 
-~~~spoiler:open
+~~~spoiler:close
 
 $\varepsilon - N$ 論法による証明は，自分で $\textcolor{blue}{N(\varepsilon)}$，すなわち $\textcolor{blue}{\varepsilon}$ に応じた $\textcolor{blue}{N}$ を定められればよいです．  
 $\varepsilon - N$ 論法では，極限値を求めることはできません．予め求めた極限値が正当かを確認する作業です．
