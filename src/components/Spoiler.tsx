@@ -3,12 +3,16 @@ import styled from "styled-components";
 
 type Status = "open" | "close";
 
-export default function Spoiler({ defaultStatus, children }: PropsWithChildren<{ defaultStatus: Status }>) {
+export default function Spoiler({
+  defaultStatus,
+  title,
+  children,
+}: PropsWithChildren<{ defaultStatus: Status; title: string | undefined }>) {
   const [status, setStatus] = useState(defaultStatus);
   return (
     <Container>
       <Label status={status} onClick={() => setStatus(status === "open" ? "close" : "open")}>
-        {{ open: "▼ クリックで閉じる", close: "▶︎ クリックで開く" }[status]}
+        {title ?? { open: "クリックで閉じる", close: "クリックで開く" }[status]}
       </Label>
       {status === "open" && <Content children={children} />}
     </Container>
@@ -34,6 +38,11 @@ const Label = styled.p<{ status: Status }>`
   &:hover {
     color: ${(p) => ({ open: "darkslateblue", close: "slateblue" }[p.status])};
     transition: color 0.2s;
+  }
+
+  &:before {
+    position: relative;
+    content: "${(p) => ({ open: "▼", close: "▶︎" }[p.status])} ";
   }
 `;
 

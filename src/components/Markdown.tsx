@@ -35,7 +35,7 @@ const components: Components = {
       throw new Error("Illegal className type");
     }
 
-    const [type, title] = (className as string).substr("language-".length).split(":");
+    const [type, title, ...data] = (className as string).substr("language-".length).split(":");
     if (!title) {
       return <code className={className} children={children} {...props} />;
     }
@@ -49,7 +49,13 @@ const components: Components = {
         if (title !== "open" && title !== "close") {
           throw new Error(`Unknown spoiler status: ${title}`);
         }
-        return <Spoiler defaultStatus={title} children={<Markdown children={children[0].toString()} />} />;
+        return (
+          <Spoiler
+            defaultStatus={title}
+            title={data.length ? data[0] : undefined}
+            children={<Markdown children={children[0].toString()} />}
+          />
+        );
       case "definition":
         return <Definition title={title} children={<Markdown children={children[0].toString()} />} />;
       case "theorem":
