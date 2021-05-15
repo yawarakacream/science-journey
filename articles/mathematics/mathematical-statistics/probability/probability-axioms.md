@@ -62,7 +62,7 @@ $A,\ B \in \mathscr{F} \implies P(A \cup B) = P(A) + P(B) - P(A \cap B)$
 
 ~~~
 
-$P$ の意味を考えれば明らかです．  
+$P$ の意味を考えれば明らかです．
 
 # 表記揺れ
 
