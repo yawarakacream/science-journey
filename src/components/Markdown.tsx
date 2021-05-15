@@ -70,7 +70,7 @@ const Container = styled.div`
   h1 {
     margin-top: 32px;
     font-size: 24px;
-    border-bottom: solid 2px lightblue;
+    border-bottom: solid 4px lightblue;
 
     @media (max-width: 600px) {
       margin-top: 16px;
