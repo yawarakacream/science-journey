@@ -3,7 +3,7 @@ title: "浮動小数点数"
 description: "浮動小数点数をその導入の背景から纏めました。本稿では規格として一般的な IEEE754 を採用します。"
 notes:
   - "structure"
-  - "machine-epsilon"
+  - "round-and-machine-epsilon"
   - "special-values"
 ---
 
