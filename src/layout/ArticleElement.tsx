@@ -10,9 +10,9 @@ import katex from "katex";
 import Navigator from "./Navigator";
 
 export interface Page {
-  header: string | undefined;
   title?: string | undefined;
   description?: string | undefined;
+  header: string | undefined;
   noteMap: NoteMap;
   bookName?: string;
   content: string;
@@ -33,6 +33,12 @@ export default function ArticleElement({ title, description, header, noteMap, bo
 
         <meta name="title" content={displayTitle} />
         <meta name="description" content={displayDescription} />
+        <meta property="og:title" content="ページの タイトル" />
+
+        <meta property="og:site_name" content={displayTitle} />
+        <meta property="og:description" content={displayDescription} />
+        <meta property="og:type" content={title ? "website" : "article"} />
+        <meta property="og:locale" content="ja_JP" />
 
         <link rel="icon" href="/favicon.ico" />
         <link
