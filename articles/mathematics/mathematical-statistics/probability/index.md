@@ -4,8 +4,12 @@ description: "数理統計学のメモです。確率公理や標本空間、加
 notes:
   - "sample-space"
   - "probability-axioms"
+  - "conditional-probability"
+  - "independence"
+  - "total-and-bayes"
 ---
 
 まだよくわかりません．
 
-とりあえず定義などを並べてみました．
+とりあえず定義などを並べてみました．  
+詳しいことは今後書いていきたいです．
