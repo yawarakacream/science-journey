@@ -4,6 +4,7 @@ description: "行列の定義や定理を、大学では説明してくれない
 notes:
   - "definition"
   - "operation"
+  - "transpose"
 ---
 
 「行列」というものを考えます．
