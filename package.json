@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "push": "node ./sj-scripts/sitemap-generator.js && git push"
+    "push": "npm run export && node ./sj-scripts/sitemap-generator.js && git push"
   },
   "babel": {
     "presets": [
