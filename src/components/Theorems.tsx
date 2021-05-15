@@ -45,7 +45,7 @@ const Title = styled.span`
 const ChildrenWrapper = styled.div`
   height: 100%;
   width: calc(100% - 8px * 2);
-  padding: 8px;
+  padding: 12px;
 `;
 
 export function Definition({ title, children }: PropsWithChildren<{ title: string }>) {
