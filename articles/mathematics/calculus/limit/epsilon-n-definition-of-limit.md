@@ -52,12 +52,12 @@ $\varepsilon = 100000000$ のような値であっても $N$ が存在する必�
 ただ収束性を考えるのに $\varepsilon$ が大きいときのことは別にどうでもよい，というか小は大を兼ねてくれるので，  
 みんな「十分小さな $\varepsilon$」と言いたがるわけです．
 
-### 厳密な証明
-
-~~~spoiler:close
+~~~spoiler:close:厳密な証明
 
 $\varepsilon - N$ 論法による証明は，自分で $\textcolor{blue}{N(\varepsilon)}$，すなわち $\textcolor{blue}{\varepsilon}$ に応じた $\textcolor{blue}{N}$ を定められればよいです．  
-$\varepsilon - N$ 論法では，極限値を求めることはできません．予め求めた極限値が正当かを確認する作業です．
+$\varepsilon - N$ 論法は，極限値を求める方法などではありません．予め求めた極限値が正当かを確認するものです．
+
+---
 
 $$
 \lim_{n \rightarrow 0} 0.1^{n} = 0
@@ -66,7 +66,7 @@ $$
 と予想して，これを示しましょう．すなわち，
 
 $$
-|0.1^{N} - 0| < \varepsilon \iff 0.1^{N} < \varepsilon
+|0.1^{N} - 0| < \varepsilon ~ (\iff 0.1^{N} < \varepsilon)
 $$
 
 がどのような $\varepsilon$ に対しても成り立つ $N$ を探します．  
@@ -82,10 +82,10 @@ $$
 
 より，$- \log_{10} \varepsilon < N$ であれば $n \leq N \implies 0.1^{n} < \varepsilon$ だとわかります．
 
-たとえば，ここで $N = -2 \log_{10} \varepsilon$ と定めると，
+たとえば，ここで $N = -\log_{10} \varepsilon + 1$ と定めると，
 
 $$
-0.1^{-2 \log_{10} \varepsilon} < \varepsilon
+0.1^{- \log_{10} \varepsilon + 1} < \varepsilon
 $$
 
 となり，この式はさっきの計算をみれば真です．
@@ -97,6 +97,34 @@ $$
 $$
 
 が示されました．$\square$
+
+---
+
+ふつうは証明に $N$ を求める過程は書かず，概ね以下のようになるでしょう：
+
+${}^{\forall} \varepsilon > 0$ に対し，$N \in \N$ を
+
+$$
+N = -\log_{10} \varepsilon + 1
+$$
+
+と定めると，任意の $n \leq N$ に対し
+
+$$
+0.1^{n} < 0.1^{N} = 0.1^{-\log_{10} \varepsilon + 1} < 0.1^{-\log_{10} \varepsilon} = \varepsilon
+$$
+
+$$
+\therefore ~  | 0.1^{n} - 0 | < \varepsilon
+$$
+
+が成り立つ．よって
+
+$$
+\lim_{n \rightarrow \infty} 0.1^{n} = 0
+$$
+
+が示される．$\quad \square$
 
 ~~~
 
