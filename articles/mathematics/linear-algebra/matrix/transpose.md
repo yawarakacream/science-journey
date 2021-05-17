@@ -44,25 +44,27 @@ $(4) \quad {}^{t} \left( AB \right) = {}^{t} B ~ {}^{t} A$
 
 ```spoiler:close:証明
 
-$A = [a_{ij}]$：$m \times n$，$B = [b_{ij}]$：$n \times l$ 行列とします．
+$A = [a_{ij}]$：$m \times n$，$B = [b_{ij}]$：$n \times l$ 行列とする．
 
-まずは型を確認します．
+**型と成分をそれぞれ確認する．**
 
-$AB$ の型は定義から $m \times l$ なので，${}^{t} \left( AB \right)$ の型は $l \times m$ です．  
-${}^{t} A$：$n \times m,\ {}^{t} B$：$l \times n$ より，${}^{t} B ~ {}^{t} A$ の型も $l \times m$ です．
+はじめに型は，
 
-よって型が等しいことがわかりました．
+$AB$ の型は定義から $m \times l$ なので，${}^{t} \left( AB \right)$ は $l \times m$ 型．  
+${}^{t} A$：$n \times m$ 型， ${}^{t} B$：$l \times n$ 型 より，${}^{t} B ~ {}^{t} A$ は $l \times m$ 型．
 
-次に成分をみます．
+となり，${}^{t} \left( AB \right)$ と ${}^{t} B ~ {}^{t} A$ の型は等しい．
+
+次に成分は，
 
 $$
-AB = C = [c_{ij}]
+AB = [c_{ij}]
 $$
 $$
-{}^{t} B ~ {}^{t} A = D = [d_{ij}]
+{}^{t} B ~ {}^{t} A = [d_{ij}]
 $$
 
-とします．定義から，
+とすると，
 
 $$
 c_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj}
@@ -71,16 +73,16 @@ $$
 d_{ji} = \sum_{k=1}^{n} b_{kj} a_{ik}
 $$
 
-となり，${}^{\forall}(i,\ j) \implies c_{ij} = d_{ji}$ です．  
-成分が等しいこともわかりました．
+と表せ，${}^{\forall}(i,\ j) \implies c_{ij} = d_{ji}$．  
+よって各成分は等しい．
 
-型と成分が等しいので，$C = D$ すなわち ${}^{t} \left( AB \right) = {}^{t} B ~ {}^{t} A$ が成り立ちます．$\square$
+型と成分が等しいので，${}^{t} \left( AB \right) = {}^{t} B ~ {}^{t} A$ が成り立つ．$\square$
 
 ### 成分の図
 
 転置行列は添字がややこしいので，図？を使って確認しておきます．
 
-$C = AB$ の $(i,\ j)$ 成分 $c_{ij}$
+$AB$ の $(i,\ j)$ 成分 $c_{ij}$
 $$
 \renewcommand{\r}[1]{\textcolor{red}{#1}}
 \newcommand{\b}[1]{\textcolor{blue}{#1}}
@@ -100,7 +102,7 @@ $$
 \end{bmatrix}
 $$
 
-$D = {}^{t} B ~ {}^{t} A$ の $(j,\ i)$ 成分 $d_{ji}$
+${}^{t} B ~ {}^{t} A$ の $(j,\ i)$ 成分 $d_{ji}$
 $$
 \renewcommand{\r}[1]{\textcolor{red}{#1}}
 \newcommand{\b}[1]{\textcolor{blue}{#1}}
@@ -130,10 +132,20 @@ $$
 
 ```
 
+$(5) \quad ({}^{t}A)^{-1} = {}^{t}(A^{-1})$
+
+```spoiler:close:証明
+
+${}^{t}A {}^{t}(A^{-1}) = {}^{t} (A^{-1} A) = {}^{t} I = I$  
+${}^{t}(A^{-1}) {}^{t}A = {}^{t} (A A^{-1}) = {}^{t} I = I$
+
+逆行列の定義より，$({}^{t}A)^{-1} = {}^{t}(A^{-1})． \quad \square$
+
+```
+
 ~~~
 
-$(1)$ から $(3)$ は明らかといっていいでしょう．$(4)$ は証明を載せました．  
-いずれも定義通りに計算すれば示せます．
+$(1)$ から $(3)$ は明らかといっていいでしょう．
 
 # 対称行列と交代行列
 
@@ -141,8 +153,8 @@ $(1)$ から $(3)$ は明らかといっていいでしょう．$(4)$ は証明�
 
 正方行列 $A$ がある．
 
-$A$ が対称行列 $\overset{def}\iff$ $A = {}^{t} A$  
-$A$ が交代行列 $\overset{def}\iff$ $A = - {}^{t} A$
+$A$ が **対称行列** $\overset{def}\iff$ $A = {}^{t} A$  
+$A$ が **交代行列** $\overset{def}\iff$ $A = - {}^{t} A$
 
 ~~~
 
