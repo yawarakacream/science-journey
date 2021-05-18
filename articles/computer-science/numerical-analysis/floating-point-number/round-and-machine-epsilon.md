@@ -86,22 +86,27 @@ $$
 
 のように計算されます．
 
-なお、あくまで $\textcolor{blue}{1} + \varepsilon_{M} > \textcolor{blue}{1}$ であることに注意します．つまり，
+なお，マシンイプシロンは **浮動小数点数の最小とは別物** です．
+
+実際，倍精度で $\varepsilon_{M} = 2^{-52}$ より小さい $2^{-53}$ は
+
+$$
+2^{-53} = \left( 1 + \frac{0}{2^{1}} + \frac{0}{2^{2}} + \cdots + \frac{0}{2^{52}} \right) \times 2^{\textcolor{blue}{-53}}
+$$
+
+と表すことができます．
+
+また，あくまで $\textcolor{blue}{1} + \varepsilon_{M} > \textcolor{blue}{1}$ であることに注意します．つまり，
 
 $$
 \textcolor{red}{0} + \varepsilon_{M} > \textcolor{red}{0}
 $$
 
 をみたす最小の正の数はマシンイプシロンとはいいません．  
-実際，倍精度で $2^{-52}$ は
+浮動小数点数の世界では $\textcolor{blue}{1} + \varepsilon_{M} > \textcolor{blue}{1}$ と $\textcolor{red}{0} + \varepsilon_{M} > \textcolor{red}{0}$ は同値ではなく，$\textcolor{blue}{1}$ がポイントであることに注意します．
 
-$$
-1 + 2^{-53} \approx \left( 1 + \frac{0}{2^{1}} + \frac{0}{2^{2}} + \cdots + \frac{0}{2^{52}} \right) \times 2^{\textcolor{blue}{-53}}
-$$
-
-と表すことができます．
-
-浮動小数点数の世界では $\textcolor{blue}{1} + \varepsilon_{M} > \textcolor{blue}{1}$ と $\textcolor{red}{0} + \varepsilon_{M} > \textcolor{red}{0}$ は同値ではなく，$1$ がポイントであることに注意します．
+なお，$\textcolor{red}{0}$ のときの数は浮動小数点数の正の最小値 +min です．  
++min については [特殊な値](/computer-science/numerical-analysis/floating-point-number/special-values) で扱っています．
 
 ## 一般の場合
 
