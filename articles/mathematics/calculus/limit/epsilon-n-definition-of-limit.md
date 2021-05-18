@@ -41,7 +41,7 @@ $\varepsilon - N$ 論法の気持ちとしては，
 
 というように，どんなに小さい $\varepsilon$ を提示しても  
 
-$\quad |a_{N} - 0| \leq \varepsilon$ かつ $|a_{N + 1} - 0| \leq \varepsilon$ かつ ...  
+$\quad |a_{N} - 0| < \varepsilon$ かつ $|a_{N + 1} - 0| < \varepsilon$ かつ ...  
 
 な $N$ が存在するので，$a_{n} \rightarrow 0$ だということになります．
 
@@ -80,7 +80,7 @@ $$
 \end{alignat*}
 $$
 
-より，$- \log_{10} \varepsilon < N$ であれば $n \leq N \implies 0.1^{n} < \varepsilon$ だとわかります．
+より，$- \log_{10} \varepsilon < N$ であれば $n \geq N \implies 0.1^{n} < \varepsilon$ だとわかります．
 
 たとえば，ここで $N = -\log_{10} \varepsilon + 1$ と定めると，
 
@@ -108,7 +108,7 @@ $$
 N = -\log_{10} \varepsilon + 1
 $$
 
-と定めると，任意の $n \leq N$ に対し
+と定めると，任意の $n \geq N$ に対し
 
 $$
 0.1^{n} < 0.1^{N} = 0.1^{-\log_{10} \varepsilon + 1} < 0.1^{-\log_{10} \varepsilon} = \varepsilon
@@ -132,7 +132,7 @@ $$
 
 $b_{n}$ は $1.1,\ 1.01,\ 1.001,\ ...$ と続きその極限値は $1$ ですが，$a_{n}$ と同様に $0$ に収束すると思ってみます．つまり，
 
-$\quad |b_{N} - 0| \leq \varepsilon$ かつ $|b_{N + 1} - 0| \leq \varepsilon$ かつ ...  
+$\quad |b_{N} - 0| < \varepsilon$ かつ $|b_{N + 1} - 0| < \varepsilon$ かつ ...  
 
 がどんな $\varepsilon$ に対しても成り立つならよいです．
 
@@ -144,6 +144,6 @@ $\quad |b_{N} - 0| \leq \varepsilon$ かつ $|b_{N + 1} - 0| \leq \varepsilon$ �
 | $0.1$ | - | - | - |
 
 $\varepsilon > 1$ のときはよさそうな $N$ がみつかりましたが，  
-$\varepsilon = 0.1$ を選ぶと $|b_{n} - 0| > 1$ なのでよさそうな $N$ が見つからなくなってしまいました．
+$\varepsilon = 0.1$ を選ぶとよさそうな $N$ が見つからなくなってしまいました．
 
 $N$ がみつからない $\varepsilon$ が $1$ つでもあればアウトなので，$b_{n} \rightarrow 0$ にはならないことがこれで示せました．
