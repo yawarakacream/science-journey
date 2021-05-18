@@ -67,7 +67,7 @@ $\overset{def}\iff$ $1 + \varepsilon_{M} > 1$ をみたす最小の正の数
 すなわち，たとえば
 
 $$
-0 + \frac{\varepsilon_{M}}{2} = 0
+1 + \frac{\varepsilon_{M}}{2} = 1
 $$
 
 が成り立ってしまいます．
@@ -85,6 +85,23 @@ $$
 倍精度 $\varepsilon_{M} = 2^{-52} \approx 2.22 \times 10^{-16}$
 
 のように計算されます．
+
+なお、あくまで $\textcolor{blue}{1} + \varepsilon_{M} > \textcolor{blue}{1}$ であることに注意します．つまり，
+
+$$
+\textcolor{red}{0} + \varepsilon_{M} > \textcolor{red}{0}
+$$
+
+をみたす最小の正の数はマシンイプシロンとはいいません．  
+実際，倍精度で $2^{-52}$ は
+
+$$
+1 + 2^{-53} \approx \left( 1 + \frac{0}{2^{1}} + \frac{0}{2^{2}} + \cdots + \frac{0}{2^{52}} \right) \times 2^{\textcolor{blue}{-53}}
+$$
+
+と表すことができます．
+
+浮動小数点数の世界では $\textcolor{blue}{1} + \varepsilon_{M} > \textcolor{blue}{1}$ と $\textcolor{red}{0} + \varepsilon_{M} > \textcolor{red}{0}$ は同値ではなく，$1$ がポイントであることに注意します．
 
 ## 一般の場合
 
