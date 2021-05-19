@@ -41,7 +41,7 @@ export default function Explorer({ noteMap, bookName }: Props) {
 const height = 24;
 const fontSize = height - 8;
 
-const Container = styled.div`
+const Container = styled.nav`
   grid-area: explorer;
   display: flex;
   flex-direction: column;
