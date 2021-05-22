@@ -66,9 +66,11 @@ $$
 \end{alignat*}
 $$
 
+**補集合** $A^{c} := U \setminus A \quad$（$U$：全体集合）
+
 **冪集合** $2^{X} := \{A ~ | ~ A \subset X\} \quad$（部分集合の集合）
 
-**補集合** $A^{c} := U \setminus A \quad$（$U$：全体集合）
+**直積集合** $A \times B := \{ (a,\ b) ~ | ~ a \in A,\ b \in B \}$
 
 ~~~
 
