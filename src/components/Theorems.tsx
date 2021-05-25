@@ -44,7 +44,7 @@ const Title = styled.span`
 
 const ChildrenWrapper = styled.div`
   height: 100%;
-  width: calc(100% - 8px * 2);
+  width: calc(100% - 8px * 2 - 4px * 2);
   padding: 12px;
 `;
 
