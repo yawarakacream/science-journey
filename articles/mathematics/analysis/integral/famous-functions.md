@@ -16,7 +16,7 @@ $$
 $$
 
 $$
-\int \frac{dx}{a^{2} - x^{2}} = \arcsin \frac{x}{a}
+\int \frac{dx}{\sqrt{a^{2} - x^{2}}} = \arcsin \frac{x}{a}
 $$
 
 $$
