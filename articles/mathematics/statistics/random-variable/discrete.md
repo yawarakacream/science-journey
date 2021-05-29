@@ -16,7 +16,7 @@ $X$ が **離散型確率変数** $\overset{def}\iff$ $F_{X}(x)$ が階段関数
 
 **$f_{X}(x)$ は，$X = x$ となる確率を表します**．
 
-離散型確率変数と確率質量関数は，それぞれ [連続型確率変数と確率密度関数](/mathematics/mathematical-statistics/random-variable/continuous) に対応する概念です．
+離散型確率変数と確率質量関数は，それぞれ [連続型確率変数と確率密度関数](/mathematics/statistics/random-variable/continuous) に対応する概念です．
 
 ~~~theorem:確率質量関数の性質
 

@@ -17,7 +17,7 @@ $X$ が **連続型確率変数** $\overset{def}\iff$ $F_{X}(x)$ が連続関数
 **$f_{X}(x)$ を積分することにより確率が求まります**．  
 注意として，確率密度関数は **確率を直接的に表すものではありません**．  
 
-連続型確率変数と確率密度関数は，それぞれ [離散型確率変数と確率質量関数](/mathematics/mathematical-statistics/random-variable/discrete) に対応する概念です．
+連続型確率変数と確率密度関数は，それぞれ [離散型確率変数と確率質量関数](/mathematics/statistics/random-variable/discrete) に対応する概念です．
 
 ~~~theorem:確率密度関数の性質
 
