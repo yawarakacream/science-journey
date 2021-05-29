@@ -20,18 +20,10 @@ export default function Spoiler({
 }
 
 const Container = styled.div`
-  margin: 8px;
-
-  p:first-child {
-    margin-top: 0;
-  }
-
-  p:last-child {
-    margin-bottom: 0;
-  }
+  margin: 0;
 `;
 
-const Label = styled.p<{ status: Status }>`
+const Label = styled.span<{ status: Status }>`
   cursor: pointer;
   color: ${(p) => ({ open: "slateblue", close: "darkslateblue" }[p.status])};
 
@@ -47,7 +39,7 @@ const Label = styled.p<{ status: Status }>`
 `;
 
 const Content = styled.div`
-  margin: 2px 0 0 calc(0.5rem - 2px);
+  margin: 8px 0 0 calc(0.5rem - 2px);
   padding: 8px;
   border-left: 4px solid slateblue;
 `;
