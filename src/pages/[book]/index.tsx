@@ -39,7 +39,7 @@ function UnitList({ units }: { units: Omit<UnitMetadata, "sections">[] }) {
       {units.map((u) => (
         <>
           <UnitTitle>
-            <FontAwesome type={u.icon} fixed={true} style={{ fontSize: 16, marginRight: 4, padding: 4 }} />
+            <FontAwesome type={u.icon} fixed={true} style={{ fontSize: 20, marginRight: 4 }} />
             {u.title}
           </UnitTitle>
           <UnitDescription>{u.description}</UnitDescription>
@@ -55,5 +55,8 @@ const UnitTitle = styled.h2`
 `;
 
 const UnitDescription = styled.p`
-  margin: 0;
+  margin: 0 0 0 28px;
+  @media (max-width: 600px) {
+    margin: 0;
+  }
 `;
