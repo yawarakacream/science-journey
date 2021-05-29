@@ -389,6 +389,61 @@ $$
 
 階数標準形の一意性より明らかです．
 
+~~~theorem:正則性と階数
+
+$n$ 次正方行列 $A$ がある．
+
+$A$ が正則 $\iff$ $A$ の階段行列は単位行列 $\iff$ $\mathrm{rank} ~ A = n$
+
+```spoiler:close:証明
+
+$A$ の階段行列は単位行列 $\iff$ $\mathrm{rank} ~ A = n$  
+は階段行列の一意性より明らか（余談にて）．
+
+$A$ が正則 $\iff$ $A$ の階段行列は単位行列  
+を示す．
+
+### $\implies$
+
+$A$ の階段行列を $B$ とおき，$B \neq I$ と仮定する．
+
+このとき，適当な正則行列（[= 基本行列の積](/mathematics/linear-algebra/elementary-operation/operation)）$P$ があって，
+
+$$
+PA = B
+$$
+
+と書け，両辺に右から $A^{-1}$ を掛けると，
+
+$$
+P = B A^{-1}
+$$
+
+となる．
+
+$B$ は単位行列でない階段行列なので，下の何行かは零ベクトルであり，よって $B A^{-1}$ も同様に零ベクトルをもつ．  
+しかし，[正則行列はすべての行に零ベクトルをもたない](/mathematics/linear-algebra/matrix/regular) ことより $P$ の正則性に矛盾．
+
+よって $B = I$．
+
+### $\impliedby$
+
+$A$ の階段行列は $I$ なので，適当な正則行列（[= 基本行列の積](/mathematics/linear-algebra/elementary-operation/operation)）$P$ があって，
+
+$$
+PA = I
+$$
+
+とかけ，$A^{-1} = P$ で $A$ は正則．
+
+以上より同値性が示された．$\square$
+
+```
+
+~~~
+
+$\mathrm{rank}$ による正則性の判定は重要です．
+
 # 余談
 
 階段行列を
