@@ -42,8 +42,8 @@ export default function ArticleElement({
 
         <meta name="title" content={displayTitle} />
         <meta name="description" content={displayDescription} />
-        <meta property="og:title" content="ページの タイトル" />
 
+        <meta property="og:title" content={displayTitle} />
         <meta property="og:site_name" content={displayTitle} />
         <meta property="og:description" content={displayDescription} />
         <meta property="og:type" content={title ? "website" : "article"} />
