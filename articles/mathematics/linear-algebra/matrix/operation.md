@@ -24,7 +24,7 @@ description: "行列の演算規則、和・差・積を確認します。ベク
 
 $m \times n$ 行列 $A$ と $n \times l$ 行列 $B$ がある．
 
-積 $AB := [\sum_{k=1}^{n} a_{ik} b_{kj}] \quad$ 結果は $m \times l$ 行列
+積 $AB := \displaystyle \left[ \sum_{k=1}^{n} a_{ik} b_{kj} \right] \quad$ 結果は $m \times l$ 行列
 
 スカラー倍 $kA := [ka_{ij}] \quad (k \in \R)$
 

@@ -9,7 +9,7 @@ title: "微分の定義"
 極限値
 
 $$
-\overset{def}\iff \lim_{h \rightarrow 0} \frac{f(a + h) - f(a)}{h}
+\lim_{h \rightarrow 0} \frac{f(a + h) - f(a)}{h}
 $$
 
 が存在するとき，$f(x)$ は $x = a$ で **微分可能** という．  
