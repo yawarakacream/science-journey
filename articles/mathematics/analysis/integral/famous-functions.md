@@ -8,11 +8,11 @@ description: "有名な積分（原始関数）を纏めました。"
 # 多項式関数等
 
 $$
-\int dx = x
+\int x^{r} ~ dx = \frac{1}{r + 1} x^{r + 1}
 $$
 
 $$
-\int x^{r} ~ dx = \frac{1}{r + 1} x^{r + 1}
+\int \frac{1}{x} dx = \log |x|
 $$
 
 $$
@@ -58,7 +58,7 @@ $$
 $$
 
 $$
-\int a^{x} ~ dx = \frac{1}{\log a} a^{x}
+\int a^{x} ~ dx = \frac{a^{x}}{\log a}
 $$
 
 $$
