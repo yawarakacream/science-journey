@@ -4,5 +4,4 @@ description: "誤差を含めた数値計算や方程式の求解，コンピュ
 icon: "subscript"
 sections:
   - "floating-point-number"
-  - "root-finding"
 ---
