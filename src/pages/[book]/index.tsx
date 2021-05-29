@@ -58,5 +58,6 @@ const UnitDescription = styled.p`
   margin: 0 0 0 28px;
   @media (max-width: 600px) {
     margin: 0;
+    font-size: 0.85rem;
   }
 `;
