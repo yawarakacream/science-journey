@@ -36,18 +36,23 @@ export const getStaticPaths: GetStaticPaths = async () => {
 function UnitList({ units }: { units: Omit<UnitMetadata, "sections">[] }) {
   return (
     <>
-      {units.map((u) => (
-        <>
+      {units.map((u, i) => (
+        <UnitContainer key={i}>
           <UnitTitle>
             <FontAwesome type={u.icon} fixed={true} style={{ fontSize: 20, marginRight: 4 }} />
             {u.title}
           </UnitTitle>
           <UnitDescription>{u.description}</UnitDescription>
-        </>
+        </UnitContainer>
       ))}
     </>
   );
 }
+
+const UnitContainer = styled.div`
+  margin: 0;
+  padding: 0;
+`;
 
 const UnitTitle = styled.h2`
   font: 20px sans-serif;
