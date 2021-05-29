@@ -16,9 +16,18 @@ export interface Page {
   noteMap: NoteMap;
   bookName?: string;
   content: string;
+  additionalContent?: JSX.Element;
 }
 
-export default function ArticleElement({ title, description, header, noteMap, bookName, content }: Page) {
+export default function ArticleElement({
+  title,
+  description,
+  header,
+  noteMap,
+  bookName,
+  content,
+  additionalContent,
+}: Page) {
   const displayTitle = title ? `${title} | 科学の旅` : "科学の旅 - 理系大学生の備忘録";
   const displayDescription =
     description ??
@@ -62,6 +71,7 @@ export default function ArticleElement({ title, description, header, noteMap, bo
               <TitleHeader dangerouslySetInnerHTML={{ __html: katex.renderToString(header, { strict: false }) }} />
             )}
             <Markdown children={content} />
+            {additionalContent}
           </Main>
         </Body>
         <Footer />
