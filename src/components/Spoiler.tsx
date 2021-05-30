@@ -24,6 +24,8 @@ const Container = styled.div`
 `;
 
 const Label = styled.span<{ status: Status }>`
+  display: inline-block;
+  width: 100%;
   cursor: pointer;
   color: ${(p) => ({ open: "slateblue", close: "darkslateblue" }[p.status])};
 
