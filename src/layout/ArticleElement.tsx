@@ -15,6 +15,7 @@ export interface Page {
   header: string | undefined;
   noteMap: NoteMap;
   bookName?: string;
+  unitName?: string;
   content: string;
   additionalContent?: JSX.Element;
 }
@@ -25,6 +26,7 @@ export default function ArticleElement({
   header,
   noteMap,
   bookName,
+  unitName,
   content,
   additionalContent,
 }: Page) {
@@ -65,7 +67,7 @@ export default function ArticleElement({
         <Header />
         <Body>
           <Navigator noteMap={noteMap} />
-          {bookName && <Explorer noteMap={noteMap} bookName={bookName} />}
+          {bookName && <Explorer noteMap={noteMap} bookName={bookName} unitName={unitName} />}
           <Main>
             {header && (
               <TitleHeader dangerouslySetInnerHTML={{ __html: katex.renderToString(header, { strict: false }) }} />

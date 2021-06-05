@@ -6,15 +6,17 @@ import ArticleElement from "../../../../layout/ArticleElement";
 
 interface Props {
   bookName: string;
+  unitName: string;
   unitTitle: string;
   section: Section;
   noteMap: NoteMap;
 }
 
-export default function BookPage({ bookName, unitTitle, section, noteMap }: Props) {
+export default function BookPage({ bookName, unitName, unitTitle, section, noteMap }: Props) {
   return (
     <ArticleElement
       bookName={bookName}
+      unitName={unitName}
       title={section.metadata.title + " - " + unitTitle}
       description={section.metadata.description}
       header={section.metadata.title}
@@ -28,6 +30,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
   props: {
     noteMap,
     bookName: params.book as string,
+    unitName: params.unit as string,
     unitTitle: getNoteArticle(params.book as string, params.unit as string).metadata.title,
     section: getNoteArticle(params.book as string, params.unit as string, params.section as string),
   },

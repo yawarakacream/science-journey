@@ -6,27 +6,28 @@ import FontAwesome from "../components/FontAwesome";
 interface Props {
   noteMap: NoteMap;
   bookName: string;
+  unitName: string;
 }
 
-export default function Explorer({ noteMap, bookName }: Props) {
+export default function Explorer({ noteMap, bookName, unitName }: Props) {
   const book = noteMap.books.find((b) => b.name === bookName);
   return (
     !!book?.units && (
       <Container>
-        {book.units.map((c, i) => (
-          <UnitContainer key={i}>
+        {book.units.map((u, i) => (
+          <UnitContainer key={i} visible={!unitName || u.name === unitName}>
             <UnitData>
-              <FontAwesome type={c.icon} fixed={true} style={{ fontSize: height - 8, marginRight: 4, padding: 4 }} />
-              <UnitTitle>{c.title}</UnitTitle>
+              <FontAwesome type={u.icon} fixed={true} style={{ fontSize: height - 8, marginRight: 4, padding: 4 }} />
+              <UnitTitle>{u.title}</UnitTitle>
             </UnitData>
-            {!!c.sections &&
-              c.sections.map((s, i) => (
+            {!!u.sections &&
+              u.sections.map((s, i) => (
                 <SectionContainer key={i}>
-                  <SectionTitle href={`/${bookName}/${c.name}/${s.name}`}>{s.title}</SectionTitle>
+                  <SectionTitle href={`/${bookName}/${u.name}/${s.name}`}>{s.title}</SectionTitle>
                   {!!s.notes &&
                     s.notes.map((n, i) => (
                       <PageContainer key={i}>
-                        <Anchor href={`/${bookName}/${c.name}/${s.name}/${n.name}`}>{n.title}</Anchor>
+                        <Anchor href={`/${bookName}/${u.name}/${s.name}/${n.name}`}>{n.title}</Anchor>
                       </PageContainer>
                     ))}
                 </SectionContainer>
@@ -52,12 +53,17 @@ const Container = styled.nav`
   }
 `;
 
-const UnitContainer = styled.div`
+const UnitContainer = styled.div<{ visible: boolean }>`
   padding: 8px 0;
   border-bottom: 2px lightsteelblue dotted;
 
   &:last-child {
     border-bottom: none;
+  }
+
+  @media (max-width: 1000px) {
+    border-bottom: 2px lightsteelblue dotted;
+    display: ${(p) => (p.visible ? "block" : "none")};
   }
 `;
 
