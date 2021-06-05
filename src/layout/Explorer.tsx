@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { NoteMap } from "../article/ArticleLoader";
 import Anchor from "../components/Anchor";
 import FontAwesome from "../components/FontAwesome";
+
 interface Props {
   noteMap: NoteMap;
   bookName: string;
