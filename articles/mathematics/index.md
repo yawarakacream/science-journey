@@ -7,8 +7,8 @@ units:
   - "set"
   - "linear-algebra"
   - "analysis"
-  - "graph-theory"
   - "statistics"
+  - "graph-theory"
 ---
 
 いわゆる大学の数学です．
