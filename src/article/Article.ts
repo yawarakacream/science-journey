@@ -3,6 +3,7 @@ import matter from "gray-matter";
 export interface ArticleMetadata {
   title: string;
   description: string;
+  draft?: boolean;
 }
 
 export interface Article<T extends ArticleMetadata> {

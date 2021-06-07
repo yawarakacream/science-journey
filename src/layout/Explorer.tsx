@@ -19,16 +19,25 @@ export default function Explorer({ noteMap, bookName, unitName }: Props) {
           <UnitContainer key={i} visible={!unitName || u.name === unitName}>
             <UnitData>
               <FontAwesome type={u.icon} fixed={true} style={{ fontSize: height - 8, marginRight: 4, padding: 4 }} />
-              <UnitTitle>{u.title}</UnitTitle>
+              <UnitTitle>
+                {u.title}
+                {u.draft && "*"}
+              </UnitTitle>
             </UnitData>
             {!!u.sections &&
               u.sections.map((s, i) => (
                 <SectionContainer key={i}>
-                  <SectionTitle href={`/${bookName}/${u.name}/${s.name}`}>{s.title}</SectionTitle>
+                  <SectionTitle href={`/${bookName}/${u.name}/${s.name}`}>
+                    {s.title}
+                    {s.draft && "*"}
+                  </SectionTitle>
                   {!!s.notes &&
                     s.notes.map((n, i) => (
                       <PageContainer key={i}>
-                        <Anchor href={`/${bookName}/${u.name}/${s.name}/${n.name}`}>{n.title}</Anchor>
+                        <Anchor href={`/${bookName}/${u.name}/${s.name}/${n.name}`}>
+                          {n.title}
+                          {n.draft && "*"}
+                        </Anchor>
                       </PageContainer>
                     ))}
                 </SectionContainer>

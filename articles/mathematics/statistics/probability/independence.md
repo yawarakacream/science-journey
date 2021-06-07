@@ -1,6 +1,7 @@
 ---
 title: "独立性"
 description: "事象の独立性を定義します。複雑な確率を考える上で重要な概念です。"
+draft: true
 ---
 
 ~~~definition:独立性

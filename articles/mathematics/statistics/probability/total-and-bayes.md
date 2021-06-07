@@ -1,5 +1,6 @@
 ---
 title: "全確率の定理・ベイズの定理"
+draft: true
 ---
 
 ~~~theorem:全確率の定理

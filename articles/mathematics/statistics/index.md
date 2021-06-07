@@ -4,4 +4,5 @@ description: "離散的な事象の確率と，発展して連続的な統計・
 icon: "chart-pie"
 sections:
   - "probability"
+  - "random-variable"
 ---
