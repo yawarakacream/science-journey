@@ -6,5 +6,4 @@ sections:
   - "limit"
   - "differential"
   - "integral"
-  - "differential-equation"
 ---
