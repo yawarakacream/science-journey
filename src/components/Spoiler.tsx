@@ -20,7 +20,7 @@ export default function Spoiler({
 }
 
 const Container = styled.div`
-  margin: 0;
+  margin: 8px 0;
 `;
 
 const Label = styled.span<{ status: Status }>`

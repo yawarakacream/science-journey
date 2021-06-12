@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import styled from "styled-components";
 import Anchor from "./Anchor";
+import CoordinateSystem2D from "./CoordinateSystem2D";
 import Spoiler from "./Spoiler";
 import { Definition, Theorem } from "./Theorems";
 
@@ -60,6 +61,13 @@ const components: Components = {
         return <Definition title={title} children={<Markdown children={children[0].toString()} />} />;
       case "theorem":
         return <Theorem title={title} children={<Markdown children={children[0].toString()} />} />;
+      case "graph": {
+        if (title === "coordinate-system-2d") {
+          return <CoordinateSystem2D {...eval(children[0].toString())} />;
+        } else {
+          throw new Error("Not implemented yet: " + title);
+        }
+      }
       default:
         throw new Error("Unknown theorem type");
     }
