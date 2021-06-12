@@ -72,7 +72,7 @@ function NoteList({ notes, divider }: { notes: { metadata: NoteMetadata; href: s
 const NoteListContainer = styled.div<{ divider: boolean }>`
   margin-top: ${({ divider }) => (divider ? 64 : 16)}px;
   padding: 4px;
-  border: 2px dashed lightgreen;
+  border: 2px dashed darkblue;
   border-radius: 8px;
 `;
 
