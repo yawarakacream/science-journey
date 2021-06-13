@@ -1,6 +1,6 @@
 ---
 title: "Newton法"
-description: "求根アルゴリズムとして最も有名な Newton（ニュートン）法について纏めました。微分可能な関数による方程式の数値解を求めます。"
+description: "求根アルゴリズムとして最も有名な Newton（ニュートン）法について纏めました．微分可能な関数による方程式の数値解を求めます．C++ のサンプルコードも掲載しています．"
 draft: true
 ---
 
@@ -44,7 +44,7 @@ $3.$ $x_{k}$ を解とし終了．
     ratio: [16, 9],
     coordinateArea: {
         from: { x: -0.5, y: -1 },
-        to: { x: 5, y: 10 }
+        to: { x: 5, y: 11 }
     },
     formulas: [
         {
@@ -166,11 +166,7 @@ $$
 
 ```spoiler:open:例
 
-Newton 法の流れを確認します．
-
 実は先ほど説明に使ったグラフは $f(x) = (x - 1)^{2} - e^{-x^{2}}$ でした．
-
-例として方程式 $(x - 1)^{2} - e^{-x^{2}} = 0$ の近似解のひとつ $x \approx 1.384$ について，すなわち
 
 ~~~graph:coordinate-system-2d
 (() => ({
@@ -180,8 +176,8 @@ Newton 法の流れを確認します．
     },
     ratio: [16, 9],
     coordinateArea: {
-        from: { x: -1.5, y: -4 },
-        to: { x: 6.5, y: 12 }
+        from: { x: -0.5, y: -1 },
+        to: { x: 5, y: 11 }
     },
     formulas: [
         {
@@ -197,7 +193,7 @@ Newton 法の流れを確認します．
         {
             type: "point",
             data: {
-                label: "A",
+                label: "(1.3838457,\ 0)",
                 x: 1.384,
                 y: 0,
                 color: "#000000",
@@ -207,7 +203,8 @@ Newton 法の流れを確認します．
 }))()
 ~~~
 
-この点 $A$ の $x$ 座標を求めることを考えましょう（縮尺を若干変更）．
+方程式 $f(x) = 0$ の解は $x = 0,\ 1.3838457...$ です．  
+このうち $x = 1.3838457...$ の方を求めてみます．
 
 準備として $f(x)$ を微分すると，
 
@@ -216,6 +213,64 @@ f'(x) = 2(x - 1) + 2x e^{-x^{2}}
 $$
 
 となります．
+
+今回は初期値を $x_{0} = 5$ として，収束判定の条件に $\varepsilon = 10^{-12}$ とした残差を用いることにします．  
+実はこの条件下では収束しますが，汎用性を考えて最大反復回数を $N = 50$ と定めておきます．
+
+C++ では以下のように Newton 法を実装できます．
+
+~~~code:newton.cpp
+#include <iostream>
+#include <iomanip>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+
+// f(x)
+double f(double x) {
+    return (x - 1) * (x - 1) - exp(-x * x);
+}
+
+// f'(x)
+double df(double x) {
+    return 2 * (x - 1) + 2 * x * exp(-x * x);
+}
+
+int main() {
+    // 出力桁数を指定
+    cout << setprecision(8);
+
+    // 許容残差
+    double eps = 1e-8;
+    // 最大反復回数
+    int N = 50;
+    // x の vector
+    vector<double> x(N + 2);
+    // 初期値
+    x[0] = 5;
+
+    // 求根
+    for (int k = 0; k <= N; k++) {
+        // 残差の確認
+        if (abs(f(x[k])) < eps) {
+            cout << "収束する" << endl;
+            cout << "k = " << k << ", x = " << x[k] << endl;
+            return 0;
+        }
+        // 次の x を求める
+        x[k + 1] = x[k] - (f(x[k]) / df(x[k]));
+    }
+    // 最大反復回数を超えたので終了
+    cout << "収束しない" << endl;
+    return 0;
+}
+~~~
+
+~~~code:output
+収束する
+k = 6, x = 1.3838457
+~~~
 
 ```
 
@@ -247,7 +302,7 @@ $3.$ $x_{k}$ を解とし終了．
     ratio: [16, 9],
     coordinateArea: {
         from: { x: -0.5, y: -1 },
-        to: { x: 5, y: 10 }
+        to: { x: 5, y: 11 }
     },
     formulas: [
         {
