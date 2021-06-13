@@ -24,6 +24,10 @@ const Container = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
+
+  @media (max-width: 600px) {
+    max-height: 192px;
+  }
 `;
 
 const FormulaList = styled.div`
@@ -31,6 +35,10 @@ const FormulaList = styled.div`
   height: 100%;
   width: 100%;
   overflow-y: auto;
+
+  @media (max-width: 600px) {
+    position: inherit;
+  }
 `;
 
 function FormulaElement({ type, color, children }: PropsWithChildren<{ type: string; color: string }>) {
