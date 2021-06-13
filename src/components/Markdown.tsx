@@ -8,6 +8,7 @@ import Anchor from "./Anchor";
 import CoordinateSystem2D from "./CoordinateSystem2D";
 import Spoiler from "./Spoiler";
 import { Definition, Theorem } from "./Theorems";
+import CodeBlock from "./CodeBlock";
 
 interface Props {
   children: string;
@@ -67,6 +68,16 @@ const components: Components = {
         } else {
           throw new Error("Not implemented yet: " + title);
         }
+      }
+      case "code": {
+        if (title === "input") {
+          return <CodeBlock title="入力" language="io" code={children[0].toString().trim()} />;
+        }
+        if (title === "output") {
+          return <CodeBlock title="出力" language="io" code={children[0].toString().trim()} />;
+        }
+        const language = title.substring(title.lastIndexOf(".") + 1);
+        return <CodeBlock title={title} language={language} code={children[0].toString().trim()} />;
       }
       default:
         throw new Error("Unknown theorem type");
