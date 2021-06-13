@@ -1,6 +1,6 @@
 ---
 title: "積の微分・Leibnizの公式"
-description: "積の微分とその一般化，Leibniz（ライプニッツ）の公式の説明と証明です。"
+description: "積の微分とその一般化，Leibniz（ライプニッツ）の公式の説明と証明です．"
 ---
 
 ~~~theorem:積の微分
