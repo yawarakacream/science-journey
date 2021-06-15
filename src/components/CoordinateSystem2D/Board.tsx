@@ -21,7 +21,6 @@ export default function Board({ formulas }: { formulas: Formula[] }) {
 }
 
 const Container = styled.div`
-  position: relative;
   height: 100%;
   width: 100%;
 
@@ -31,7 +30,6 @@ const Container = styled.div`
 `;
 
 const FormulaList = styled.div`
-  position: absolute;
   height: 100%;
   width: 100%;
   overflow-y: auto;
