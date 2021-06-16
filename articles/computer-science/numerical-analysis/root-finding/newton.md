@@ -138,9 +138,9 @@ $3.$ $x_{k}$ を解とし終了．
 
 誤差の許容については，適当な $\varepsilon$ を定めて
 
-- 絶対誤差 $|x_{k + 1} - x_{k}| < \varepsilon$
+- 絶対誤差 $\displaystyle |x_{k + 1} - x_{k}| < \varepsilon$
 - 相対誤差 $\displaystyle \left| \frac{x_{k + 1} - x_{k}}{x_{k}} \right| < \varepsilon$
-- **残差（residual）** $|f(x_{k})| < \varepsilon$
+- **残差（residual）** $\displaystyle |f(x_{k})| < \varepsilon$
 
 のいずれかを条件とすることが多いです．
 
@@ -164,10 +164,11 @@ $$
 \therefore ~ x_{k + 1} = x_{k} - \frac{f(x_{k})}{f'(x_{k})}.
 $$
 
-```spoiler:open:例
+## 例
 
 実は先ほど説明に使ったグラフは $f(x) = (x - 1)^{2} - e^{-x^{2}}$ でした．
 
+```spoiler:close:グラフ
 ~~~graph:coordinate-system-2d
 (() => ({
     axes: {
@@ -202,6 +203,7 @@ $$
     ],
 }))()
 ~~~
+```
 
 方程式 $f(x) = 0$ の解は $x = 0,\ 1.3838457...$ です．  
 このうち $x = 1.3838457...$ の方を求めてみます．
@@ -271,8 +273,6 @@ int main() {
 収束する
 k = 6, x = 1.3838457
 ~~~
-
-```
 
 # 簡易 Newton 法（Parallel Code 法）
 
