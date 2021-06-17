@@ -48,4 +48,4 @@ $\quad \overset{def}\iff {}^{\forall}\varepsilon > 0,\ {}^{\exists}\delta = \del
 ただし $|x - a| \leq \delta$ という比較のため，**$a$ 近傍で定義されている** 必要はあります．
 
 [ε-N 論法](/mathematics/analysis/limit/epsilon-n-definition-of-limit) のときと同じく $\varepsilon$ の小は大を兼ねるので，$f(x)$ は連続である必要はありません．  
-（$\epsilon = 0.01$ で成り立つなら $\epsilon = 0.1$ などのこともカバーできている）
+（$\varepsilon = 0.01$ で成り立つなら $\varepsilon = 0.1$ などのこともカバーできている）
