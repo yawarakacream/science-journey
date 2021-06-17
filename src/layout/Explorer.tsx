@@ -27,10 +27,15 @@ export default function Explorer({ noteMap, bookName, unitName }: Props) {
             {!!u.sections &&
               u.sections.map((s, i) => (
                 <SectionContainer key={i}>
-                  <SectionTitle href={`/${bookName}/${u.name}/${s.name}`}>
-                    {s.title}
-                    {s.draft && "*"}
-                  </SectionTitle>
+                  {s.notes?.length ? (
+                    <span>{s.title}</span>
+                  ) : (
+                    <Anchor href={`/${bookName}/${u.name}/${s.name}`}>
+                      {s.title}
+                      {s.draft && "*"}
+                    </Anchor>
+                  )}
+
                   {!!s.notes &&
                     s.notes.map((n, i) => (
                       <PageContainer key={i}>
@@ -90,8 +95,6 @@ const UnitTitle = styled.div`
 
 const SectionContainer = styled.div`
   margin-left: ${fontSize * 2}px;
-`;
-const SectionTitle = styled(Anchor)`
   font-size: ${fontSize}px;
 `;
 

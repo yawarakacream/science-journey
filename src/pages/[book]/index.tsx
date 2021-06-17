@@ -29,9 +29,10 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
   props: { noteMap, book: getNoteArticle(params.book as string) },
 });
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  return { paths: noteMap.books.map((b) => ({ params: { book: b.name } })), fallback: false };
-};
+export const getStaticPaths: GetStaticPaths = async () => ({
+  paths: noteMap.books.map((b) => ({ params: { book: b.name } })),
+  fallback: false,
+});
 
 function UnitList({ units }: { units: Omit<UnitMetadata, "sections">[] }) {
   return (

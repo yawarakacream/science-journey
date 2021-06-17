@@ -68,8 +68,12 @@ const getNoteMap = (): NoteMap => {
                     name: sectionName,
                     notes:
                       sectionMetadata.notes?.reduce((notes, noteName) => {
-                        const noteMetadata = getNoteArticle<NoteMetadata>(bookName, unitName, sectionName, noteName)
-                          .metadata;
+                        const noteMetadata = getNoteArticle<NoteMetadata>(
+                          bookName,
+                          unitName,
+                          sectionName,
+                          noteName
+                        ).metadata;
                         notes.push({
                           ...noteMetadata,
                           name: noteName,

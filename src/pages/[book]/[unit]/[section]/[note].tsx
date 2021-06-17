@@ -36,15 +36,13 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
   },
 });
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: noteMap.books.flatMap((b) =>
-      b.units.flatMap((c) =>
-        c.sections.flatMap((s) =>
-          s.notes.map((n) => ({ params: { book: b.name, unit: c.name, section: s.name, note: n.name } }))
-        )
+export const getStaticPaths: GetStaticPaths = async () => ({
+  paths: noteMap.books.flatMap((b) =>
+    b.units.flatMap((c) =>
+      c.sections.flatMap((s) =>
+        s.notes.map((n) => ({ params: { book: b.name, unit: c.name, section: s.name, note: n.name } }))
       )
-    ),
-    fallback: false,
-  };
-};
+    )
+  ),
+  fallback: false,
+});

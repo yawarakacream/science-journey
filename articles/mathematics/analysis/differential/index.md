@@ -4,5 +4,4 @@ notes:
   - "definition"
   - "famous-functions"
   - "product-and-leibniz"
-draft: true
 ---
