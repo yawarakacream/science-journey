@@ -38,6 +38,7 @@ const FormulaList = styled.div`
 
   @media (max-width: 600px) {
     position: inherit;
+    max-height: 192px;
   }
 `;
 
