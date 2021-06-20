@@ -5,11 +5,19 @@ draft: true
 
 ~~~definition:連続型確率変数と確率密度関数
 
-確率空間 $(\Omega,\ \mathscr{F},\ P)$，確率変数 $X$，分布関数 $F_{X}(x)$ がある．
+確率空間 $(\Omega,\ \mathscr{F},\ P)$，確率変数 $X$，分布関数 $F_{X}(x)$ があるとき，
 
 $X$ が **連続型確率変数** $\overset{def}\iff$ $F_{X}(x)$ が連続関数
 
 **確率密度関数** $f_{X}(x)$ $\overset{def}\iff$ $\displaystyle F_{X}(x) = \int_{-\infty}^{x} f_{X}(t) ~ dt$ を満たす $f_{X}(x)$
+
+---
+
+$f_{X}(x)$ が確率密度関数である **必要十分条件** は以下の $(1)$ かつ $(2)$．
+
+$(1)$ $f_{X}(x) \geq 0 \quad for \quad {}^{\forall} x \in \R$
+
+$(2)$ $\displaystyle \int_{-\infty}^{\infty} f_{X}(x) ~ dx = 1$
 
 ~~~
 
@@ -20,19 +28,15 @@ $X$ が **連続型確率変数** $\overset{def}\iff$ $F_{X}(x)$ が連続関数
 
 連続型確率変数と確率密度関数は，それぞれ [離散型確率変数と確率質量関数](/mathematics/statistics/random-variable/discrete) に対応する概念です．
 
+確率質量関数とは異なり，確率密度関数は $f_{X}(x) > 1$ であることもあります．  
+
 ~~~theorem:確率密度関数の性質
 
-$(1)$ $f_{X}(x) \geq 0 \quad for \quad {}^{\forall} x \in \R$
+$(1)$ $\displaystyle P(X \in A) = \int_{A} f_{X}(x) ~ dx \quad for \quad  {}^{\forall} A \subset \R$
 
-$(2)$ $\displaystyle \int_{-\infty}^{\infty} f_{X}(x) ~ dx = 1$
-
-$(3)$ $\displaystyle P(X \in A) = \int_{A} f_{X}(x) ~ dx \quad for \quad  {}^{\forall} A \subset \R$
-
-$(4)$ $\displaystyle \frac{d}{dx}F_{X}(x) = f_{X}(x)$
+$(2)$ $\displaystyle \frac{d}{dx}F_{X}(x) = f_{X}(x)$
 
 ~~~
-
-確率質量関数とは異なり，確率密度関数は $f_{X}(x) > 1$ であることもあります．  
 
 ~~~spoiler:open:例
 

@@ -6,7 +6,7 @@ draft: true
 
 ~~~definition:独立性
 
-確率空間 $(\Omega,\ \mathscr{F},\ P)$ と 事象 $A,\ B \in \mathscr{F}$ がある．
+確率空間 $(\Omega,\ \mathscr{F},\ P)$ と 事象 $A,\ B \in \mathscr{F}$ に対し，
 
 $A$ と $B$ が **独立** $\overset{def}\iff$ $P(A \cap B) = P(A) ~ P(B)$
 

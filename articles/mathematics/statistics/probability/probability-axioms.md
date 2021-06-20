@@ -7,7 +7,7 @@ description: "確率公理により確率速度（確率）と確率空間を定
 
 ~~~definition:確率（確率公理）
 
-空でない集合 $\Omega$ とその完全加法族 $\mathscr{F}$，及び関数 $P: \mathscr{F} \rightarrow \R$ がある．
+空でない集合 $\Omega$ とその完全加法族 $\mathscr{F}$，及び関数 $P: \mathscr{F} \rightarrow \R$ に対し，
 
 $P$ が $\Omega$ 上（或いは $\mathscr{F}$ 上）の **確率測度**（probability measure）である  
 $$

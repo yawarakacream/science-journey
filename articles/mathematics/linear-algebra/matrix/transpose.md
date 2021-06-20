@@ -5,7 +5,7 @@ description: "行列の転置は，大学に入ってすぐに学ぶ行列の基
 
 ~~~definition:転置行列
 
-$m \times n$ 行列 $A = [a_{ij}]$ がある．
+$A$：$m \times n$ 行列
 
 $\quad A$ の **転置行列** $ ~ {}^{t} A := [a_{ji}].$
 
@@ -151,10 +151,10 @@ $(1)$ から $(3)$ は明らかといっていいでしょう．
 
 ~~~definition:対称行列と交代行列
 
-正方行列 $A$ がある．
+$A$：正方行列
 
-$A$ が **対称行列** $\overset{def}\iff$ $A = {}^{t} A$  
-$A$ が **交代行列** $\overset{def}\iff$ $A = - {}^{t} A$
+$\quad$ $A$ が **対称行列** $\overset{def}\iff$ $A = {}^{t} A$  
+$\quad$ $A$ が **交代行列** $\overset{def}\iff$ $A = - {}^{t} A$
 
 ~~~
 

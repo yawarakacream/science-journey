@@ -4,15 +4,16 @@ title: "確率変数と分布関数"
 
 ~~~definition:確率変数
 
-標本空間 $\Omega$ がある．
+$\Omega$：標本空間
 
-**確率変数** $X(\omega)$ $\overset{def}\iff$ $\omega \in \Omega$ に実数を対応させる関数
+$\quad$ **確率変数** $X(\omega)$ $\overset{def}\iff$ $\omega \in \Omega$ に実数を対応させる関数
 
 ~~~
 
 ~~~definition:分布関数
 
-確率空間 $(\Omega,\ \mathscr{F},\ P)$，確率変数 $X$ がある．
+$(\Omega,\ \mathscr{F},\ P)$：確率空間  
+$X$：確率変数
 
 $X$ の **分布関数** $F_{X}(x) : R \rightarrow [0,\ 1]$ は，
 
@@ -33,7 +34,7 @@ $$
 
 $(1)$ $\textcolor{blue}{0 \leq F_{X}(x) \leq 1} \quad for \quad {}^{\forall} x \in \R$
 
-$(2)$ **非減少関数** $\quad$ $x_{1} < x_{2} \implies F_{X}(x_{1}) \leq F_{X}(x_{2})$
+$(2)$ **広義単調増加** $\quad$ $x_{1} < x_{2} \implies F_{X}(x_{1}) \leq F_{X}(x_{2})$
 
 $(3)$ $\textcolor{blue}{F_{X}(-\infty) = 0,\ F_{X}(\infty) = 1}$
 

@@ -7,11 +7,11 @@ description: "行列の演算規則，和・差・積を確認します．ベク
 
 ~~~definition:和と差
 
-型が同じ行列 $A = [a_{ij}],\ B = [b_{ij}]$ がある．
+$A,\ B$：型が同じ行列
 
-和 $A + B := [a_{ij} + b_{ij}]$
+$\quad$ **和** $A + B := [a_{ij} + b_{ij}]$
 
-差 $A - B := [a_{ij} - b_{ij}]$
+$\quad$ **差** $A - B := [a_{ij} - b_{ij}]$
 
 ~~~
 
@@ -22,13 +22,14 @@ description: "行列の演算規則，和・差・積を確認します．ベク
 
 ~~~definition:積
 
-$m \times n$ 行列 $A$ と $n \times l$ 行列 $B$ がある．
+$A$：$m \times n$ 行列  
+$B$：$n \times l$ 行列
 
-積 $AB := \displaystyle \left[ \sum_{k=1}^{n} a_{ik} b_{kj} \right] \quad$ 結果は $m \times l$ 行列
+$\quad$ **積** $AB := \displaystyle \left[ \sum_{k=1}^{n} a_{ik} b_{kj} \right] \quad$ 結果は $m \times l$ 行列
 
-スカラー倍 $kA := [ka_{ij}] \quad (k \in \R)$
+$\quad$ **スカラー倍** $kA := [ka_{ij}] \quad (k \in \R)$
 
-マイナス倍 $-A := [-a_{ij}]$
+$\quad$ **マイナス倍** $-A := [-a_{ij}]$
 
 ~~~
 

@@ -5,7 +5,7 @@ description: "条件付き確率を定義し，そこから導かれる有名な
 
 ~~~definition:条件付き確率
 
-確率空間 $(\Omega,\ \mathscr{F},\ P)$ と $A,\ B \in \mathscr{F}$ がある．
+確率空間 $(\Omega,\ \mathscr{F},\ P)$ と $A,\ B \in \mathscr{F}$ に対し，
 
 $B$ が与えられたときの $A$ の **条件付き確率** $P(A ~ | ~ B)$ は，
 

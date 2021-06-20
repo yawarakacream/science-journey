@@ -5,11 +5,11 @@ description: ""
 
 ~~~definition:正則行列と逆行列
 
-正方行列 $A$ に対し，
+$A$：正方行列
 
-$X$ が $A$ の **逆行列** $\overset{def}\iff$ $AX = I$ かつ $XA = I$
+$\quad$ $X$ が $A$ の **逆行列** $\overset{def}\iff$ $AX = I$ かつ $XA = I$
 
-$A$ が **正則行列** $\overset{def}\iff$ $A$ の逆行列が存在
+$\quad$ $A$ が **正則行列** $\overset{def}\iff$ $A$ の逆行列が存在
 
 逆行列は通常 $A^{-1}$ のように表す．
 
