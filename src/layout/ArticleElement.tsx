@@ -1,13 +1,15 @@
 import React from "react";
 import Head from "next/head";
 import styled from "styled-components";
+import { NoteMap } from "../article/ArticleLoader";
 import Footer from "./Footer";
 import Header from "./Header";
 import Explorer from "./Explorer";
-import { NoteMap } from "../article/ArticleLoader";
-import Markdown from "../components/Markdown";
 import katex from "katex";
 import Navigator from "./Navigator";
+import dynamic from "next/dynamic";
+
+const Markdown = dynamic(() => import("../components/Markdown"));
 
 export interface Page {
   title?: string | undefined;
