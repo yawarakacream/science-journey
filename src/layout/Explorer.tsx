@@ -7,7 +7,7 @@ import FontAwesome from "../components/FontAwesome";
 interface Props {
   noteMap: NoteMap;
   bookName: string;
-  unitName: string;
+  unitName?: string;
 }
 
 export default function Explorer({ noteMap, bookName, unitName }: Props) {
