@@ -1,7 +1,6 @@
 ---
 title: "Newton法"
 description: "求根アルゴリズムとして最も有名な Newton（ニュートン）法について纏めました．微分可能な関数による方程式の数値解を求めます．C++ のサンプルコードも掲載しています．"
-draft: true
 ---
 
 **Newton 法** は，非線形方程式に対する反復解法で，最も有名なアルゴリズムのひとつです．
@@ -22,7 +21,7 @@ $1.$ 初期値 $x_{0}$ を与える．
 $2.$ $k = 0,\ 1,\ ...$ に対し以下の操作を繰り返す．
 
 - **誤差が許容できた** とき，3. へ遷移
-- 誤差が許容できなかったとき，$\displaystyle x_{k + 1} = x_{k} + \frac{f(x_{k})}{f'(x_{k})}$ とおき $2.$ へ戻る（[反復式](/computer-science/numerical-analysis/root-finding/iteratives-and-banach)）．
+- 誤差が許容できなかったとき，$\displaystyle x_{k + 1} = x_{k} + \frac{f(x_{k})}{f'(x_{k})}$ とおき $2.$ へ戻る（[反復式](/computer-science/numerical-analysis/root-finding/iteratives-and-convergence)）．
 
 $3.$ $x_{k}$ を解とし終了．
 
@@ -274,11 +273,69 @@ int main() {
 k = 6, x = 1.3838457
 ~~~
 
-# 簡易 Newton 法（Parallel Code 法）
+## 収束次数
+
+~~~theorem:収束次数
+
+Newton 法は **$2$ 次収束** する．
+
+```spoiler:close:証明
+
+$f(x) = 0$ の解 $\alpha$ を求めるとする．
+
+反復式より，
+
+$$
+\begin{alignat*}{1}
+             x_{k + 1} &= x_{k} - \frac{f(x_{k})}{f'(x_{k})} \\
+    x_{k + 1} - \alpha &= (x_{k} - \alpha) - \frac{f(x_{k})}{f'(x_{k})} \\
+                       &= \frac{(x_{k} - \alpha) f'(x_{k}) - f(x_{k})}{f'(x_{k})} \\
+                       &= \frac{(x_{k} - \alpha) f'(x_{k}) - f(x_{k})}{f'(x_{k})} \\
+\end{alignat*}
+$$
+
+ここで，仮定より $f(x)$ は微分可能で $f(x)$ を $x_{k}$ 近傍でテイラー展開すると，  
+テイラーの定理よりある $\xi \in (x_{k},\ \alpha)$ が存在して，
+
+$$
+f(\alpha) = f(x_{k}) + f'(x_{k})(\alpha - x_{k}) + \frac{f''(\xi)}{2} (x_{k} - \alpha)^{2}
+$$
+
+と表せる．$f(\alpha) = 0$ より少し変形して，
+
+$$
+f'(x_{k})(x_{k} - \alpha) - f(x_{k}) = \frac{f''(\xi)}{2} (\alpha - x_{k})^{2}
+$$
+
+を得る．反復式の分子に代入すると，
+
+$$
+\begin{alignat*}{1}
+                   x_{k + 1} - \alpha &= \frac{(x_{k} - \alpha) f'(x_{k}) - f(x_{k})}{f'(x_{k})} \\
+                                      &= \frac{\frac{f''(\xi)}{2} (\alpha - x_{k})^{2}}{f'(x_{k})} \\
+                                      &= \frac{f''(\xi)}{2 f'(x_{k})} (\alpha - x_{k})^{2} \\
+    \therefore ~ |x_{k + 1} - \alpha| &= \left|\frac{f''(\xi)}{2 f'(x_{k})}\right| |x_{k} - \alpha|^{2}
+\end{alignat*}
+$$
+
+したがって，[収束次数の定義](http://127.0.0.1:3000/computer-science/numerical-analysis/root-finding/iteratives-and-convergence) より Newton 法は $2$ 次収束．$\square$
+
+```
+
+~~~
+
+Newton 法は _基本的に_ $2$ 次収束します．
+
+基本的にというのは，実は **重解に対しては $1$ 次収束** であることが知られています．  
+（重解ならば $x_{k}$ が $\alpha$ に近いとき $f'(x_{k}),\ f''(\xi) \rightarrow 0$ で上記の議論はできません）
+
+とはいえ $2$ 次収束するパターンの方が多いので，$2$ 次収束すると思っておけばよいです．
+
+# 簡易 Newton 法（Parallel Chord 法）
 
 ~~~definition:簡易Newton法
 
-**簡易 Newton 法**（簡易ニュートン法）または **Parallel Code 法**（パラレルコード法）は，Newton 法の接線を簡易にとるアルゴリズム．
+**簡易 Newton 法**（簡易ニュートン法）または **Parallel Chord 法**（パラレルコード法）は，Newton 法の接線を簡易にとるアルゴリズム．
 
 ---
 

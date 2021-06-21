@@ -2,6 +2,7 @@
 title: "求根アルゴリズム"
 description: "方程式を近似的に解くアルゴリズムについて纏めました．"
 notes:
+  - "iteratives-and-convergence"
   - "newton"
   - "secant"
 ---
