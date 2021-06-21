@@ -5,7 +5,6 @@ import { NoteMap } from "../article/ArticleLoader";
 import Footer from "./Footer";
 import Header from "./Header";
 import Explorer from "./Explorer";
-import katex from "katex";
 import Navigator from "./Navigator";
 import dynamic from "next/dynamic";
 
@@ -14,7 +13,7 @@ const Markdown = dynamic(() => import("../components/Markdown"));
 export interface Page {
   title?: string | undefined;
   description?: string | undefined;
-  header: string | undefined;
+  header: string;
   noteMap: NoteMap;
   bookName?: string;
   unitName?: string;
@@ -71,9 +70,7 @@ export default function ArticleElement({
           <Navigator noteMap={noteMap} />
           {bookName && <Explorer noteMap={noteMap} bookName={bookName} unitName={unitName} />}
           <Main>
-            {header && (
-              <TitleHeader dangerouslySetInnerHTML={{ __html: katex.renderToString(header, { strict: false }) }} />
-            )}
+            <TitleHeader>{header}</TitleHeader>
             <Markdown children={content} />
             {additionalContent}
           </Main>
@@ -132,7 +129,7 @@ const Body = styled.div`
 
 const Main = styled.main`
   grid-area: main;
-  margin: 8px 0;
+  margin: 0;
   padding: 8px 16px;
   border-left: 1px lightgray solid;
   border-right: 1px lightgray solid;
@@ -145,7 +142,7 @@ const Main = styled.main`
 
 const TitleHeader = styled.h1`
   margin: 0 0 8px;
-  font-size: 32px;
+  font: 36px serif;
   border-bottom: 4px lightgreen solid;
 
   @media (max-width: 1024px) {
