@@ -12,7 +12,7 @@ interface Props {
   noteMap: NoteMap;
 }
 
-export default function BookPage({ bookName, unitName, sectionTitle, note, noteMap }: Props) {
+export default function NotePage({ bookName, unitName, sectionTitle, note, noteMap }: Props) {
   return (
     <ArticleElement
       bookName={bookName}

@@ -1,4 +1,4 @@
-import { GetServerSideProps, GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 import { Section } from "../../../../article/Article";
 import { getNoteArticle, NoteMap, noteMap } from "../../../../article/ArticleLoader";
@@ -12,7 +12,7 @@ interface Props {
   noteMap: NoteMap;
 }
 
-export default function BookPage({ bookName, unitName, unitTitle, section, noteMap }: Props) {
+export default function SectionPage({ bookName, unitName, unitTitle, section, noteMap }: Props) {
   return (
     <ArticleElement
       bookName={bookName}
