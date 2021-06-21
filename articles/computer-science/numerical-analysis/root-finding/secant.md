@@ -20,7 +20,7 @@ $1.$ 初期値 $x_{0},\ x_{1}$ を与える．
 $2.$ $k = 1,\ 2,\ ...$ に対し以下の操作を繰り返す．
 
 - **誤差が許容できた** とき，3. へ遷移
-- 誤差が許容できなかったとき，$\displaystyle x_{k + 1} = x_{k} - f(x_{k}) \frac{x_{k} - x_{k - 1}}{f(x_{k}) - f(x_{k - 1})}$ とおき $2.$ へ戻る（[反復式](/computer-science/numerical-analysis/root-finding/iteratives-and-banach)）．
+- 誤差が許容できなかったとき，$\displaystyle x_{k + 1} = x_{k} - f(x_{k}) \frac{x_{k} - x_{k - 1}}{f(x_{k}) - f(x_{k - 1})}$ とおき $2.$ へ戻る（[反復式](/computer-science/numerical-analysis/root-finding/iteratives-and-convergence)）．
 
 $3.$ $x_{k}$ を解とし終了．
 
