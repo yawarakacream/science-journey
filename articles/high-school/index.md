@@ -4,7 +4,6 @@ subTitle: "High School"
 description: "高等学校で学ぶ数学・理科です。感覚的なところから厳密な証明まで、やさしく解説します。"
 units:
   - "mathematics-b"
-  - "mathematics-3"
 ---
 
 高等学校で学ぶ数学・理科です。
