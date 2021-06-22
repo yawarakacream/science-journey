@@ -152,6 +152,18 @@ const Container = styled.div`
     color: blue;
   }
 
+  blockquote {
+    margin: 0;
+    padding: 4px 8px;
+    background-color: floralwhite;
+    border: 1px solid papayawhip;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
   .katex-display {
   }
 
