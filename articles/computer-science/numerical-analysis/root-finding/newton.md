@@ -294,17 +294,17 @@ $$
 \end{alignat*}
 $$
 
-ここで，仮定より $f(x)$ は微分可能で $f(x)$ を $x_{k}$ 近傍でテイラー展開すると，  
-テイラーの定理よりある $\xi \in (x_{k},\ \alpha)$ が存在して，
+ここで，仮定より $f(x)$ は $x_{k}$ 近傍で微分可能で，
+テイラーの定理よりある $c \in (x_{k},\ \alpha)$ が存在して，
 
 $$
-f(\alpha) = f(x_{k}) + f'(x_{k})(\alpha - x_{k}) + \frac{f''(\xi)}{2} (x_{k} - \alpha)^{2}
+f(\alpha) = f(x_{k}) + f'(x_{k})(\alpha - x_{k}) + \frac{f''(c)}{2} (x_{k} - \alpha)^{2}
 $$
 
 と表せる．$f(\alpha) = 0$ より少し変形して，
 
 $$
-f'(x_{k})(x_{k} - \alpha) - f(x_{k}) = \frac{f''(\xi)}{2} (\alpha - x_{k})^{2}
+f'(x_{k})(x_{k} - \alpha) - f(x_{k}) = \frac{f''(c)}{2} (\alpha - x_{k})^{2}
 $$
 
 を得る．反復式の分子に代入すると，
@@ -312,9 +312,9 @@ $$
 $$
 \begin{alignat*}{1}
                    x_{k + 1} - \alpha &= \frac{(x_{k} - \alpha) f'(x_{k}) - f(x_{k})}{f'(x_{k})} \\
-                                      &= \frac{\frac{f''(\xi)}{2} (\alpha - x_{k})^{2}}{f'(x_{k})} \\
-                                      &= \frac{f''(\xi)}{2 f'(x_{k})} (\alpha - x_{k})^{2} \\
-    \therefore ~ |x_{k + 1} - \alpha| &= \left|\frac{f''(\xi)}{2 f'(x_{k})}\right| |x_{k} - \alpha|^{2}
+                                      &= \frac{\frac{f''(c)}{2} (\alpha - x_{k})^{2}}{f'(x_{k})} \\
+                                      &= \frac{f''(c)}{2 f'(x_{k})} (\alpha - x_{k})^{2} \\
+    \therefore ~ |x_{k + 1} - \alpha| &= \left|\frac{f''(c)}{2 f'(x_{k})}\right| |x_{k} - \alpha|^{2}
 \end{alignat*}
 $$
 
@@ -326,10 +326,8 @@ $$
 
 Newton 法は _基本的に_ $2$ 次収束します．
 
-基本的にというのは，実は **重解に対しては $1$ 次収束** であることが知られています．  
-（重解ならば $x_{k}$ が $\alpha$ に近いとき $f'(x_{k}),\ f''(\xi) \rightarrow 0$ で上記の議論はできません）
-
-とはいえ $2$ 次収束するパターンの方が多いので，$2$ 次収束すると思っておけばよいです．
+基本的にというのは，実は **重解に対しては $1$ 次収束になる** ことが知られています．  
+（$x_{k}$ が重解 $\alpha$ に近づくと $f'(x_{k}),\ f''(c) \rightarrow 0$ で上記の議論はできません）
 
 # 簡易 Newton 法（Parallel Chord 法）
 
