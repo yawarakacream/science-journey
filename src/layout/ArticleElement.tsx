@@ -7,6 +7,7 @@ import Header from "./Header";
 import Explorer from "./Explorer";
 import Navigator from "./Navigator";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
 
 const Markdown = dynamic(() => import("../components/Markdown"));
 
@@ -31,6 +32,9 @@ export default function ArticleElement({
   content,
   additionalContent,
 }: Page) {
+  const router = useRouter();
+  const validUrl = "https://science-journey.net" + router.asPath;
+
   const displayTitle = title ? `${title} | 科学の旅` : "科学の旅 - 理系大学生の備忘録";
   const displayDescription =
     description ??
@@ -46,12 +50,16 @@ export default function ArticleElement({
         <meta name="title" content={displayTitle} />
         <meta name="description" content={displayDescription} />
 
+        <meta property="og:url" content={validUrl} />
         <meta property="og:title" content={displayTitle} />
         <meta property="og:site_name" content={displayTitle} />
         <meta property="og:description" content={displayDescription} />
         <meta property="og:type" content={title ? "website" : "article"} />
         <meta property="og:locale" content="ja_JP" />
 
+        <meta name="twitter:card" content="card" />
+
+        <link rel="canonical" href={validUrl} />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
