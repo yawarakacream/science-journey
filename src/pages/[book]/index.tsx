@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 import styled from "styled-components";
-import { Book, UnitMetadata } from "../../article/Article";
+import { Book, UnitArticleMetadata, UnitMarkdownMetadata } from "../../article/Article";
 import { getNoteArticle, NoteMap, noteMap } from "../../article/ArticleLoader";
 import FontAwesome from "../../components/FontAwesome";
 import ArticleElement from "../../layout/ArticleElement";
@@ -34,7 +34,7 @@ export const getStaticPaths: GetStaticPaths = async () => ({
   fallback: false,
 });
 
-function UnitList({ units }: { units: Omit<UnitMetadata, "sections">[] }) {
+function UnitList({ units }: { units: UnitArticleMetadata[] }) {
   return (
     <>
       {units.map((u, i) => (
