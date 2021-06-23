@@ -5,4 +5,5 @@ icon: "font"
 sections:
   - "matrix"
   - "elementary-operation"
+  - "vector-space"
 ---
