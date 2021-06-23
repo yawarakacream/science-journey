@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { UnitArticleMetadata } from "../article/Article";
 import { NoteMap } from "../article/ArticleLoader";
@@ -31,7 +32,8 @@ interface UnitProps {
 }
 
 function Unit({ bookName, unit, openDefault }: UnitProps) {
-  const [open, setOpen] = useState(openDefault);
+  const router = useRouter();
+  const [open, setOpen] = useState(router.asPath.match(/\//g).length == 1 || openDefault);
   return (
     <UnitContainer>
       <UnitData onClick={() => setOpen(!open)}>
