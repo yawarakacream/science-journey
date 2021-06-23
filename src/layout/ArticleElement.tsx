@@ -57,7 +57,7 @@ export default function ArticleElement({
         <meta property="og:type" content={title ? "website" : "article"} />
         <meta property="og:locale" content="ja_JP" />
 
-        <meta name="twitter:card" content="card" />
+        <meta name="twitter:card" content="summary" />
 
         <link rel="canonical" href={validUrl} />
         <link rel="icon" href="/favicon.ico" />
