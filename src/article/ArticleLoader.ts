@@ -1,16 +1,17 @@
 import fs from "fs";
 import {
   Article,
-  ArticleMetadata,
-  BookMetadata,
-  UnitMetadata,
+  MarkdownMetadata,
+  BookMarkdownMetadata,
+  UnitMarkdownMetadata,
   fromMarkdown,
   HomeArticle,
-  NoteMetadata,
-  SectionMetadata,
+  NoteMarkdownMetadata,
+  SectionMarkdownMetadata,
+  BookArticleMetadata,
 } from "./Article";
 
-const getMarkdown = <T extends ArticleMetadata>(...path: string[]) =>
+const getMarkdown = <T extends MarkdownMetadata>(...path: string[]) =>
   fromMarkdown<T>(fs.readFileSync("./articles/" + path.join("/")).toString());
 
 export const getHomeArticle = (): HomeArticle => ({
@@ -19,7 +20,7 @@ export const getHomeArticle = (): HomeArticle => ({
 });
 
 const indexMd = "index.md";
-export const getNoteArticle = <T extends ArticleMetadata>(
+export const getNoteArticle = <T extends MarkdownMetadata>(
   book?: string,
   unit?: string,
   section?: string,
@@ -33,16 +34,7 @@ export const getNoteArticle = <T extends ArticleMetadata>(
 };
 
 export interface NoteMap {
-  books: (Omit<BookMetadata, "units"> & {
-    name: string;
-    units: (Omit<UnitMetadata, "sections"> & {
-      name: string;
-      sections: (Omit<SectionMetadata, "notes"> & {
-        name: string;
-        notes: (NoteMetadata & { name: string })[];
-      })[];
-    })[];
-  })[];
+  books: BookArticleMetadata[];
 }
 
 //TODO: 難しすぎる
@@ -50,25 +42,29 @@ const getNoteMap = (): NoteMap => {
   const home = getHomeArticle();
   return {
     books: home.metadata.books.reduce((books, bookName) => {
-      const bookMetadata = getNoteArticle<BookMetadata>(bookName).metadata;
+      const bookMetadata = getNoteArticle<BookMarkdownMetadata>(bookName).metadata;
       books.push({
         ...bookMetadata,
         name: bookName,
         units:
           bookMetadata.units?.reduce((units, unitName) => {
-            const unitMetadata = getNoteArticle<UnitMetadata>(bookName, unitName).metadata;
+            const unitMetadata = getNoteArticle<UnitMarkdownMetadata>(bookName, unitName).metadata;
             units.push({
               ...unitMetadata,
               name: unitName,
               sections:
                 unitMetadata.sections?.reduce((sections, sectionName) => {
-                  const sectionMetadata = getNoteArticle<SectionMetadata>(bookName, unitName, sectionName).metadata;
+                  const sectionMetadata = getNoteArticle<SectionMarkdownMetadata>(
+                    bookName,
+                    unitName,
+                    sectionName
+                  ).metadata;
                   sections.push({
                     ...sectionMetadata,
                     name: sectionName,
                     notes:
                       sectionMetadata.notes?.reduce((notes, noteName) => {
-                        const noteMetadata = getNoteArticle<NoteMetadata>(
+                        const noteMetadata = getNoteArticle<NoteMarkdownMetadata>(
                           bookName,
                           unitName,
                           sectionName,
