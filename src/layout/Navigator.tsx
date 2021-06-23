@@ -82,9 +82,13 @@ const ItemOverlay = styled(Anchor)`
     border-left: 1px solid lightgray;
     border-right: 1px solid lightgray;
     border-bottom: none;
+
     &[data-selected="true"] {
       border-bottom: none;
       background-color: rgba(135, 206, 250, 0.1);
+    }
+    &[data-selected="false"]:hover {
+      border-bottom: none;
     }
   }
 `;
