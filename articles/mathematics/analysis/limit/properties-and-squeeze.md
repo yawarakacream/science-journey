@@ -1,6 +1,5 @@
 ---
 title: "基本性質とはさみうちの原理"
-draft: true
 ---
 
 ~~~theorem:極限の基本性質
