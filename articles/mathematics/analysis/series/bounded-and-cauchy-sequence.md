@@ -1,7 +1,6 @@
 ---
 title: "収束列・Cauchy列"
 description: "収束列，Cauchy列（コーシー列）を定義し，これらの関係性を確認します．"
-draft: true
 ---
 
 ~~~definition:収束列
@@ -89,7 +88,7 @@ $\{a_{n}\}$ が Cauchy 列 $\iff$ $\{a_{n}\}$ が収束列
 
 ## $\implies$
 
-Cauchy 列は有界列なので，$\{a_{n}\}$ は収束部分列 $\{a_{n_{i}}\}$ をもつ．
+Cauchy 列は有界列なので，$\{a_{n}\}$ は [収束部分列](/mathematics/analysis/series/bolzano-weierstrass-theorem) $\{a_{n_{i}}\}$ をもつ．
 
 Cauchy 列の定義から ${}^{\forall} \varepsilon > 0$ に対し $N \in \N$ が存在して
 
