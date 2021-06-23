@@ -8,20 +8,26 @@ description: "ε-δ論法を用いて，関数の収束と発散を厳密に定�
 ここでは一変数関数を取り扱います．
 
 ~~~definition:関数の収束
-関数 $f(x)$ が $x \rightarrow a$ で $\alpha \in \R$ に **収束** する．  
-$\quad \overset{def}\iff {}^{\forall}\varepsilon > 0,\ {}^{\exists}\delta = \delta(\varepsilon) > 0 \quad \left\lbrack \ |x - a| \leq \delta \implies |f(x) - \alpha| < \varepsilon \ \right\rbrack$  
+関数 $f(x)$ が $x \rightarrow a$ で $\alpha \in \R$ に **収束** する．
+
+$\quad \overset{def}\iff {}^{\forall}\varepsilon > 0,\ {}^{\exists}\delta = \delta(\varepsilon) > 0 \quad \left\lbrack \ |x - a| \leq \delta \implies |f(x) - \alpha| < \varepsilon \ \right\rbrack$
+
 $\quad \iff$ 任意の $\varepsilon > 0$ に対して $\varepsilon$ に応じて決まる $\delta > 0$ が存在し，任意の $|x - a| < \delta$ なる $x$ で $|f(x) - \alpha| < \varepsilon$．
 
 これを $\varepsilon - \delta$ 論法 という．
 ~~~
 
 ~~~definition:関数の発散
-関数 $f(x)$ が $x \rightarrow a$ で正の無限大に **発散** する．  
-$\quad \overset{def}\iff {}^{\forall}L > 0,\ {}^{\exists}\delta = \delta(L) > 0 \quad \left\lbrack \ |x - a| < \delta \implies f(x) > L \ \right\rbrack$  
+関数 $f(x)$ が $x \rightarrow a$ で正の無限大に **発散** する．
+
+$\quad \overset{def}\iff {}^{\forall}L > 0,\ {}^{\exists}\delta = \delta(L) > 0 \quad \left\lbrack \ |x - a| < \delta \implies f(x) > L \ \right\rbrack$
+
 $\quad \iff$ 任意の $L > 0$ に対して $L$ に応じて決まる $\delta > 0$ が存在し，任意の $|x - a| < \delta$ なる $x$ で $f(x) > L$．
 
-関数 $f(x)$ が $x \rightarrow a$ で負の無限大に発散する．  
-$\quad \overset{def}\iff {}^{\forall}L < 0,\ {}^{\exists}\delta = \delta(L) > 0 \quad \left\lbrack \ |x - a| < \delta \implies f(x) < L \ \right\rbrack$  
+関数 $f(x)$ が $x \rightarrow a$ で負の無限大に発散する．
+
+$\quad \overset{def}\iff {}^{\forall}L < 0,\ {}^{\exists}\delta = \delta(L) > 0 \quad \left\lbrack \ |x - a| < \delta \implies f(x) < L \ \right\rbrack$
+
 $\quad \iff$ 任意の $L < 0$ に対して $L$ に応じて決まる $\delta > 0$ が存在し，任意の $|x - a| < \delta$ なる $x$ で $f(x) < L$．
 ~~~
 
