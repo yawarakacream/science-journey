@@ -173,7 +173,7 @@ const Container = styled.div`
 
     @media (max-width: 600px) {
       font-size: 1.1rem;
-      padding-left: 0.5rem;
+      padding-left: 1rem;
     }
   }
 `;
