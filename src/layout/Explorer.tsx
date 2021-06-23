@@ -1,56 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { UnitArticleMetadata } from "../article/Article";
 import { NoteMap } from "../article/ArticleLoader";
 import Anchor from "../components/Anchor";
 import FontAwesome from "../components/FontAwesome";
 
-interface Props {
+interface ExplorerProps {
   noteMap: NoteMap;
   bookName: string;
   unitName?: string;
 }
 
-export default function Explorer({ noteMap, bookName, unitName }: Props) {
+export default function Explorer({ noteMap, bookName, unitName }: ExplorerProps) {
   const book = noteMap.books.find((b) => b.name === bookName);
   return (
     !!book?.units && (
       <Container>
         {book.units.map((u, i) => (
-          <UnitContainer key={i} visible={!unitName || u.name === unitName}>
-            <UnitData>
-              <FontAwesome type={u.icon} fixed={true} style={{ fontSize: height - 8, marginRight: 4, padding: 4 }} />
-              <UnitTitle>
-                {u.title}
-                {u.draft && "*"}
-              </UnitTitle>
-            </UnitData>
-            {!!u.sections &&
-              u.sections.map((s, i) => (
-                <SectionContainer key={i}>
-                  {s.notes?.length ? (
-                    <span>{s.title}</span>
-                  ) : (
-                    <Anchor href={`/${bookName}/${u.name}/${s.name}`}>
-                      {s.title}
-                      {s.draft && "*"}
-                    </Anchor>
-                  )}
-
-                  {!!s.notes &&
-                    s.notes.map((n, i) => (
-                      <PageContainer key={i}>
-                        <Anchor href={`/${bookName}/${u.name}/${s.name}/${n.name}`}>
-                          {n.title}
-                          {n.draft && "*"}
-                        </Anchor>
-                      </PageContainer>
-                    ))}
-                </SectionContainer>
-              ))}
-          </UnitContainer>
+          <Unit key={i} bookName={bookName} unit={u} openDefault={u.name === unitName} />
         ))}
       </Container>
     )
+  );
+}
+
+interface UnitProps {
+  bookName: string;
+  unit: UnitArticleMetadata;
+  openDefault: boolean;
+}
+
+function Unit({ bookName, unit, openDefault }: UnitProps) {
+  const [open, setOpen] = useState(openDefault);
+  return (
+    <UnitContainer>
+      <UnitData onClick={() => setOpen(!open)}>
+        <FontAwesome
+          type={open ? "minus" : "plus"}
+          fixed={true}
+          style={{ fontSize: height - 8, marginRight: 4, padding: 4 }}
+        />
+        <UnitTitle>
+          {unit.title}
+          {unit.draft && "*"}
+        </UnitTitle>
+      </UnitData>
+      {open &&
+        !!unit.sections &&
+        unit.sections.map((s, i) => (
+          <SectionContainer key={i}>
+            {s.notes?.length ? (
+              <span>{s.title}</span>
+            ) : (
+              <Anchor href={`/${bookName}/${unit.name}/${s.name}`}>
+                {s.title}
+                {s.draft && "*"}
+              </Anchor>
+            )}
+
+            {!!s.notes &&
+              s.notes.map((n, i) => (
+                <PageContainer key={i}>
+                  <Anchor href={`/${bookName}/${unit.name}/${s.name}/${n.name}`}>
+                    {n.title}
+                    {n.draft && "*"}
+                  </Anchor>
+                </PageContainer>
+              ))}
+          </SectionContainer>
+        ))}
+    </UnitContainer>
   );
 }
 
@@ -68,23 +87,24 @@ const Container = styled.nav`
   }
 `;
 
-const UnitContainer = styled.div<{ visible: boolean }>`
+const UnitContainer = styled.div`
   padding: 8px 0;
   border-bottom: 2px lightsteelblue dotted;
 
   &:last-child {
     border-bottom: none;
   }
-
-  @media (max-width: 1000px) {
-    border-bottom: 2px lightsteelblue dotted;
-    display: ${(p) => (p.visible ? "block" : "none")};
-  }
 `;
 
 const UnitData = styled.div`
   display: flex;
   flex-direction: row;
+  cursor: pointer;
+
+  &:hover {
+    color: slateblue;
+    transition: color 0.2s;
+  }
 `;
 const UnitTitle = styled.div`
   padding: 0;
