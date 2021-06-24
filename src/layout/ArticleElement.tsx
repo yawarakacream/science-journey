@@ -156,8 +156,4 @@ const TitleHeader = styled.h1`
   @media (max-width: 1024px) {
     font-size: 24px;
   }
-
-  @media (max-width: 600px) {
-    font-size: 20px;
-  }
 `;

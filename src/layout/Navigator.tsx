@@ -94,19 +94,19 @@ const ItemOverlay = styled(Anchor)`
 `;
 
 const ItemTitle = styled.span`
-  font-size: 1.2rem;
+  font-size: 18px;
   @media (max-width: 600px) {
-    font-size: 0.75rem;
+    font-size: 12px;
   }
   @media (max-width: 370px) {
-    font-size: 0.7rem;
+    font-size: 10px;
   }
 `;
 
 const ItemSubTitle = styled.span`
-  font-size: 0.9rem;
+  font-size: 14px;
   @media (max-width: 600px) {
-    font-size: 0.25rem;
+    font-size: 4px;
   }
   @media (max-width: 370px) {
     display: none;

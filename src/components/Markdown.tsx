@@ -86,6 +86,13 @@ const components: Components = {
 };
 
 const Container = styled.div`
+  font-family: sans-serif;
+  font-size: 16px;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+
   h1 {
     margin-top: 32px;
     font-size: 24px;
@@ -104,7 +111,8 @@ const Container = styled.div`
 
     @media (max-width: 600px) {
       margin-top: 16px;
-      font-size: 16px;
+      font-size: 18px;
+      border-bottom: dotted 4px lightsteelblue;
     }
   }
 
@@ -140,13 +148,6 @@ const Container = styled.div`
     background-color: #fff;
     border-top: 1px solid #c6cbd1;
   }
-  p {
-    font-family: sans-serif;
-
-    @media (max-width: 600px) {
-      font-size: 0.85rem;
-    }
-  }
 
   strong {
     color: blue;
@@ -164,16 +165,13 @@ const Container = styled.div`
     }
   }
 
-  .katex-display {
-  }
-
   .katex-display .katex {
     text-align: left !important;
-    padding-left: 2rem;
+    padding-left: 32px;
 
     @media (max-width: 600px) {
-      font-size: 1.1rem;
-      padding-left: 1rem;
+      padding-left: 16px;
+      font-size: 14px;
     }
   }
 `;
