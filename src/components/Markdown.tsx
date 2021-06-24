@@ -1,14 +1,26 @@
+import dynamic from "next/dynamic";
+import { PropsWithChildren } from "react";
 import ReactMarkdown from "react-markdown";
 import { Components } from "react-markdown/src/ast-to-react";
 import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import styled from "styled-components";
-import Anchor from "./Anchor";
-import CoordinateSystem2D from "./CoordinateSystem2D";
-import Spoiler from "./Spoiler";
-import { Definition, Theorem } from "./Theorems";
-import CodeBlock from "./CodeBlock";
+
+const Anchor = dynamic(() => import("./Anchor"));
+const Spoiler = dynamic(() => import("./Spoiler"));
+const CoordinateSystem2D = dynamic(() => import("./CoordinateSystem2D"));
+const Definition = dynamic<
+  PropsWithChildren<{
+    title: string;
+  }>
+>(() => import("./Theorems").then((t) => t.Definition));
+const Theorem = dynamic<
+  PropsWithChildren<{
+    title: string;
+  }>
+>(() => import("./Theorems").then((t) => t.Definition));
+const CodeBlock = dynamic(() => import("./CodeBlock"));
 
 interface Props {
   children: string;
