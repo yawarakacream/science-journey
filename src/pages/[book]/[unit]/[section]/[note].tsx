@@ -1,8 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from "next";
+import dynamic from "next/dynamic";
 import React from "react";
 import { Note } from "../../../../article/Article";
 import { getNoteArticle, NoteMap, noteMap } from "../../../../article/ArticleLoader";
-import ArticleElement from "../../../../layout/ArticleElement";
+
+const ArticleElement = dynamic(() => import("../../../../layout/ArticleElement"));
 
 interface Props {
   bookName: string;

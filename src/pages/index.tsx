@@ -1,8 +1,10 @@
 import { GetStaticProps } from "next";
+import dynamic from "next/dynamic";
 import React from "react";
 import { HomeArticle } from "../article/Article";
 import { getHomeArticle, noteMap, NoteMap } from "../article/ArticleLoader";
-import ArticleElement from "../layout/ArticleElement";
+
+const ArticleElement = dynamic(() => import("../layout/ArticleElement"));
 
 interface Props {
   noteMap: NoteMap;
