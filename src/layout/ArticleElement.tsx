@@ -6,10 +6,8 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Explorer from "./Explorer";
 import Navigator from "./Navigator";
-import dynamic from "next/dynamic";
+import Markdown from "../components/Markdown";
 import { useRouter } from "next/router";
-
-const Markdown = dynamic(() => import("../components/Markdown"));
 
 export interface Page {
   title?: string | undefined;
