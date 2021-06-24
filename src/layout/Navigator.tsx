@@ -96,9 +96,6 @@ const ItemOverlay = styled(Anchor)`
 const ItemTitle = styled.span`
   font-size: 18px;
   @media (max-width: 600px) {
-    font-size: 12px;
-  }
-  @media (max-width: 370px) {
     font-size: 10px;
   }
 `;
@@ -106,7 +103,7 @@ const ItemTitle = styled.span`
 const ItemSubTitle = styled.span`
   font-size: 14px;
   @media (max-width: 600px) {
-    font-size: 4px;
+    font-size: 8px;
   }
   @media (max-width: 370px) {
     display: none;
