@@ -68,8 +68,6 @@ export default function ArticleElement({
         />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css" />
 
-        <style global>{`body { margin: 0px; padding: 0px; overflow-y: scroll; }`}</style>
-
         <title children={displayTitle} />
       </Head>
 

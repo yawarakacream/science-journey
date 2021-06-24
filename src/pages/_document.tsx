@@ -23,7 +23,7 @@ export default class _Document extends Document {
             </>
           )}
         </Head>
-        <body>
+        <body style={{ padding: 0, margin: 0, overflowY: "scroll" }}>
           <Main />
           <NextScript />
         </body>
