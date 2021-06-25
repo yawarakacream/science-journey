@@ -1,6 +1,7 @@
 ---
 title: "級数"
 notes:
+  - "bounded"
   - "bolzano-weierstrass-theorem"
-  - "bounded-and-cauchy-sequence"
+  - "convergence-and-cauchy-sequence"
 ---

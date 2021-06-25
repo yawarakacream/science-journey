@@ -25,7 +25,7 @@ $\quad \overset{def}\iff {}^{\forall}\varepsilon > 0,\ {}^{\exists}N = N(\vareps
 
 ~~~theorem:収束列と有界列
 
-$\{a_{n}\}$ が収束列 $\implies$ $\{a_{n}\}$ が有界列
+$\{a_{n}\}$ が収束列 $\implies$ $\{a_{n}\}$ が [有界列](/mathematics/analysis/series/bounded)
 
 ```spoiler:close:証明
 
@@ -90,7 +90,7 @@ Cauchy 列は番号が進むにつれ項と項の差が小さくなっていく�
 
 ~~~theorem:Cauchy列と有界列
 
-$\{a_{n}\}$ が Cauchy 列 $\implies$ $\{a_{n}\}$ が有界列
+$\{a_{n}\}$ が Cauchy 列 $\implies$ $\{a_{n}\}$ が [有界列](/mathematics/analysis/series/bounded)
 
 ```spoiler:close:証明
 
