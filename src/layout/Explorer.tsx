@@ -85,14 +85,14 @@ const Container = styled.nav`
   display: flex;
   flex-direction: column;
   padding: 8px;
-  font-size: var(---font-size);
+  font-size: var(--font-size);
 
   @media (max-width: 1024px) {
     border-top: 2px dotted black;
   }
 
   .fas {
-    font-size: var(---font-size);
+    font-size: var(--font-size);
   }
 `;
 

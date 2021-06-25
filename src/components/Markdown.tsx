@@ -19,7 +19,7 @@ const Theorem = dynamic<
   PropsWithChildren<{
     title: string;
   }>
->(() => import("./Theorems").then((t) => t.Definition));
+>(() => import("./Theorems").then((t) => t.Theorem));
 const CodeBlock = dynamic(() => import("./CodeBlock"));
 
 interface Props {
