@@ -33,7 +33,7 @@ $$
 
 ~~~
 
-~~~theorem:Bayes（ベイズ）の定理
+~~~theorem:Bayesの定理
 
 $(\Omega,\ \mathscr{F},\ P)$：確率空間  
 $A_{1},\ A_{2},\ ...\ $：${}^{\forall} i,\ P(A_{i}) > 0$ をみたす $\Omega$ の分割
@@ -43,6 +43,8 @@ $A_{1},\ A_{2},\ ...\ $：${}^{\forall} i,\ P(A_{i}) > 0$ をみたす $\Omega$ 
 $$
 P(A_{i} ~ | ~ B) = \frac{P(A_{i}) ~ P(B ~ | ~ A_{i})}{\sum_{j = 1}^{\infty} P(A_{j}) ~ P(B ~ | ~ A_{j})}
 $$
+
+これを **Bayes の定理**（ベイズの定理）という．
 
 ```spoiler:open:証明
 

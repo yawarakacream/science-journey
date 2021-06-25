@@ -30,6 +30,8 @@ $$
 \lim_{x \rightarrow a} f(x) = \lim_{x \rightarrow a} g(x) = \alpha ~ \implies ~ \lim_{x \rightarrow a} h(x) = \alpha
 $$
 
+これを **はさみうちの原理**（squeeze theorem）という．
+
 ```spoiler:close:証明
 
 絶対値を不等式に書き換えた $\varepsilon - \delta$ 論法を用いて示す．

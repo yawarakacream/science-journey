@@ -31,13 +31,15 @@ $$
 
 有名な公式です．
 
-~~~theorem:Leibniz（ライプニッツ）の公式
+~~~theorem:Leibnizの公式
 
 関数 $f(x),\ g(x)$ が $n$ 階微分可能であるとき，
 
 $$
 (f(x) ~ g(x))^{(n)} = \sum_{k = 0}^{n} {}_{n} \mathrm{C} {}_{k} ~ f^{(k)}(x) ~ g^{(n - k)}(x)
 $$
+
+これを **Leibniz の公式**（ライプニッツの公式）という．
 
 ```spoiler:close:証明
 
