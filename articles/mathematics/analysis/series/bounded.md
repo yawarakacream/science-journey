@@ -88,7 +88,7 @@ $\min S$ が存在する $\implies$ $\inf S = \min S$
 
 $a_{n} = n^{2} ~ (n \in \N)$ は下に有界で，$\inf a_{n} = 1$．
 
-$f(x) = \sin x$ は有界で，$\sup f = 1,\ \inf f = -1$．
+$f(x) = \sin x ~ (x \in \R)$ は有界で，$\sup f = 1,\ \inf f = -1$．
 
 ~~~
 
