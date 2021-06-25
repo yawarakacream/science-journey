@@ -1,5 +1,5 @@
+import React, { useState } from "react";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { UnitArticleMetadata } from "../article/Article";
 import { NoteMap } from "../article/ArticleLoader";
@@ -40,7 +40,7 @@ function Unit({ bookName, unit, openDefault }: UnitProps) {
         <FontAwesome
           type={open ? "minus" : "plus"}
           fixed={true}
-          style={{ fontSize: height - 8, marginRight: 4, padding: 4 }}
+          style={{ fontSize: "var(--font-size)", marginRight: "calc(var(--font-size) - 12px)", padding: 4 }}
         />
         <UnitTitle>
           {unit.title}
@@ -75,17 +75,24 @@ function Unit({ bookName, unit, openDefault }: UnitProps) {
   );
 }
 
-const height = 24;
-const fontSize = height - 8;
-
 const Container = styled.nav`
+  --font-size: 16px;
+  @media (max-width: 600px) {
+    --font-size: 14px;
+  }
+
   grid-area: explorer;
   display: flex;
   flex-direction: column;
   padding: 8px;
+  font-size: var(---font-size);
 
   @media (max-width: 1024px) {
     border-top: 2px dotted black;
+  }
+
+  .fas {
+    font-size: var(---font-size);
   }
 `;
 
@@ -111,16 +118,12 @@ const UnitData = styled.div`
 const UnitTitle = styled.div`
   padding: 0;
   margin: 0;
-  height: ${height}px;
-  font-size: ${fontSize}px;
 `;
 
 const SectionContainer = styled.div`
-  margin-left: ${fontSize * 2}px;
-  font-size: ${fontSize}px;
+  margin-left: calc(var(--font-size) * 2);
 `;
 
 const PageContainer = styled.div`
-  margin-left: ${fontSize}px;
-  font-size: ${fontSize}px;
+  margin-left: var(--font-size);
 `;

@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 import { NoteMap } from "../article/ArticleLoader";
 import Footer from "./Footer";
@@ -7,7 +8,6 @@ import Header from "./Header";
 import Explorer from "./Explorer";
 import Navigator from "./Navigator";
 import Markdown from "../components/Markdown";
-import { useRouter } from "next/router";
 
 export interface Page {
   title?: string | undefined;

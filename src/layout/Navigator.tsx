@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
 import React from "react";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 import { NoteMap } from "../article/ArticleLoader";
 import Anchor from "../components/Anchor";
@@ -94,16 +94,17 @@ const ItemOverlay = styled(Anchor)`
 `;
 
 const ItemTitle = styled.span`
+  font-family: "ヒラギノ明朝 Pro W3", serif;
   font-size: 18px;
   @media (max-width: 600px) {
-    font-size: 10px;
+    font-size: 12px;
   }
 `;
 
 const ItemSubTitle = styled.span`
   font-size: 14px;
   @media (max-width: 600px) {
-    font-size: 8px;
+    font-size: 10px;
   }
   @media (max-width: 370px) {
     display: none;

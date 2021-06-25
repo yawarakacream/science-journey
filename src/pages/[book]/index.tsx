@@ -58,10 +58,17 @@ const UnitContainer = styled.div`
 `;
 
 const UnitTitle = styled.h2`
-  font: 20px sans-serif;
   margin: 24px 0 8px;
+  font: 20px sans-serif;
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
 `;
 
 const UnitDescription = styled.p`
   margin: 0 0 0 28px;
+  font-size: 16px;
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
 `;
