@@ -73,7 +73,7 @@ $\min S$ が存在する $\implies$ $\inf S = \min S$
 ~~~spoiler:open:例
 
 集合 $A = \{ x ~ | ~ x < 1 \}$ は上に有界で，$\sup A = 1$．  
-しかし，最大値 $\max x$ は存在しない．
+しかし，最大値 $\max A$ は存在しない．
 
 ~~~
 
