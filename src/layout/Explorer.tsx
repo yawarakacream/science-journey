@@ -77,9 +77,6 @@ function Unit({ bookName, unit, openDefault }: UnitProps) {
 
 const Container = styled.nav`
   --font-size: 16px;
-  @media (max-width: 600px) {
-    --font-size: 14px;
-  }
 
   grid-area: explorer;
   display: flex;

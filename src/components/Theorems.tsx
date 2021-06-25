@@ -33,18 +33,23 @@ const Container = styled.div<{ color: string }>`
 `;
 
 const Title = styled.span`
-  --font-size: 20px;
-  @media (max-width: 600px) {
-    --font-size: 18px;
-  }
-
   position: absolute;
   margin: -24px 0 0 16px;
   padding: 0 8px;
-  font-size: var(--font-size);
+  font-size: 20px;
   font-weight: bold;
   background-color: white;
   z-index: 1;
+
+  @media (max-width: 600px) {
+    font-size: 18px;
+    font-weight: normal;
+    margin-left: 8px;
+  }
+
+  @media (max-width: 370px) {
+    font-size: 16px;
+  }
 `;
 
 const ChildrenWrapper = styled.div`
