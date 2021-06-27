@@ -1,6 +1,6 @@
 ---
 title: "有界性と上限・下限"
-draft: true
+description: "集合の有界性と，それをベースに数列・関数の有界性を定義します．"
 ---
 
 ~~~definition:有界性
