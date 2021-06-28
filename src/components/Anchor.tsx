@@ -15,7 +15,7 @@ export default function Anchor({
   ...a
 }: PropsWithChildren<{ href: string } & Partial<StyleProps> & JSX.IntrinsicElements["a"]>) {
   return (
-    <Link href={href} prefetch={false} passHref>
+    <Link href={href} passHref>
       <A underline={underline} changeColorIfVisited={changeColorIfVisited} {...a}>
         {children}
       </A>
