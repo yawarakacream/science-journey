@@ -294,8 +294,8 @@ $$
 \end{alignat*}
 $$
 
-ここで，仮定より $f(x)$ は $x_{k}$ 近傍で微分可能で，
-テイラーの定理よりある $c \in (x_{k},\ \alpha)$ が存在して，
+ここで，仮定より $f(x)$ は $x_{k}$ 近傍で微分可能で，  
+[Taylor の定理](/mathematics/analysis/differential/taylor-theorem-and-series) よりある $c \in (x_{k},\ \alpha)$ が存在して，
 
 $$
 f(\alpha) = f(x_{k}) + f'(x_{k})(\alpha - x_{k}) + \frac{f''(c)}{2} (x_{k} - \alpha)^{2}
