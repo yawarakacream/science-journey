@@ -60,11 +60,17 @@ export default function ArticleElement({
         <link rel="canonical" href={validUrl} />
         <link rel="icon" href="/favicon.ico" />
         <link
-          rel="stylesheet"
+          rel="preload stylesheet"
+          as="style"
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css" />
+        <link
+          rel="preload stylesheet"
+          as="style"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css"
+        />
 
         <title children={displayTitle} />
       </Head>
