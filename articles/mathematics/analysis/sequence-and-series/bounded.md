@@ -5,7 +5,7 @@ description: "集合の有界性と，それをベースに数列・関数の有
 
 ~~~definition:有界性
 
-$S$：空でない $R$ の部分集合 とする．
+$S$：空でない $\R$ の部分集合 とする．
 
 $S$ が **上に有界**（bounded from above）
 
