@@ -33,7 +33,10 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
     noteMap,
     bookName: params.book as string,
     unitName: params.unit as string,
-    sectionTitle: getNoteArticle(params.book as string, params.unit as string, params.section as string).metadata.title,
+    sectionTitle: noteMap.books
+      .find((b) => b.name === params.book)
+      .units.find((u) => u.name === params.unit)
+      .sections.find((s) => s.name === params.section).title,
     note: getNoteArticle(params.book as string, params.unit as string, params.section as string, params.note as string),
   },
 });
