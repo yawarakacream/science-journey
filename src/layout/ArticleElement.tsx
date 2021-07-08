@@ -33,7 +33,7 @@ export default function ArticleElement({
   const router = useRouter();
   const validUrl = "https://science-journey.net" + router.asPath;
 
-  const displayTitle = title ? `${title} | 科学の旅` : "科学の旅 - 理系大学生の備忘録";
+  const displayTitle = title ? `${title} | 科学の旅` : "科学の旅";
   const displayDescription =
     description ??
     "理系大学生の数学・計算機科学の備忘録です。厳密にかつ行間を埋め、やさしく数学や計算機科学を考えていきます。";
