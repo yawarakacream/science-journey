@@ -1,5 +1,12 @@
 import styled from "styled-components";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+import { xcode } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+
+import cpp from "react-syntax-highlighter/dist/cjs/languages/hljs/cpp";
+import mathematica from "react-syntax-highlighter/dist/cjs/languages/hljs/mathematica";
+
+SyntaxHighlighter.registerLanguage("cpp", cpp);
+SyntaxHighlighter.registerLanguage("nb", mathematica);
 
 export default function CodeBlock({ title, language, code }: { title: string; language: string; code: string }) {
   return (
@@ -7,7 +14,7 @@ export default function CodeBlock({ title, language, code }: { title: string; la
       <TitleContainer>
         <Title>{title}</Title>
       </TitleContainer>
-      <SyntaxHighlighter language={language} children={code} lineNumberStyle={{ minWidth: 0 }} />
+      <SyntaxHighlighter language={language} children={code} style={xcode} lineNumberStyle={{ minWidth: 0 }} />
     </Container>
   );
 }
@@ -17,9 +24,23 @@ const Container = styled.div`
 
   /* for SyntaxHighlighter */
   pre {
-    font-size: 80% !important;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+    background-color: rgb(245, 242, 240) !important;
+    padding: 0 16px 8px !important;
+    margin: 0;
+    text-shadow: white 0px 1px;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    line-height: 1.5;
+    tab-size: 4;
+    hyphens: none;
+    overflow: auto;
+
+    code {
+      font-size: 90% !important;
+      font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+    }
   }
 `;
 
@@ -27,7 +48,7 @@ const TitleContainer = styled.div`
   position: relative;
   height: 24px;
   margin-top: 2px;
-  padding: 0 12.8px 4px;
+  padding: 0 12px 4px;
   background-color: rgb(245, 242, 240);
 `;
 
