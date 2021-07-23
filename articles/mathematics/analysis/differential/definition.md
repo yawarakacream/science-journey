@@ -5,7 +5,7 @@ description: "微分の定義を確認します．"
 
 ~~~definition:微分係数
 
-関数 $f(x)$，$a \in \R$ がある．
+関数 $f(x)$，$a \in \R$ に対し，
 
 極限値
 
@@ -22,11 +22,11 @@ $$
 
 一般の点の微分を考える．
 
-関数 $f(x)$，区間 $I$ がある．
+関数 $f(x)$，区間 $I$ に対し，
 
 $f(x)$ が区間 $I$ で **微分可能** $\overset{def}\iff$ $f(x)$ は ${}^{\forall} x \in I$ で微分可能
 
-$f(x)$ の**導関数** $f'(x)$ $\overset{def}\iff$ 一般の $x \in \R$ に対する $f(x)$ の微分係数
+$f'(x)$ が $f(x)$ の **導関数** $\overset{def}\iff$ 一般の $x \in \R$ に対する $f(x)$ の微分係数
 
 $$
 f'(x) := \lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h}

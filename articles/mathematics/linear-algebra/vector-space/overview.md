@@ -10,18 +10,18 @@ $V$ が $K$ 上の **ベクトル空間**（vector space）$\overset{def}{\iff}$
 
 $(1)$ 以下の演算が定義されている
 
-- スカラー倍 ${}^{\forall}\bm{v} \in V,\ {}^{\forall}k \in K \implies k \bm{v} \in V$ が定義されている
-- 加法 ${}^{\forall}\bm{u},\ \bm{v} \in V \implies \bm{u} + \bm{v} \in V$ が定義されている
+- スカラー倍：${}^{\forall}\bm{v} \in V,\ {}^{\forall}k \in K \implies k \bm{v} \in V$
+- 加法　　　：${}^{\forall}\bm{u},\ \bm{v} \in V \implies \bm{u} + \bm{v} \in V$
 
 $(2)$ 各演算に対し，以下の性質をみたす
 
-- $\bm{u} + \bm{v} = \bm{v} + \bm{u}$（交換法則）
-- $(\bm{u} + \bm{v}) + \bm{w} = \bm{u} + (\bm{v} + \bm{w})$（結合法則）
-- $k (l \bm{u}) = (kl) \bm{u}$（結合法則）
-- $k (\bm{u} + \bm{v}) = k \bm{u} + k \bm{v}$（分配法則）
-- $(k + l) \bm{v} = k \bm{v} + k \bm{u}$（分配法則）
-- $1\bm{v} = \bm{v}$（恒等変換）
-- $0\bm{v} = \bm{o}$（$0$ 倍は $\bm{o}$）
+- 交換法則：$\bm{u} + \bm{v} = \bm{v} + \bm{u}$
+- 結合法則：$(\bm{u} + \bm{v}) + \bm{w} = \bm{u} + (\bm{v} + \bm{w})$
+- 結合法則：$k (l \bm{u}) = (kl) \bm{u}$
+- 分配法則：$k (\bm{u} + \bm{v}) = k \bm{u} + k \bm{v}$
+- 分配法則：$(k + l) \bm{v} = k \bm{v} + k \bm{u}$
+- 恒等変換：$1\bm{v} = \bm{v}$
+- $0$ 倍は $\bm{o}$：$0\bm{v} = \bm{o}$
 
 ~~~
 
