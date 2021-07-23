@@ -9,17 +9,18 @@ const ArticleElement = dynamic(() => import("../../../../layout/ArticleElement")
 interface Props {
   bookName: string;
   unitName: string;
+  unitTitle: string;
   sectionTitle: string;
   note: Note;
   noteMap: NoteMap;
 }
 
-export default function NotePage({ bookName, unitName, sectionTitle, note, noteMap }: Props) {
+export default function NotePage({ bookName, unitName, unitTitle, sectionTitle, note, noteMap }: Props) {
   return (
     <ArticleElement
       bookName={bookName}
       unitName={unitName}
-      title={note.metadata.title + " - " + sectionTitle}
+      title={`${note.metadata.title} - ${sectionTitle} - ${unitTitle}`}
       description={note.metadata.description}
       header={note.metadata.title}
       content={note.content}
@@ -33,6 +34,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
     noteMap,
     bookName: params.book as string,
     unitName: params.unit as string,
+    unitTitle: noteMap.books.find((b) => b.name === params.book).units.find((u) => u.name === params.unit).title,
     sectionTitle: noteMap.books
       .find((b) => b.name === params.book)
       .units.find((u) => u.name === params.unit)
