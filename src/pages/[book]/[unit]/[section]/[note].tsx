@@ -10,17 +10,16 @@ interface Props {
   bookName: string;
   unitName: string;
   unitTitle: string;
-  sectionTitle: string;
   note: Note;
   noteMap: NoteMap;
 }
 
-export default function NotePage({ bookName, unitName, unitTitle, sectionTitle, note, noteMap }: Props) {
+export default function NotePage({ bookName, unitName, unitTitle, note, noteMap }: Props) {
   return (
     <ArticleElement
       bookName={bookName}
       unitName={unitName}
-      title={`${note.metadata.title} - ${sectionTitle} - ${unitTitle}`}
+      title={`${note.metadata.title} - ${unitTitle}`}
       description={note.metadata.description}
       header={note.metadata.title}
       content={note.content}
@@ -35,10 +34,6 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => ({
     bookName: params.book as string,
     unitName: params.unit as string,
     unitTitle: noteMap.books.find((b) => b.name === params.book).units.find((u) => u.name === params.unit).title,
-    sectionTitle: noteMap.books
-      .find((b) => b.name === params.book)
-      .units.find((u) => u.name === params.unit)
-      .sections.find((s) => s.name === params.section).title,
     note: getNoteArticle(params.book as string, params.unit as string, params.section as string, params.note as string),
   },
 });
