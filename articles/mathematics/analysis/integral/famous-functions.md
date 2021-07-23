@@ -8,11 +8,11 @@ description: "有名な積分（原始関数）を纏めました．"
 # 多項式関数等
 
 $$
-\int x^{r} ~ dx = \frac{1}{r + 1} x^{r + 1}
+\int x^{r} ~ dx = \frac{1}{r + 1} x^{r + 1} \quad (r \neq -1)
 $$
 
 $$
-\int \frac{1}{x} dx = \log |x|
+\int \frac{dx}{x} = \log |x|
 $$
 
 $$
