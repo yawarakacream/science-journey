@@ -4,4 +4,5 @@ description: "Wolfram Research 社の数式処理システム Mathematica，及�
 icon: "calculator"
 sections:
   - "overview"
+  - "syntax"
 ---
