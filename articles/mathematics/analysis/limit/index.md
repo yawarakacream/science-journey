@@ -5,4 +5,5 @@ notes:
   - "epsilon-n-definition-of-limit"
   - "epsilon-delta-definition-of-limit"
   - "properties-and-squeeze"
+  - "lhopital-rule"
 ---
