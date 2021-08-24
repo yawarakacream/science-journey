@@ -71,6 +71,8 @@ $\quad \displaystyle \lim_{x \rightarrow a} f(x) = \lim_{x \rightarrow a} g(x) =
 
 $\quad$ $\displaystyle \lim_{x \rightarrow a} \frac{f'(x)}{g'(x)} = \alpha$ $\quad$ ならば $\quad$ $\displaystyle \lim_{x \rightarrow a} \frac{f(x)}{g(x)} = \alpha$
 
+$\quad (\alpha \in [-\infty, \infty])$
+
 ~~~
 
 l'Hôpital（ロピタル）の定理です．
