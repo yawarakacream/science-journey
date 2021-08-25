@@ -114,7 +114,10 @@ function Section({
         {section.notes?.length ? (
           <>{section.title}</>
         ) : (
-          <Anchor href={`${bookName}/${unitName}/${section.name}`}>{section.title}</Anchor>
+          <Anchor href={`${bookName}/${unitName}/${section.name}`}>
+            {section.title}
+            {section.draft && "*"}
+          </Anchor>
         )}
       </SectionTitle>
 
@@ -149,7 +152,10 @@ function Note({
   return (
     <NoteContainer>
       <NoteTitle>
-        <Anchor href={`${bookName}/${unitName}/${sectionName}/${note.name}`}>{note.title}</Anchor>
+        <Anchor href={`${bookName}/${unitName}/${sectionName}/${note.name}`}>
+          {note.title}
+          {note.draft && "*"}
+        </Anchor>
       </NoteTitle>
     </NoteContainer>
   );
