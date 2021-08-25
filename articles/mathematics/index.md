@@ -8,7 +8,6 @@ units:
   - "linear-algebra"
   - "analysis"
   - "statistics"
-  - "graph-theory"
 ---
 
 いわゆる大学の数学です．
