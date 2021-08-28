@@ -1,5 +1,6 @@
 ---
 title: "行列式の基礎的な計算"
+description: "正則行列，転置行列，三角行列などの特殊な行列の行列式やサイズの小さい行列式の覚え方，余因子展開による計算方法を紹介します．"
 draft: true
 ---
 
@@ -53,6 +54,20 @@ $$
 $$
 |I| = 1
 $$
+
+~~~
+
+## 正則行列
+
+~~~spoiler:close
+
+$A$ が正則のとき，$|A||A^{-1}| = |AA^{-1}| = |I| = 1$ より
+
+$$
+\displaystyle |A^{-1}| = \frac{1}{|A|}
+$$
+
+が成り立ちます．
 
 ~~~
 
@@ -115,22 +130,6 @@ $A$ が正則でないならば $|A| = 0$ から $|{}^{t} A| = 0$ なので $|{}
 $$
 |AB| = |A| |B|
 $$
-
-~~~
-
-## 行列の正則性
-
-~~~spoiler:close
-
-$A$ が正則であることと $|A|$ が $0$ でないことは同値です．
-
-$\quad$ $A$ が正則 $\iff$ $|A| \neq 0$
-
-また，$A$ が正則のとき
-
-$\quad \displaystyle |A^{-1}| = \frac{1}{|A|}$
-
-が成り立ちます．
 
 ~~~
 
@@ -301,6 +300,8 @@ $$
 ~~~spoiler:close
 
 [余因子](/mathematics/linear-algebra/determinant/cofactor) を用いた計算方法が知られています．
+
+証明は [余因子と余因子行列](/mathematics/linear-algebra/determinant/cofactor) のページにあります．
 
 第 $i$ 行に関して展開すると
 

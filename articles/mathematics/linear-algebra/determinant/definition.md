@@ -1,5 +1,6 @@
 ---
 title: "行列式の定義"
+description: "順列を用いて行列式を定義し，正則性との関連，「交代性」「多重線形性」といった性質を紹介します．"
 ---
 
 ~~~definition:行列式（Determinant）
@@ -151,3 +152,56 @@ $(2)$ と $(3)$ がぱっと見矛盾しているように見えるかもしれ�
 
 一般に行列式の計算は大変です（$|S_{n}| = n!$ なので項が $n!$ 個出てくる）．  
 簡単に計算するための方法がいくつか考えられており，詳しくは [基礎的な計算](/mathematics/linear-algebra/determinant/basic-calculation)，[余因子展開](/mathematics/linear-algebra/determinant/cofactor) をご覧ください．
+
+~~~theorem:行列式と正則性
+
+$A$ が正則 $\iff$ $|A| \neq 0$
+
+```spoiler:close:証明
+
+$A$ を $n$ 次正方行列とします．
+
+## $\implies$
+
+[適当な計算](/mathematics/linear-algebra/determinant/basic-calculation) により
+
+$$
+|A||A^{-1}| = |AA^{-1}| = |I| = 1 \neq 0
+$$
+$$
+\therefore |A| \neq 0. \quad \square
+$$
+
+## $\impliedby$
+
+対偶「$A$ は正則でない $\implies$ $|A| = 0$」を示す．
+
+[任意の行列は階数標準形に変形できる](/mathematics/linear-algebra/elementary-operation/echelon) ので，適当な基本行列の積 $P,\ Q$ 及び $A$ の階数標準形 $B$ が存在して
+
+$$
+PAQ = B
+$$
+
+とかける．
+
+$A$ は正則でないので $\mathrm{rank} ~ A < n$（$\because$ [正則性と階数](/mathematics/linear-algebra/elementary-operation/echelon)）．
+
+すなわち $\mathrm{rank} ~ B < n$ で，$B$ は零ベクトルを含むから $|B| = 0$ なので（$\because$ [零ベクトルを含む行列の行列式](/mathematics/linear-algebra/determinant/basic-calculation)）
+
+$$
+|PAQ| = |B| = 0
+$$
+
+また，$|PAQ| = |P||A||Q|$ より（$\because$ [行列の積の行列式](/mathematics/linear-algebra/determinant/basic-calculation)）
+
+$$
+|P||A||Q| = 0
+$$
+
+である．$P,\ Q$ は正則なので「$\implies$」で既に示したように $|P|,\ |Q| \neq 0$，したがって $|A| = 0$．$\square$
+
+```
+
+~~~
+
+正則性の判定に使えます．
