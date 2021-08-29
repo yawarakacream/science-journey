@@ -71,7 +71,7 @@ function Unit({ bookName, unit }: { bookName: string; unit: UnitArticleMetadata 
   return (
     <UnitContainer>
       <UnitTitle>
-        <FontAwesome type={unit.icon} fixed={true} style={{ fontSize: 20, marginRight: 4 }} />
+        <FontAwesome type={unit.icon} fixed={true} style={{ fontSize: 20, marginRight: 2 }} />
         {unit.title}
       </UnitTitle>
       <UnitContent>
@@ -114,7 +114,7 @@ function Section({
         {section.notes?.length ? (
           <>{section.title}</>
         ) : (
-          <Anchor href={`${bookName}/${unitName}/${section.name}`}>
+          <Anchor href={`/${bookName}/${unitName}/${section.name}`}>
             {section.title}
             {section.draft && "*"}
           </Anchor>
@@ -152,7 +152,7 @@ function Note({
   return (
     <NoteContainer>
       <NoteTitle>
-        <Anchor href={`${bookName}/${unitName}/${sectionName}/${note.name}`}>
+        <Anchor href={`/${bookName}/${unitName}/${sectionName}/${note.name}`}>
           {note.title}
           {note.draft && "*"}
         </Anchor>
