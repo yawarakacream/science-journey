@@ -65,7 +65,7 @@ const components: Components = {
         }
         return (
           <Spoiler
-            defaultStatus={title}
+            openFirst={title === "open"}
             title={data.length ? data[0] : undefined}
             children={<Markdown children={children[0].toString()} />}
           />
