@@ -1,15 +1,15 @@
 import { PropsWithChildren, useState } from "react";
 import styled from "styled-components";
+import { isGooglebot } from "../utility";
 
 type Status = "open" | "close";
 
 export default function Spoiler({
-  openFirst,
+  openDefault,
   title,
   children,
-}: PropsWithChildren<{ openFirst: boolean; title: string | undefined }>) {
-  const googlebot = typeof navigator === "object" && navigator.userAgent?.includes("Googlebot");
-  const [status, setStatus] = useState((openFirst || googlebot ? "open" : "close") as Status);
+}: PropsWithChildren<{ openDefault: boolean; title: string | undefined }>) {
+  const [status, setStatus] = useState((openDefault || isGooglebot ? "open" : "close") as Status);
   return (
     <Container>
       <Label status={status} onClick={() => setStatus(status === "open" ? "close" : "open")}>

@@ -5,6 +5,7 @@ import { UnitArticleMetadata } from "../article/Article";
 import { NoteMap } from "../article/ArticleLoader";
 import Anchor from "../components/Anchor";
 import FontAwesome from "../components/FontAwesome";
+import { isGooglebot } from "../utility";
 
 interface ExplorerProps {
   noteMap: NoteMap;
@@ -33,7 +34,7 @@ interface UnitProps {
 
 function Unit({ bookName, unit, openDefault }: UnitProps) {
   const router = useRouter();
-  const [open, setOpen] = useState(router.asPath.match(/\//g).length == 1 || openDefault);
+  const [open, setOpen] = useState(openDefault || router.asPath.match(/\//g).length == 1 || isGooglebot);
   return (
     <UnitContainer>
       <UnitData onClick={() => setOpen(!open)}>
