@@ -15,17 +15,17 @@ $$
 P(B) = \sum_{i=1}^{\infty} P(A_{i}) ~ P(B ~ | ~ A_{i})
 $$
 
-```spoiler:open:証明
+```spoiler:close:証明
 
-[確率公理](/mathematics/mathematical-statistics/probability/probability-axioms) と [一般乗法定理](/mathematics/mathematical-statistics/probability/conditional-probability) を用いて示します．
+[確率公理](/mathematics/statistics/probability/probability-axioms) と [乗法定理](/mathematics/statistics/probability/conditional-probability) を用いて示します．
 
 $$
 \begin{alignat*}{1}
     P(B) &= P(B \cap \Omega) \\
          &= P \left( B \cap \left( \bigcup_{i = 1}^{\infty} A_{i} \right) \right) \\
          &= P \left( \bigcup_{i = 1}^{\infty} \left( B \cap A_{i} \right) \right) \\
-         &= P \left( \sum_{i = 1}^{\infty} \left( B \cap A_{i} \right) \right) \\
-         &= P \left( \sum_{i = 1}^{\infty} P(A_{i})~ P(B ~ | ~ A_{i}) \right)
+         &= \sum_{i = 1}^{\infty} P \left( B \cap A_{i} \right) \\
+         &= \sum_{i = 1}^{\infty} P(A_{i})~ P(B ~ | ~ A_{i})
 \end{alignat*}
 $$
 
@@ -46,9 +46,9 @@ $$
 
 これを **Bayes の定理**（ベイズの定理）という．
 
-```spoiler:open:証明
+```spoiler:close:証明
 
-全確率の定理 と [条件付き確率の定義](/mathematics/mathematical-statistics/probability/conditional-probability) を用いて示します．  
+全確率の定理 と [条件付き確率の定義](/mathematics/statistics/probability/conditional-probability) を用いて示します．  
 特に約分などもなく，そのまま分子と分母を書き換えるだけです．
 
 $$
@@ -61,3 +61,5 @@ $$
 ```
 
 ~~~
+
+$P(A_{i} ~ | B)$ を $P(B | A_{i})$ で表せるという面白い定理です．
