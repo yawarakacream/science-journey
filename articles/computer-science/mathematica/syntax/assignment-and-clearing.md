@@ -221,7 +221,7 @@ Out[14]= -1
 In[15]:= Remove[z]
 
 In[16]:= ?z
-Out[16]= Missing["UnknownSymbol", "z"]
+Out[16]= Missing[UnknownSymbol, z]
 ~~~
 
 Remove（と Clear、ClearAll）は引数を文字列で受け取ることができます．
@@ -233,7 +233,7 @@ Remove（と Clear、ClearAll）は引数を文字列で受け取ることがで
 In[17]:= Remove["Global`*"]
 
 In[18]:= ?Global`*
-Out[18]= Missing["UnknownSymbol", "Global`*"]
+Out[18]= Missing[UnknownSymbol, Global`*]
 ~~~
 
 私たちが割り当てたすべての式が消えてしまいました．
