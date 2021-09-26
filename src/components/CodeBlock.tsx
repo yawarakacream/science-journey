@@ -3,9 +3,11 @@ import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import { xcode } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 import cpp from "react-syntax-highlighter/dist/cjs/languages/hljs/cpp";
+import python from "react-syntax-highlighter/dist/cjs/languages/hljs/python";
 import mathematica from "react-syntax-highlighter/dist/cjs/languages/hljs/mathematica";
 
 SyntaxHighlighter.registerLanguage("cpp", cpp);
+SyntaxHighlighter.registerLanguage("py", python);
 SyntaxHighlighter.registerLanguage("nb", mathematica);
 
 export default function CodeBlock({ title, language, code }: { title: string; language: string; code: string }) {

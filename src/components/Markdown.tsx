@@ -21,6 +21,7 @@ const Theorem = dynamic<
   }>
 >(() => import("./Theorems").then((t) => t.Theorem));
 const CodeBlock = dynamic(() => import("./CodeBlock"));
+const OneLineCodeBlock = dynamic(() => import("./OneLineCodeBlock"));
 
 interface Props {
   children: string;
@@ -46,6 +47,9 @@ const components: Components = {
 
   code: ({ node, inline, className, children, ...props }) => {
     if (typeof className !== "string") {
+      if (Object.keys(props).length === 0) {
+        return <OneLineCodeBlock code={children[0] as string} />;
+      }
       throw new Error("Illegal className type");
     }
 
