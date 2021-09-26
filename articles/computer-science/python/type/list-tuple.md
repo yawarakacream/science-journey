@@ -63,7 +63,7 @@ print(p)
 [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 ~~~
 
-（append・insert については [sequence 型](/computer-science/python/type/sequence) を参照）
+（append・insert については [sequence 型](/computer-science/python/type/sequence) は後述）
 
 ただし，append や insert といった後から要素を追加するメソッドは遅い処理であることが知られており，できるだけ内包記法を使うことが推奨されています．
 

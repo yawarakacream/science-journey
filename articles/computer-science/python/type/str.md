@@ -155,7 +155,7 @@ print(hex(12))
 
 # sequence 型
 
-str は文字「列」型とはいいますが，文字型というのは存在しないので，一文字ずつを文字列とした文字列のようになっています．
+str は文字「列」型とはいいます．では一文字ずつ取り出すとどうなるのでしょうか．
 
 ~~~code:main.py
 x = "abc"[1]
@@ -169,11 +169,12 @@ b
 ~~~
 
 [i] は i 番目の文字を取得する演算子です．i は 0 から数えます．  
-x は b という一文字ですが，type(x) によって str 型となっており，str は str を纏めたものと見做せることがわかります．
+x は b という一文字ですが type(x) が示す通り str 型です．
 
-詳しくいえば str は sequence 型として振る舞わせることができるのです．  
-実際，[i] は sequence 型の演算子です．
+実は，Python には「文字型」のような一文字だけを表す型がありません．  
+一文字だけであっても文字列と呼び，したがって str 型は str 型を纏めたものと見做せるのです．
 
-sequence 型の代表例としては list と tuple があります．
+詳しくいえば str 型は sequence 型として振る舞わせられます．  
+実際，[i] は str 型というより sequence 型の演算子です．
 
-sequence 型の機能は list・tuple の機能と纏めて [list・tuple 型](/computer-science/python/type/list-tuple) で紹介していますので，詳しくはそちらをご覧ください．
+sequence 型としての機能はその代表格である list・tuple の機能と纏めて [list・tuple 型](/computer-science/python/type/list-tuple) で紹介していますので，詳しくはそちらをご覧ください．
