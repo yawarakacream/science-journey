@@ -5,6 +5,8 @@ draft: true
 
 **str** は文字列を扱う型です．
 
+# 定義
+
 基本的にクォテーション（' か "）を使って定義します．
 
 str は空白スペースまたは + で結合できます．
@@ -43,6 +45,36 @@ print(x)
 abc
 def
 ghi
+~~~
+
+## 変換
+
+`str()` で囲うと変数を str 型に変換できます．
+
+~~~code:main.py
+x = 12
+y = str(12)
+print(y)
+print(type(y))
+~~~
+
+~~~code:output
+12
+<class 'str'>
+~~~
+
+int に対しては以下の組み込み関数が存在します．
+
+- `bin()`：2 進数へ
+- `oct()`：8 進数へ
+- `hex()`：16 進数へ
+
+~~~code:main.py
+print(hex(12))
+~~~
+
+~~~code:output
+0xc
 ~~~
 
 # メソッド
@@ -121,36 +153,6 @@ print("-456".zfill(8))
 ~~~code:output
 00000123
 -0000456
-~~~
-
-# 変換
-
-`str()` で囲うと変数を str 型に変換できます．
-
-~~~code:main.py
-x = 12
-y = str(12)
-print(y)
-print(type(y))
-~~~
-
-~~~code:output
-12
-<class 'str'>
-~~~
-
-int に対しては以下の組み込み関数が存在します．
-
-- `bin()`：2 進数へ
-- `oct()`：8 進数へ
-- `hex()`：16 進数へ
-
-~~~code:main.py
-print(hex(12))
-~~~
-
-~~~code:output
-0xc
 ~~~
 
 # sequence 型
