@@ -4,5 +4,5 @@ notes:
   - "numeric"
   - "bool"
   - "str"
-  - "list-tuple"
+  - "list-and-tuple"
 ---
