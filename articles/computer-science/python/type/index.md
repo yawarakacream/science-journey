@@ -5,4 +5,5 @@ notes:
   - "bool"
   - "str"
   - "list-and-tuple"
+  - "dict"
 ---

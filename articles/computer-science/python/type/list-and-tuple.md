@@ -59,15 +59,25 @@ for i in range(10):
 print(p)
 ~~~
 
-~~~code:output
-[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
-~~~
-
 （append・insert については後述）
 
 ただし，append や insert といった後から要素を追加するメソッドは遅い処理であることが知られており，できるだけ内包記法を使うことが推奨されています．
 
-# 変換
+tuple については，そのままだと generator 式と呼ばれる別のオブジェクトになってしまいます．  
+tuple() で包むことで tuple の内包表記になります．
+
+~~~code:main.py
+p = tuple(2 * i for i in range(10))
+print(p)
+~~~
+
+~~~code:output
+(0, 2, 4, 6, 8, 10, 12, 14, 16, 18)
+~~~
+
+厳密には，tuple の内包表記になるというより generator 式を tuple に変換しているのですが，実用上は tuple の内包表記になると思っておけばよいでしょう．
+
+## 変換
 
 他の sequence 型や要素を複数個持つ値は list() や tuple() で囲うとそれぞれに変換できます．
 
