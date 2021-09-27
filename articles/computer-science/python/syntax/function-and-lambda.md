@@ -46,6 +46,23 @@ test
 
 インデントは適当な個数の半角スペースやタブ文字（\t）でも動作しますが，半角スペース $4$ つが推奨されています．
 
+~~~code:main.py
+def f():
+    print('test')
+    print('test')
+
+f()
+~~~
+
+~~~code:output
+test
+test
+~~~
+
+複数行記述できます．
+
+## 引数
+
 引数をもつ関数は以下のように定義します．
 
 ~~~code:main.py
@@ -310,13 +327,13 @@ lambda 式は変数として振る舞える関数の定義方法，ともいえ�
 ~~~code:main.py
 f = lambda x: 2 * x
 print(f(3))
-f = lambda x: -7 * x
+f = lambda x: 7 * x
 print(f(3))
 ~~~
 
 ~~~code:output
 6
--21
+21
 ~~~
 
 以下のような書き方も認められます．
