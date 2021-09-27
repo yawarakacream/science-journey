@@ -5,10 +5,12 @@ import { xcode } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import cpp from "react-syntax-highlighter/dist/cjs/languages/hljs/cpp";
 import python from "react-syntax-highlighter/dist/cjs/languages/hljs/python";
 import mathematica from "react-syntax-highlighter/dist/cjs/languages/hljs/mathematica";
+import plaintext from "react-syntax-highlighter/dist/cjs/languages/hljs/plaintext";
 
 SyntaxHighlighter.registerLanguage("cpp", cpp);
 SyntaxHighlighter.registerLanguage("py", python);
 SyntaxHighlighter.registerLanguage("nb", mathematica);
+SyntaxHighlighter.registerLanguage("io", plaintext);
 
 export default function CodeBlock({ title, language, code }: { title: string; language: string; code: string }) {
   return (
