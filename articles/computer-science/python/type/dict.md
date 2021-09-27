@@ -221,3 +221,25 @@ print(tuple(d.values()))
 ['a', 'b', 'p', 'x']
 (1, 2, True, 'xyz')
 ~~~
+
+## update
+
+dict と dict を結合します．
+
+~~~code:main.py
+d1 = { i: i ** 2 for i in range(4) }
+d2 = { i: -(i ** 2) for i in range(2, 6)}
+print(d1)
+print(d2)
+
+d1.update(d2)
+print(d1)
+~~~
+
+~~~code:output
+{0: 0, 1: 1, 2: 4, 3: 9}
+{2: -4, 3: -9, 4: -16, 5: -25}
+{0: 0, 1: 1, 2: -4, 3: -9, 4: -16, 5: -25}
+~~~
+
+キーが重複する場合は引数に与えられた方が優先されます（update なのでそれはそうですね）．

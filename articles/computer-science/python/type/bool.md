@@ -8,7 +8,7 @@ draft: true
 文字列に変換されてもそのまま True や False となります．
 
 内部的には **整数として処理されており**，True は 1，False は 0 を意味します．  
-int として [数の演算](/computer-science/python/type/int-float-complex) に使えます．
+進んですべきことではありませんが，int として [数の演算](/computer-science/python/type/int-float-complex) に使えます．
 
 # 演算子
 
