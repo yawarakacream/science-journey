@@ -11,6 +11,8 @@ Python には数を表す型として，
 
 があります．
 
+実は bool という型もありますが，それについては [真理値：bool 型](/computer-science/python/type/bool) で扱います．
+
 ## int
 
 整数型 int は（メモリの許す限り）任意の大きさの整数です．
