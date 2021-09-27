@@ -63,9 +63,24 @@ print(p)
 [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 ~~~
 
-（append・insert については [sequence 型](/computer-science/python/type/sequence) は後述）
+（append・insert については後述）
 
 ただし，append や insert といった後から要素を追加するメソッドは遅い処理であることが知られており，できるだけ内包記法を使うことが推奨されています．
+
+# 変換
+
+他の sequence 型や要素を複数個持つ値は list() や tuple() で囲うとそれぞれに変換できます．
+
+~~~code:main.py
+p = list(range(10))
+print(p)
+~~~
+
+~~~code:output
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+~~~
+
+（[range 関数についてはこちら](/computer-science/python/syntax/for-technics)）
 
 # 演算子
 
