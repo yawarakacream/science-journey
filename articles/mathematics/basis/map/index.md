@@ -112,11 +112,11 @@ $\quad$ $B \sub Y$ の $f$ による **逆像** $f^{-1}(B) := \{ a \mid f(a) \in
 ~~~definition:単射・全射・全単射
 $f: X \rightarrow Y$
 
-$f$ が **単射** $\quad\overset{def}{\iff}$ 任意の $x,\ y \in X$ に対し $x \neq y$ ならば $f(x) \neq f(y)$  
+$f$ が **単射** $\overset{def}{\iff}$ 任意の $x,\ y \in X$ に対し $x \neq y$ ならば $f(x) \neq f(y)$  
 
-$f$ が **全射** $\quad\overset{def}{\iff}$ 任意の $y \in Y$ に対し $f(x) = y$ をみたす $x \in X$ が存在する   
+$f$ が **全射** $\overset{def}{\iff}$ 任意の $y \in Y$ に対し $f(x) = y$ をみたす $x \in X$ が存在する   
 
-$f$ が **全単射** $\quad\overset{def}{\iff}$ $f$ は単射かつ全射
+$f$ が **全単射** $\overset{def}{\iff}$ $f$ は単射かつ全射
 ~~~
 
 ~~~theorem:単射・全射・全単射の必要十分条件
@@ -125,5 +125,4 @@ $f$ が単射 $\iff$ $g \circ f = \mathrm{id}_{X}$ をみたす $g: Y \rightarro
 $f$ が全射 $\iff$ $f \circ g = \mathrm{id}_{Y}$ をみたす $g: Y \rightarrow X$ が存在する
 
 $f$ が全単射 $\iff$ $f \circ g = \mathrm{id}_{Y},\ g \circ f = \mathrm{id}_{X}$ をみたす $g: Y \rightarrow X$ が存在する
-
 ~~~
