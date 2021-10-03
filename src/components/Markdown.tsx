@@ -6,6 +6,7 @@ import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import styled from "styled-components";
+import { isGooglebot } from "../utility";
 
 const Anchor = dynamic(() => import("./Anchor"));
 const Spoiler = dynamic(() => import("./Spoiler"));
@@ -30,12 +31,16 @@ interface Props {
 export default function Markdown({ children }: Props) {
   return (
     <Container>
-      <ReactMarkdown
-        components={components}
-        remarkPlugins={[remarkMath, remarkGfm]}
-        rehypePlugins={[rehypeKatex]}
-        children={children}
-      />
+      {isGooglebot ? (
+        <ReactMarkdown components={components} children={children} />
+      ) : (
+        <ReactMarkdown
+          components={components}
+          remarkPlugins={[remarkMath, remarkGfm]}
+          rehypePlugins={[rehypeKatex]}
+          children={children}
+        />
+      )}
     </Container>
   );
 }
