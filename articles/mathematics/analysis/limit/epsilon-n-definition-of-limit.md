@@ -9,7 +9,7 @@ description: "躓きやすい ε-N 論法のきもちとともに，数列の収
 ここでは，初項 $n = 1$ から始まる無限実数列（実数の項が無限に続く数列）を単に数列と呼び，この数列について考えることにします．
 
 ~~~definition:数列の収束
-数列 $\{a_{n}\}$ が $\alpha \in \R$ に **収束** する．
+数列 $\{a_{n}\}$ が $\alpha \in \R$ に **収束する**
 
 $\quad \overset{def}\iff {}^{\forall}\varepsilon > 0,\ {}^{\exists}N = N(\varepsilon) \in \N \quad \lbrack \ {}^{\forall}n \geq N \implies |a_{n} - \alpha| < \varepsilon \ \rbrack$
 
@@ -19,17 +19,25 @@ $\quad \iff$ 任意の $\varepsilon > 0$ に対して $\varepsilon$ に応じて
 ~~~
 
 ~~~definition:数列の発散
-数列 $\{a_{n}\}$ が正の無限大に **発散** する．
+数列 $\{a_{n}\}$ が **発散する**
+
+$\quad \overset{def}\iff$ 数列 $\{a_{n}\}$ が収束しない
+
+数列 $\{a_{n}\}$ が **正の無限大に発散する**
 
 $\quad \overset{def}\iff {}^{\forall}L > 0,\ {}^{\exists}N = N(L) \in \N \quad \lbrack \ {}^{\forall}n \geq N \implies a_{n} > L \ \rbrack$
 
 $\quad \iff$ 任意の $L > 0$ に対して $L$ に応じて決まる $N \in \N$ が存在し，任意の $n \geq N$ なる $n$ で $a_{n} > L$．
 
-数列 $\{a_{n}\}$ が負の無限大に発散する．
+数列 $\{a_{n}\}$ が **負の無限大に発散する**
 
 $\quad \overset{def}\iff {}^{\forall}L < 0,\ {}^{\exists}N = N(L) \in \N \quad \lbrack \ {}^{\forall}n \geq N \implies a_{n} < L \ \rbrack$
 
 $\quad \iff$ 任意の $L < 0$ に対して $L$ に応じて決まる $N \in \N$ が存在し，任意の $n \geq N$ なる $n$ で $a_{n} < L$．
+
+数列 $\{a_{n}\}$ が **振動する**
+
+$\quad \overset{def}\iff$ 数列 $\{a_{n}\}$ が発散するが無限大には発散しない
 ~~~
 
 どちらも「条件を $1$ つ設けたとき，ある $N$ とその先すべてがその条件を満たす」が軸です．
