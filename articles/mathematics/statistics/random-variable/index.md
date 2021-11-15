@@ -4,4 +4,6 @@ notes:
   - "overview"
   - "discrete"
   - "continuous"
+  - "joint"
+  - "marginal"
 ---
