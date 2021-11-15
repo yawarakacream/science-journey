@@ -4,6 +4,5 @@ notes:
   - "sample-space"
   - "probability-axioms"
   - "conditional-probability"
-  - "independence"
   - "total-and-bayes"
 ---
