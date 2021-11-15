@@ -4,9 +4,9 @@ description: "結合確率分布から各変数の分布や確率を求めます
 draft: true
 ---
 
-[結合確率分布](/mathematics/statistics/random-variable/joint) から変数を消去することを考えます．
+[結合確率分布](/mathematics/statistics/random-variable/joint) から変数を消去した確率分布を考えます．
 
-このことを **周辺確率分布** といいます．
+これを **周辺確率分布** といいます．
 
 ~~~definition:周辺累積分布関数
 

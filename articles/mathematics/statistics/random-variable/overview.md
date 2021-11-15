@@ -12,13 +12,18 @@ desciprion: "確率変数と累積分布関数（分布関数）について定�
 $(\Omega,\ \mathscr{F},\ P)$：確率空間  
 $X$：確率変数
 
-$X$ の **累積分布関数**（CDF）$F_{X}(x) : \R \rightarrow [0,\ 1]$ は，
+$X$ の **確率分布** $P_{X}(X = x)$ は，
 
 $$
-F_{X}(x) := P(X \leq x) = P(\{\omega ~ | ~ X(\omega) \leq x\})
+P_{X}(X = x) = P(\{ \omega ~ | ~ X(\omega) = x \})
 $$
 
-単に **分布関数** ともいう．  
+$X$ の **累積分布関数** または単に **分布関数**（CDF）$F_{X}(x) : \R \rightarrow [0,\ 1]$ は，
+
+$$
+F_{X}(x) := P_{X}(X \leq x)
+$$
+
 CDF：cumulative distribution function
 
 ~~~
