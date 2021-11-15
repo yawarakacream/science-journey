@@ -5,11 +5,13 @@ draft: true
 
 ~~~definition:連続型確率変数と確率密度関数
 
-確率空間 $(\Omega,\ \mathscr{F},\ P)$，確率変数 $X$，分布関数 $F_{X}(x)$ があるとき，
+確率空間 $(\Omega,\ \mathscr{F},\ P)$，確率変数 $X$，累積分布関数 $F_{X}(x)$ に対し，
 
 $X$ が **連続型確率変数** $\overset{def}\iff$ $F_{X}(x)$ が連続関数
 
-**確率密度関数** $f_{X}(x)$ $\overset{def}\iff$ $\displaystyle F_{X}(x) = \int_{-\infty}^{x} f_{X}(t) ~ dt$ を満たす $f_{X}(x)$
+**確率密度関数**（PDF）$f_{X}(x)$ $\overset{def}\iff$ $\displaystyle F_{X}(x) = \int_{-\infty}^{x} f_{X}(t) ~ dt$ を満たす $f_{X}(x)$
+
+PDF：probability density function
 
 ---
 
@@ -30,7 +32,7 @@ $(2)$ $\displaystyle \int_{-\infty}^{\infty} f_{X}(x) ~ dx = 1$
 
 確率質量関数とは異なり，確率密度関数は $f_{X}(x) > 1$ であることもあります．  
 
-~~~theorem:確率密度関数の性質
+~~~theorem:確率密度関数の利用
 
 $(1)$ $\displaystyle P(X \in A) = \int_{A} f_{X}(x) ~ dx \quad for \quad  {}^{\forall} A \subset \R$
 

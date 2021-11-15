@@ -5,11 +5,13 @@ draft: true
 
 ~~~definition:離散型確率変数と確率質量関数
 
-確率空間 $(\Omega,\ \mathscr{F},\ P)$，確率変数 $X$，分布関数 $F_{X}(x)$ があるとき，
+確率空間 $(\Omega,\ \mathscr{F},\ P)$，確率変数 $X$，累積分布関数 $F_{X}(x)$ に対し，
 
 $X$ が **離散型確率変数** $\overset{def}\iff$ $F_{X}(x)$ が階段関数
 
-**確率質量関数** $f_{X}(x) := P(X = x) = P(\{\omega ~ | ~ X(\omega) = x\})$
+**確率質量関数**（PMF）$f_{X}(x) := P(X = x) = P(\{\omega ~ | ~ X(\omega) = x\})$
+
+PMF：probability mass function
 
 ---
 
@@ -27,13 +29,11 @@ $(2)$ $\displaystyle \sum_{i} f_{X}(x_{i}) = 1$
 
 離散型確率変数と確率質量関数は，それぞれ [連続型確率変数と確率密度関数](/mathematics/statistics/random-variable/continuous) に対応する概念です．
 
-~~~theorem:確率質量関数の性質
+~~~theorem:確率質量関数の利用
 
 $(1)$ $\displaystyle P(X \in A) = \sum_{x \in A} f_{X}(x) \quad for \quad  {}^{\forall} A \subset \R$
 
 $(2)$ $\displaystyle F_{X}(x) = \sum_{x_{i} \leq x} f_{X}(x_{i})$
-
-ただし，$x_{1},\ x_{2},\ ...$ は離散型確率変数 $X$ がとる実数．
 
 ~~~
 

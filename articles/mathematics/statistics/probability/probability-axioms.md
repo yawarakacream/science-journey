@@ -9,7 +9,7 @@ description: "確率公理により確率速度（確率）と確率空間を定
 
 空でない集合 $\Omega$ とその完全加法族 $\mathscr{F}$，及び関数 $P: \mathscr{F} \rightarrow \R$ に対し，
 
-$P$ が $\Omega$ 上（或いは $\mathscr{F}$ 上）の **確率測度**（probability measure）  
+$P$ が $\Omega$ 上（或いは $\mathscr{F}$ 上）の **確率測度**（probability measure）または単に **確率**  
 $$
 \quad \overset{def}\iff
 \begin{cases}
@@ -20,8 +20,7 @@ $$
 \end{cases}
 $$
 
-確率空間（probability space）  
-$\quad \overset{def}\iff$ 組 $(\Omega,\ \mathscr{F},\ P)$
+組 $(\Omega,\ \mathscr{F},\ P)$ を **確率空間**（probability space）や **確率モデル** という．
 
 ~~~
 
@@ -35,14 +34,15 @@ $(3)$ はこれだとわかりづらいです（完全加法性）が，互い�
 
 ~~~theorem:確率
 
-事象 $A, B$ が $A \sub B$  
-$$
-\quad \implies
+$
+\displaystyle
+A \sub B
+\implies
 \begin{cases}
     (1) ~ P(A) \leq P(B) \\
     (2) ~ P(B - A) = P(B) - P(A)
 \end{cases}
-$$
+$
 
 ${}^{\forall}A \in \mathscr{F} \implies 0 \leq P(A) \leq 1$
 
@@ -68,13 +68,3 @@ $A,\ B \in \mathscr{F} \implies P(A \cup B) = P(A) + P(B) - P(A \cap B)$
 ~~~
 
 $P$ の意味を考えれば明らかです．
-
-# 表記揺れ
-
-### 確率測度
-
-確率測度のことを単に **確率** ということがあります．
-
-### 確率空間
-
-確率空間のことを **確率モデル** ということがあります．
