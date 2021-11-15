@@ -7,7 +7,7 @@ draft: true
 
 確率空間 $(\Omega,\ \mathscr{F},\ P)$，確率変数 $X$，累積分布関数 $F_{X}(x)$ に対し，
 
-$X$ が **連続型確率変数** $\overset{def}\iff$ $F_{X}(x)$ が連続関数
+$X$ が **連続型確率変数** $\overset{def}\iff$ $X$ は連続値をとる
 
 **確率密度関数**（PDF）$f_{X}(x)$ $\overset{def}\iff$ $\displaystyle F_{X}(x) = \int_{-\infty}^{x} f_{X}(t) ~ dt$ を満たす $f_{X}(x)$
 

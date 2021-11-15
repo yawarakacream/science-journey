@@ -7,7 +7,7 @@ draft: true
 
 確率空間 $(\Omega,\ \mathscr{F},\ P)$，確率変数 $X$，累積分布関数 $F_{X}(x)$ に対し，
 
-$X$ が **離散型確率変数** $\overset{def}\iff$ $F_{X}(x)$ が階段関数
+$X$ が **離散型確率変数** $\overset{def}\iff$ $X$ は離散値をとる
 
 **確率質量関数**（PMF）$f_{X}(x) := P(X = x) = P(\{\omega ~ | ~ X(\omega) = x\})$
 
