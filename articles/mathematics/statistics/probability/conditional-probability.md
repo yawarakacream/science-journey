@@ -81,7 +81,7 @@ $$
 
 $A$ と $B$ が **独立** $\overset{def}\iff$ $P(A \cap B) = P(A) ~ P(B)$
 
-$A$ と $B$ が **独立** $\overset{def}\iff$ $A$ と $B$ が独立でない
+$A$ と $B$ が **従属** $\overset{def}\iff$ $A$ と $B$ が独立でない
 
 ~~~
 
