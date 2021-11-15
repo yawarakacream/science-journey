@@ -6,4 +6,6 @@ notes:
   - "continuous"
   - "joint"
   - "marginal"
+  - "conditional-probability-distribution"
+  - "independence"
 ---
