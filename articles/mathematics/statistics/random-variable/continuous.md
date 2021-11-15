@@ -59,3 +59,7 @@ $$
 - $\displaystyle P \left( X < \frac{1}{2} \right) = \int_{-\infty}^{\frac{1}{2}} f_{X}(x) = \int_{-\infty}^{0} 0 ~ dx + \int_{0}^{\frac{1}{2}} x ~ dx = \frac{1}{8}.$
 
 ~~~
+
+# 表記揺れ
+
+確率密度関数のことを単に **密度関数** ということがあります．
