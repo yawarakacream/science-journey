@@ -30,7 +30,7 @@ $$
 
 ~~~
 
-[漸化式](/high-school/mathematics-3/limit/strategy) ほどのバリエーションはありません。  
+[漸化式](/mathematics/high-school-mathematics-b/sequence/recurrence-relation-strategy) ほどのバリエーションはありません。  
 大抵ボーナス問題です。基本を抑えれば問題ないでしょう。
 
 ## 有名な極限
