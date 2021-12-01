@@ -1,6 +1,5 @@
 ---
 books:
-  - "high-school"
   - "mathematics"
   - "computer-science"
 ---
