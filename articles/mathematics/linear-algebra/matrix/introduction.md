@@ -9,15 +9,15 @@ description: "行列の定義や定理を，大学では説明してくれない
 行列はさらに数を縦横の $2$ 方向に並べたものです．
 
 $$
-\begin{bmatrix}
+\begin{pmatrix}
     1 & 2 \\
     3 & 4
-\end{bmatrix}
+\end{pmatrix}
 ,\
-\begin{bmatrix}
+\begin{pmatrix}
     a & b^{2}        & -s \\
     2x & \sin \theta & p
-\end{bmatrix}
+\end{pmatrix}
 ,\
 ...
 $$
@@ -39,20 +39,20 @@ $$
 
 $$
 \bm{a} =
-\begin{bmatrix}
+\begin{pmatrix}
     x \\
     y
-\end{bmatrix}
+\end{pmatrix}
 $$
 
 を $\theta$ 回転させると，
 
 $$
 \bm{a'} =
-\begin{bmatrix}
+\begin{pmatrix}
     x \cos \theta - y \sin \theta \\
     x \sin \theta + y \cos \theta
-\end{bmatrix}
+\end{pmatrix}
 $$
 
 になることが簡単にわかります．
@@ -69,28 +69,28 @@ $$
 早速ですが回転は $\bm{a'}$ の形をうまく作ればいいので，
 
 $$
-    \begin{bmatrix}
+    \begin{pmatrix}
         \cos \theta & - \sin \theta \\
         \sin \theta & \cos \theta
-    \end{bmatrix}
-    \begin{bmatrix}
+    \end{pmatrix}
+    \begin{pmatrix}
         x \\
         y
-    \end{bmatrix}
+    \end{pmatrix}
     =
-    \begin{bmatrix}
+    \begin{pmatrix}
         x \cos \theta - y \sin \theta \\
         x \sin \theta + y \cos \theta
-    \end{bmatrix}
+    \end{pmatrix}
     = \bm{a'}
 $$
 
 ということで，
 $$
-    \begin{bmatrix}
+    \begin{pmatrix}
         \cos \theta & - \sin \theta \\
         \sin \theta & \cos \theta
-    \end{bmatrix}
+    \end{pmatrix}
 $$
 を左から掛ければ辻褄が合って回転させられることがわかります（回転行列）．
 
@@ -99,22 +99,22 @@ $$
 そこで以下のようにもう $1$ 次元めを追加してしまいます．
 
 $$
-    \begin{bmatrix}
+    \begin{pmatrix}
         a_{x} & 0     & b_{x} \\
         0     & a_{y} & b_{y} \\
         0     & 0     & 1
-    \end{bmatrix}
-    \begin{bmatrix}
+    \end{pmatrix}
+    \begin{pmatrix}
         x \\
         y \\
         1
-    \end{bmatrix}
+    \end{pmatrix}
     =
-    \begin{bmatrix}
+    \begin{pmatrix}
         a_{x} x + b_{x} \\
         a_{y} y + b_{y} \\
         1
-    \end{bmatrix}
+    \end{pmatrix}
 $$
 
 少しずるい気もしますが，行列はその拡張性の高さに優位性があるのです．  

@@ -394,7 +394,7 @@ $A$ の階段行列は単位行列 $\iff$ $\mathrm{rank} ~ A = n$
 $A$ が正則 $\iff$ $A$ の階段行列は単位行列  
 を示す．
 
-### $\implies$
+## $\implies$
 
 $A$ の階段行列を $B$ とおき，$B \neq I$ と仮定する．
 
@@ -415,9 +415,9 @@ $$
 $B$ は単位行列でない階段行列なので，下の何行かは零ベクトルであり，よって $B A^{-1}$ も同様に零ベクトルをもつ．  
 しかし，[正則行列はすべての行に零ベクトルをもたない](/mathematics/linear-algebra/matrix/regular) ことより $P$ の正則性に矛盾．
 
-よって $B = I$．
+よって $B = I$．$\square$
 
-### $\impliedby$
+## $\impliedby$
 
 $A$ の階段行列は $I$ なので，適当な正則行列（[= 基本行列の積](/mathematics/linear-algebra/elementary-operation/operation)）$P$ があって，
 
@@ -425,9 +425,7 @@ $$
 PA = I
 $$
 
-とかけ，$A^{-1} = P$ で $A$ は正則．
-
-以上より同値性が示された．$\square$
+とかけ，$A^{-1} = P$ で $A$ は正則．$\square$
 
 ```
 

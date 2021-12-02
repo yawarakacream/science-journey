@@ -23,7 +23,7 @@ $f(x),\ g(x)$ が $x = a$ で連続
 
 $\quad\implies$ $\displaystyle f(x) \pm g(x),\ f(x) ~ g(x),\ \frac{f(x)}{g(x)}$ は連続
 
-$f(x)$ が $x = a$ で連続かつ $g(y)$ が $y = f(a)$ 連続
+$f(x)$ が $x = a$ で連続かつ $g(y)$ が $y = f(a)$ で連続
 
 $\quad\implies$ 合成関数 $(g \circ f) (x) ~ (= g(f(x)))$ は連続
 

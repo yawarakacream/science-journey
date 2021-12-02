@@ -88,8 +88,8 @@ $$
 {}^{\exists} c \in (a,\ b) \quad s.t. \quad \frac{f(b) - f(a)}{b - a} = f'(c)
 $$
 
-これを **平均値の定理**（mean value theorem）  
-または **Lagrange の平均値の定理**（ラグランジュの平均値の定理）という．
+これを **Lagrange の平均値の定理**（ラグランジュの平均値の定理），  
+または単に **平均値の定理**（mean value theorem）という．
 
 $g(x) = x$ とした Cauchy の平均値の定理である．
 

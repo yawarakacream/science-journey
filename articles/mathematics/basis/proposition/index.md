@@ -17,44 +17,43 @@ notes:
 
 記号論理学において，ある文字 $x$ に $q$ が *かかっている* とき，$x$ を **束縛変項**，$q$ を **量化子** と呼びます．
 
-### 全称量化子 ∀
+## 全称量化子 ∀
 
 すべての〜〜，任意の〜〜
 
 アルファベットの A が上下逆転したものです．  
 All の A か Any の A かは意見が分かれるところです．
 
-#### 例
-
+~~~spoiler:close:例
 ${}^{\forall}n \in \N$ に対し $a_{n} = \alpha$ $\iff$ $a_{n}$ はどんな自然数 $n$ に対しても $a_{n} = \alpha$
+~~~
 
-
-### 存在量化子 ∃
+## 存在量化子 ∃
 
 ある〜〜，〜〜が存在して
 
 アルファベットの E が左右逆転したものです．  
 Exists の E です．
 
-#### 例
-
+~~~spoiler:close:例
 ${}^{\exists}n \in \N$ に対し $a_{n} = \alpha$ $\iff$ $a_{n} = \alpha$ をみたす自然数 $n$ が少なくとも $1$ つは存在する
+~~~
 
-### A [B]
+## A [B]
 
 B のような A，A は B をみたす
 
-#### 例
-
+~~~spoiler:close:例
 ${}^{\exists}x \in \R \quad \lbrack x^{2} = 4 \rbrack$ $\iff$ $x^{2} = 4$ をみたす $x \in \R$ が存在する
+~~~
 
-### A s.t. B
+## A s.t. B
 
 B のような A，A は B をみたす
 
 A [B] と同じです．  
 such that の略です．
 
-#### 例
-
+~~~spoiler:close:例
 ${}^{\exists}x \in \R \quad s.t. \quad x^{2} = 4$ $\iff$ $x^{2} = 4$ をみたす $x \in \R$ が存在する
+~~~

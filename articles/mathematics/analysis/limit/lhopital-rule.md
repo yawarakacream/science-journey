@@ -17,6 +17,8 @@ $\quad$ $\displaystyle \lim_{x \rightarrow a} \frac{f'(x)}{g'(x)} = \alpha$ $\qu
 
 $\quad (\alpha \in [-\infty, \infty])$
 
+これを（$0 / 0$ 型の）**l'Hopital の定理**（ロピタルの定理）という．
+
 ```spoiler:close:証明
 
 ${}^{\forall} x \in I ~ (x \neq a)$ に対し，[Cauchy の平均値の定理](/mathematics/analysis/differential/rolle-and-mean-value) からある $c \in (x, a)$ が存在して
@@ -70,6 +72,8 @@ $\quad \displaystyle \lim_{x \rightarrow a} f(x) = \lim_{x \rightarrow a} g(x) =
 $\quad$ $\displaystyle \lim_{x \rightarrow a} \frac{f'(x)}{g'(x)} = \alpha$ $\quad$ ならば $\quad$ $\displaystyle \lim_{x \rightarrow a} \frac{f(x)}{g(x)} = \alpha$
 
 $\quad (\alpha \in [-\infty, \infty])$
+
+これを（$\infty / \infty$ 型の）**l'Hopital の定理**（ロピタルの定理）という．
 
 ~~~
 

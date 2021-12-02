@@ -25,7 +25,7 @@ $$
          &= P \left( B \cap \left( \bigcup_{i = 1}^{\infty} A_{i} \right) \right) \\
          &= P \left( \bigcup_{i = 1}^{\infty} \left( B \cap A_{i} \right) \right) \\
          &= \sum_{i = 1}^{\infty} P \left( B \cap A_{i} \right) \\
-         &= \sum_{i = 1}^{\infty} P(A_{i})~ P(B ~ | ~ A_{i})
+         &= \sum_{i = 1}^{\infty} P(A_{i})~ P(B ~ | ~ A_{i}) \qquad \square
 \end{alignat*}
 $$
 
@@ -54,7 +54,7 @@ $$
 $$
 \begin{alignat*}{1}
     P(A_{i} ~ | ~ B) &= \frac{P(A_{i} \cap B)}{P(B)} \\
-                     &= \frac{P(A_{i}) ~ P(B ~ | ~ A_{i})}{\sum_{j = 1}^{\infty} P(A_{j}) ~ P(B ~ | ~ A_{j})}
+                     &= \frac{P(A_{i}) ~ P(B ~ | ~ A_{i})}{\sum_{j = 1}^{\infty} P(A_{j}) ~ P(B ~ | ~ A_{j})} \qquad \square
 \end{alignat*}
 $$
 

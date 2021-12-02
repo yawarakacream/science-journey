@@ -53,7 +53,7 @@ $$
 {}^{\forall}n \in N \implies |a_{n}| \leq M_{2}
 $$
 
-よって $\{a_{n}\}$ は有界．$\square$
+よって $\{a_{n}\}$ は [有界列](/mathematics/analysis/series/bounded)．$\square$
 
 ---
 
@@ -88,11 +88,13 @@ $\quad \overset{def}\iff {}^{\forall} \varepsilon > 0,\ {}^{\exists} N \in \N \q
 Cauchy 列は番号が進むにつれ項と項の差が小さくなっていくような数列といえます．  
 そこで想像つくかもしれませんが，以下のような命題が知られています．
 
-~~~theorem:Cauchy列と有界列
+~~~theorem:Cauchy列と収束列
 
-$\{a_{n}\}$ が Cauchy 列 $\implies$ $\{a_{n}\}$ が [有界列](/mathematics/analysis/series/bounded)
+$\{a_{n}\}$ が Cauchy 列 $\iff$ $\{a_{n}\}$ が収束列
 
-```spoiler:close:証明
+```spoiler:close:補題：Cauchy&nbsp;列は有界列
+
+$\{a_{n}\}$：Cauchy 列
 
 Cauchy 列の定義より ${}^{\forall} \varepsilon > 0$ に対しある $N \in \N$ が存在して
 
@@ -112,21 +114,17 @@ $$
 {}^{\forall}n \in N \implies |a_{n}| \leq M
 $$
 
-よって $\{a_{n}\}$ は有界．$\square$
+よって $\{a_{n}\}$ は [有界列](/mathematics/analysis/series/bounded)．$\square$
 
 ---
 
-「$\{a_{n}\}$ が収束列 $\implies$ $\{a_{n}\}$ が有界列」のときと同様の方針です．
-
+「収束列 $\implies$ 有界列」のときと同様の方針です．  
 そちらの証明は説明のために少し冗長でしたが，こちらでは簡素に済ませました．
 
+一般に収束列は有界列なので，実際のところ「Cauchy 列 $\iff$ 収束列」がわかれば補題はどうでもよいです．  
+「Cauchy 列 $\iff$ 収束列」を示すために有界列が必要で有界列のために収束列が必要で・・・という循環論法にならないための補題ですね．
+
 ```
-
-~~~
-
-~~~theorem:Cauchy列と収束列
-
-$\{a_{n}\}$ が Cauchy 列 $\iff$ $\{a_{n}\}$ が収束列
 
 ```spoiler:close:証明
 
@@ -185,10 +183,3 @@ Cauchy 列と収束列が同値であることがわかりました．
 
 Cauchy 列は $\varepsilon - N$ 論法によく似た定義でしたが，**Cauchy 列自身は極限に言及していない** ことに注意します．  
 極限に対してはこうした定理（証明）が必要です．
-
-# 余談
-
-Cauchy 列と有界列の方は収束列のための補題のようなものですが，定理として置いておきます．
-
-一般に収束列は有界列なので，実際のところ下の定理がわかれば上の定理はどうでもよいです．  
-Cauchy 列 $\iff$ 収束列を示すために有界列が必要で有界列のために収束列が必要で・・・という循環論法にならないための定理ですね．
