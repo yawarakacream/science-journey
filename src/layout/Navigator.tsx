@@ -22,7 +22,7 @@ const Container = styled.nav`
   flex-direction: row;
   justify-content: space-around;
   flex: 1;
-  background-color: floralwhite;
+  background-color: lightsteelblue;
 
   @media (max-width: 600px) {
     border-bottom: 2px solid lightgray;
@@ -73,7 +73,7 @@ const ItemOverlay = styled(Anchor)`
     border-bottom: 4px solid darkblue;
   }
   &[data-selected="false"]:hover {
-    border-bottom: 4px solid lightskyblue;
+    border-bottom: 4px solid cornflowerblue;
   }
 
   @media (max-width: 600px) {
