@@ -22,7 +22,7 @@ const Container = styled.nav`
   flex-direction: row;
   justify-content: space-around;
   flex: 1;
-  background-color: lightblue;
+  background-color: floralwhite;
 
   @media (max-width: 600px) {
     border-bottom: 2px solid lightgray;

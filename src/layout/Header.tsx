@@ -17,7 +17,7 @@ const Container = styled.header`
   height: 64px;
   display: flex;
   flex-direction: column;
-  background-color: lightblue;
+  background-color: floralwhite;
   text-align: center;
 
   @media (max-width: 600px) {
