@@ -34,7 +34,8 @@ interface UnitProps {
 
 function Unit({ bookName, unit, openDefault }: UnitProps) {
   const router = useRouter();
-  const [open, setOpen] = useState(openDefault || router.asPath.match(/\//g).length == 1 || isGooglebot);
+  const isBookPage = router.asPath.match(/\//g).length === 1;
+  const [open, setOpen] = useState(openDefault || !isBookPage || isGooglebot);
   return (
     <UnitContainer>
       <UnitData onClick={() => setOpen(!open)}>
