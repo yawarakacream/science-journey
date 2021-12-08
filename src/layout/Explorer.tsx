@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useRouter } from "next/router";
 import styled from "styled-components";
 import { UnitArticleMetadata } from "../article/Article";
 import { NoteMap } from "../article/ArticleLoader";
@@ -33,9 +32,7 @@ interface UnitProps {
 }
 
 function Unit({ bookName, unit, openDefault }: UnitProps) {
-  const router = useRouter();
-  const isBookPage = router.asPath.match(/\//g).length === 1;
-  const [open, setOpen] = useState(openDefault || !isBookPage || isGooglebot);
+  const [open, setOpen] = useState(openDefault || isGooglebot);
   return (
     <UnitContainer>
       <UnitData onClick={() => setOpen(!open)}>
