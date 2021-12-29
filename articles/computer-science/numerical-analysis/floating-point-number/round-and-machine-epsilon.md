@@ -1,6 +1,6 @@
 ---
 title: "丸めとマシンイプシロン"
-description: "浮動小数点数の丸め方4種類ととマシン（計算機）イプシロンについて纏めました．浮動小数点数を考える上で必須の概念です．"
+description: "浮動小数点数の丸め方4種類ととマシンイプシロン（計算機イプシロン）について纏めました．浮動小数点数を考える上で必須の概念です．"
 ---
 
 浮動小数点数にはその特性上，表現できない数があり，避けられない誤差が生まれてしまいます．
@@ -18,7 +18,7 @@ description: "浮動小数点数の丸め方4種類ととマシン（計算機�
 - $0$ 方向への丸め
 - 最近点への丸め
 
-そのままの意味です．
+意味はそのままです．
 
 最近点の丸めだけ注意として，最近点が $2$ つあるときは，仮数部の最終ビットが偶数である方に丸めます．
 
@@ -43,7 +43,7 @@ $$
 $$
 
 $2$ 種類の丸めが考えられるときは **仮数部の最終ビットが偶数である方** に丸めるという定義でした．  
-最終ビットが偶数ということは，最終ビットが $0$ だという意味なので（ビットは $0$ か $1$ かのどちらか），
+最終ビットが偶数ということは最終ビットが $0$ だという意味なので
 
 $$
 1 + 2^{-53} \approx \left( 1 + \frac{0}{2^{1}} + \frac{0}{2^{2}} + \cdots + \frac{0}{2^{52}} \right) \times 2^{0}
@@ -56,11 +56,11 @@ $$
 # マシンイプシロン
 
 ~~~definition:マシンイプシロン
-マシンイプシロン（machine epsilon） $\varepsilon_{M}$  
-$\overset{def}\iff$ $1 + \varepsilon_{M} > 1$ をみたす最小の正の数
+**マシンイプシロン**（machine epsilon） $\varepsilon_{M}$  
+$\quad$ $1 + \varepsilon_{M} > 1$ をみたす最小の正の数
 ~~~
 
-数学的には任意の正の実数で成り立ちますが，浮動小数点数ではそうともいきません．
+数学的には $\varepsilon$ は任意の正の実数で成り立ちますが，浮動小数点数ではそうともいきません．
 
 その最小単位を **マシンイプシロン** といい，$\textcolor{blue}{\varepsilon_{M}}$ で表します．
 
@@ -96,21 +96,14 @@ $$
 
 と表すことができます．
 
-また，あくまで $\textcolor{blue}{1} + \varepsilon_{M} > \textcolor{blue}{1}$ であることに注意します．つまり，
+また，あくまで $\textcolor{blue}{1} + \varepsilon_{M} > \textcolor{blue}{1}$ であることに注意します．$\textcolor{red}{0} + \varepsilon_{M} > \textcolor{red}{0}$ をみたす最小の正の数はマシンイプシロンとはいいません．
 
-$$
-\textcolor{red}{0} + \varepsilon_{M} > \textcolor{red}{0}
-$$
-
-をみたす最小の正の数はマシンイプシロンとはいいません．  
 浮動小数点数の世界では $\textcolor{blue}{1} + \varepsilon_{M} > \textcolor{blue}{1}$ と $\textcolor{red}{0} + \varepsilon_{M} > \textcolor{red}{0}$ は同値ではなく，$\textcolor{blue}{1}$ がポイントであることに注意します．
 
 なお，$\textcolor{red}{0}$ のときの数は浮動小数点数の正の最小値 +min です．  
 +min については [特殊な値](/computer-science/numerical-analysis/floating-point-number/special-values) で扱っています．
 
-## 一般の場合
-
-~~~spoiler:close
+~~~spoiler:close:一般の場合
 
 一般に $t$ 進浮動小数点数のマシンイプシロンは，その仮数部の大きさを $d$ とすると，
 
