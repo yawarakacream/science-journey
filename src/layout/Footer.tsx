@@ -7,7 +7,7 @@ export default function Footer() {
     <Container>
       <Copyright>
         <Anchor href="/" underline={false} changeColorIfVisited={false}>
-          (c) 2021 科学の旅
+          (c) 2021 - {new Date().getFullYear()} 科学の旅
         </Anchor>
       </Copyright>
     </Container>
