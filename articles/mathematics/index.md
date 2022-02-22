@@ -11,6 +11,7 @@ units:
   - "high-school-mathematics-1"
   - "high-school-mathematics-3"
   - "high-school-mathematics-b"
+  - "uncategorized"
 ---
 
 いわゆる大学の数学です．
