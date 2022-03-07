@@ -25,7 +25,7 @@ $\quad \overset{def}\iff {}^{\forall}\varepsilon > 0,\ {}^{\exists}N = N(\vareps
 
 ~~~theorem:収束列と有界列
 
-$\{a_{n}\}$ が収束列 $\implies$ $\{a_{n}\}$ が [有界列](/mathematics/analysis/series/bounded)
+$\{a_{n}\}$ が収束列 $\implies$ $\{a_{n}\}$ が [有界列](/mathematics/analysis/sequence-and-series/bounded)
 
 ```spoiler:close:証明
 
