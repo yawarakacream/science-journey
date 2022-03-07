@@ -66,7 +66,7 @@ $\quad\displaystyle \sum_{n = 1}^{\infty} a_{n}$ が収束する $\iff\displayst
 
 [十分大きなすべての $\underline{n}$](/mathematics/analysis/sequence-and-series/definition-of-series) の話と同様の理由で積分の下端は $1$ でなくてよいです．下端を $c$ とすると，$f(n) = a_{n}$ は $n \geq c$ のときに成り立てばよいです．
 
-```spoiler:open:例
+```spoiler:close:例
 
 $\displaystyle a_{n} = \frac{1}{n^{p}} ~ (p \geq 1)$ とし，$\displaystyle \sum_{n = 1}^{\infty} a_{n}$ が収束するか調べてみます．
 
