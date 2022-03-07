@@ -20,16 +20,6 @@ $\displaystyle \sum_{n = 1}^{\infty} a_{n}$ が **条件収束する** $\overset
 
 級数は **絶対収束するならば収束する**．
 
-```spoiler:close:証明
-
-三角不等式
-
-$$
-\left| \sum_{n = 1}^{m} a_{n} \right| \leq \displaystyle \sum_{n = 1}^{m} |a_{n}|
-$$
-
-```
-
 ~~~
 
 ~~~theorem:再配置した級数
