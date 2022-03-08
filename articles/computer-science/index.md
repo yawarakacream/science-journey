@@ -6,6 +6,7 @@ units:
   - "numerical-analysis"
   - "python"
   - "mathematica"
+  - "uncategorized"
 ---
 
 計算機科学（コンピュータサイエンス）です．
