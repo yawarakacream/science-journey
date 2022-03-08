@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { PropsWithChildren } from "react";
+import { isValidElement, PropsWithChildren, ReactElement } from "react";
 import ReactMarkdown from "react-markdown";
 import { Components } from "react-markdown/src/ast-to-react";
 import rehypeKatex from "rehype-katex";
@@ -49,6 +49,19 @@ const components: Components = {
   pre: "div",
 
   a: ({ ...props }) => <Anchor changeColorIfVisited={false} {...(props as any)} />,
+
+  thead: ({ children }) => {
+    // returns <></> if all th in tr in thead are empty
+    if (children.length === 1 && isValidElement(children[0])) {
+      const tr: ReactElement = children[0];
+      const ths: ReactElement[] = tr.props.children;
+      const thsChildren: any[] | undefined = ths.map((th) => th.props.children);
+      if (thsChildren.every((c) => c === undefined)) {
+        return <></>;
+      }
+    }
+    return <thead children={children} />;
+  },
 
   code: ({ node, inline, className, children, ...props }) => {
     if (typeof className !== "string") {
