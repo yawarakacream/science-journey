@@ -47,11 +47,12 @@ $\quad \overset{def}\iff$ 数列 $\{a_{n}\}$ が発散するが無限大には�
 $a_{n}$ は $0.1,\ 0.01,\ 0.001,\ ...$ と続き，その極限値は $0$ です．  
 $\varepsilon - N$ 論法の気持ちとしては，
 
-| $\varepsilon$ | $\mid a_{N} - 0 \mid$ | $\mid a_{N + 1} - 0 \mid$ | $N$ |
-| :-- | :-- | :-- | :-- |
-| $0.1$ | $0.1$ | $0.1 \cdot 0.1$ | $1$ |
-| $0.001$ | $0.001$ | $0.001 \cdot 0.1$ | $2$ |
-| $0.0001$ | $0.0001$ | $0.0001 \cdot 0.1$ | $3$ |
+$\varepsilon = 0.5$ を提示すると，$N = 1$ のとき  
+$\quad |a_{1} - 0| = 0.1 < \varepsilon,\ |a_{2} - 0| = 0.01 < \varepsilon,\ ...$  
+$\varepsilon = 0.05$ を提示すると，$N = 2$ のとき  
+$\quad |a_{2} - 0| = 0.01 < \varepsilon,\ |a_{3} - 0| = 0.001 < \varepsilon,\ ...$  
+$\varepsilon = 0.005$ を提示すると，$N = 3$ のとき  
+$\quad |a_{3} - 0| = 0.001 < \varepsilon,\ |a_{4} - 0| = 0.0001 < \varepsilon,\ ...$  
 
 というように，どんなに小さい $\varepsilon$ を提示しても  
 
@@ -96,10 +97,10 @@ $$
 
 より，$- \log_{10} \varepsilon < N$ であれば $n \geq N \implies 0.1^{n} < \varepsilon$ だとわかります．
 
-たとえば，ここで $N = -\log_{10} \varepsilon + 1$ と定めると，
+たとえば，ここで $N = \lfloor -\log_{10} \varepsilon \rfloor + 2$ と定めると，
 
 $$
-0.1^{- \log_{10} \varepsilon + 1} < \varepsilon
+0.1^{\lfloor - \log_{10} \varepsilon \rfloor + 2} < \varepsilon
 $$
 
 となり，この式はさっきの計算をみれば真です．
@@ -119,26 +120,28 @@ $$
 ${}^{\forall} \varepsilon > 0$ に対し，$N \in \N$ を
 
 $$
-N = -\log_{10} \varepsilon + 1
+N = \lfloor -\log_{10} \varepsilon \rfloor + 2
 $$
 
 と定めると，任意の $n \geq N$ に対し
 
 $$
-0.1^{n} < 0.1^{N} = 0.1^{-\log_{10} \varepsilon + 1} < 0.1^{-\log_{10} \varepsilon} = \varepsilon
+0.1^{n}
+    \leq 0.1^{N} 
+    = 0.1^{\lfloor -\log_{10} \varepsilon \rfloor + 2} 
+    < 0.1^{-\log_{10} \varepsilon}
+    = \varepsilon
 $$
 
 $$
-\therefore ~  | 0.1^{n} - 0 | < \varepsilon
+\therefore ~  |0.1^{n} - 0| < \varepsilon
 $$
 
-が成り立つ．よって
+したがって
 
 $$
-\lim_{n \rightarrow \infty} 0.1^{n} = 0
+\lim_{n \rightarrow \infty} 0.1^{n} = 0 \quad \square
 $$
-
-が示される．$\quad \square$
 
 ~~~
 
@@ -148,16 +151,16 @@ $b_{n}$ は $1.1,\ 1.01,\ 1.001,\ ...$ と続きその極限値は $1$ ですが
 
 $\quad |b_{N} - 0| < \varepsilon$ かつ $|b_{N + 1} - 0| < \varepsilon$ かつ ...  
 
-がどんな $\varepsilon$ に対しても成り立つならよいです．
+となる $N$ が $\varepsilon$ に対しても存在するか考えてみましょう．
 
-| $\varepsilon$ | $\mid b_{N} - 0 \mid$ | $\mid b_{N + 1} - 0 \mid$ | $N$ |
-| :-- | :-- | :-- | :-- |
-| $1.1$ | $1.1$ | $1.1 \cdot 0.1$ | $1$ |
-| $1.001$ | $1.001$ | $1.001 \cdot 0.1$ | $2$ |
-| $1.0001$ | $1.0001$ | $1.0001 \cdot 0.1$ | $3$ |
-| $0.1$ | - | - | - |
+$\varepsilon = 1.5$ を提示すると，$N = 1$ のとき  
+$\quad |b_{1} - 0| = 1.1 < \varepsilon,\ |b_{2} - 0| = 1.01 < \varepsilon,\ ...$  
+$\varepsilon = 0.5$ を提示すると，$N = 1$ のとき  
+$\quad |b_{1} - 0| = 1.1 > \varepsilon,\ |b_{2} - 0| = 1.01 > \varepsilon$  
+$\quad |b_{3} - 0| = 1.001 > \varepsilon,\ |b_{4} - 0| = 1.0001 > \varepsilon$  
+$\quad |b_{100} - 0| = 1.00...01 > \varepsilon,\ ...$  
 
-$\varepsilon > 1$ のときはよさそうな $N$ がみつかりましたが，  
-$\varepsilon = 0.1$ を選ぶとよさそうな $N$ が見つからなくなってしまいました．
+$\varepsilon = 1.5$ のときはよさそうな $N$ がみつかりましたが，  
+$\varepsilon = 0.5$ を選ぶとよさそうな $N$ が見つからなくなってしまいました．
 
 $N$ がみつからない $\varepsilon$ が $1$ つでもあればアウトなので，$b_{n} \rightarrow 0$ にはならないことがこれで示せました．
