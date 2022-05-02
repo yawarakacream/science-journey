@@ -21,7 +21,7 @@ $~~\quad A$ の **転置行列** $ ~ {}^{t} A := [a_{ji}].$
 
 したがって，${}^{t} A$ は $n \times m$ 行列になります．
 
-~~~spoiler:open:例
+~~~spoiler:close:例
 $$
 A =
 \begin{pmatrix}
@@ -82,7 +82,7 @@ $$
 と表せ，${}^{\forall}(i,\ j) \implies c_{ij} = d_{ji}$．  
 よって各成分は等しい．
 
-型と成分が等しいので，${}^{t} \left( AB \right) = {}^{t} B ~ {}^{t} A$ が成り立つ．$\square$
+型と成分が等しいので，${}^{t} \left( AB \right) = {}^{t} B ~ {}^{t} A$．$\square$
 
 ### 成分の図
 
@@ -145,7 +145,7 @@ $(5) \quad ({}^{t}A)^{-1} = {}^{t}(A^{-1})$ $\quad$ $A$ が正則 $\iff$ ${}^{t}
 ${}^{t}A {}^{t}(A^{-1}) = {}^{t} (A^{-1} A) = {}^{t} I = I$  
 ${}^{t}(A^{-1}) {}^{t}A = {}^{t} (A A^{-1}) = {}^{t} I = I$
 
-逆行列の定義より，$({}^{t}A)^{-1} = {}^{t}(A^{-1})． \quad \square$
+逆行列の定義より $({}^{t}A)^{-1} = {}^{t}(A^{-1})$．$\square$
 
 ```
 
@@ -164,7 +164,7 @@ $\quad$ $A$ が **交代行列** $\overset{def}\iff$ $A = - {}^{t} A$
 
 ~~~
 
-~~~spoiler:open:例
+~~~spoiler:close:例
 
 対称行列
 

@@ -7,7 +7,7 @@ description: "行列の演算規則，和・差・積を確認します．ベク
 
 ~~~definition:和と差
 
-$A,\ B$：型が同じ行列
+$A = [a_{ij}],\ B = [b_{ij}]$：型が同じ行列
 
 $\quad$ **和** $A + B := [a_{ij} + b_{ij}]$
 
@@ -22,8 +22,8 @@ $\quad$ **差** $A - B := [a_{ij} - b_{ij}]$
 
 ~~~definition:積
 
-$A$：$m \times n$ 行列  
-$B$：$n \times l$ 行列
+$A = [a_{ij}]$：$m \times n$ 行列  
+$B = [b_{ij}]$：$n \times l$ 行列
 
 $\quad$ **積** $AB := \displaystyle \left[ \sum_{k=1}^{n} a_{ik} b_{kj} \right] \quad$ 結果は $m \times l$ 行列
 
@@ -70,7 +70,6 @@ A + B =
     6 & 8 \\
     9 & 12
 \end{bmatrix}
-.
 $$
 
 $$
@@ -84,7 +83,6 @@ A - B =
     -4 & -5 \\
     -3 & -4
 \end{bmatrix}
-.
 $$
 
 $$
@@ -98,7 +96,6 @@ AB =
     17 & 23 \\
     39 & 53
 \end{bmatrix}
-.
 $$
 
 $$
@@ -112,7 +109,6 @@ BA =
     26 & 38 \\
     30 & 44
 \end{bmatrix}
-.
 $$
 
 $$
@@ -121,7 +117,6 @@ $$
     2 & 4 \\
     6 & 8
 \end{bmatrix}
-.
 $$
 
 $$
@@ -130,7 +125,6 @@ $$
     -5 & -7 \\
     -6 & -8
 \end{bmatrix}
-.
 $$
 
 ~~~

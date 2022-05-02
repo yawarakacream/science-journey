@@ -6,6 +6,18 @@ draft: true
 
 # 特殊な行列
 
+## 行列の積
+
+~~~spoiler:close
+
+行列の積は行列式の積です．
+
+$$
+|AB| = |A| |B|
+$$
+
+~~~
+
 ## 零ベクトルを含む行列
 
 ~~~spoiler:close
@@ -113,23 +125,11 @@ $$
 $$
 となり成立．
 
-$A$ が正則でないならば $|A| = 0$ から $|{}^{t} A| = 0$ なので $|{}^{t} A| = |A|$．
+$A$ が正則でないならば，[転置行列も正則でない](/mathematics/linear-algebra/matrix/transpose) こと，及び [正則でない行列の行列式は $0$](/mathematics/linear-algebra/determinant/definition) から，$|A| = |{}^{t} A| = 0$．
 
 よって任意の $A$ に対し $|{}^{t} A| = |A|$．$\square$
 
 ```
-
-~~~
-
-## 行列の積
-
-~~~spoiler:close
-
-行列の積は行列式の積です．
-
-$$
-|AB| = |A| |B|
-$$
 
 ~~~
 
