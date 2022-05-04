@@ -44,10 +44,6 @@ title: "有名な技術系の本と略称"
 
 # 言語
 
-**Effective 〇〇**
-
-Effective Java が有名
-
 **実践Rustプログラミング入門**
 
 |||
@@ -56,3 +52,12 @@ Effective Java が有名
 | 著者 | 初田直也 山口聖弘 吉川哲史 豊田優貴 松本健太郎 原将己 中村謙弘 |
 | ISBN | 978-4-7980-6170-2 |
 | amazon | https://www.amazon.co.jp/dp/4798061700 |
+
+**プロを目指す人のためのTypeScript入門 安全なコードの書き方から高度な型の使い方まで**
+
+|||
+|-|-|
+| 略称 | **プルーベリー本** |
+| 著者 | 鈴木僚太（[@uhyo_](https://twitter.com/uhyo_)） |
+| ISBN | 978-4-297-12747-3 |
+| amazon | https://www.amazon.co.jp/dp/4297127474 |
