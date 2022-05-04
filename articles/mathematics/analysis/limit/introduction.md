@@ -11,20 +11,24 @@ description: "微分積分をきちんと扱う準備として，大学らしい
 数列 $\{a_{n}\}$ がある．  
 $n$ を限りなく大きくすると $a_{n}$ が限りなく $\alpha$ に近づくとき，
 $a_{n}$ は $\alpha$ に **収束する** といい，
+
 $$
-\lim_{n \rightarrow \infty} a_{n} = \alpha \qquad a_{n} \rightarrow \alpha \qquad \lim a_{n} = \alpha
+\lim_{n \rightarrow \infty} a_{n} = \alpha
 $$
-のように表す．
+
+と表す．
 ~~~
 
 ~~~definition:関数の極限（高校の定義）
 関数 $f(x)$ がある．  
 $x$ が限りなく $a$ に近づくと $f(x)$ が限りなく $\alpha$ に近づくとき，
 $f(x)$ は $x \rightarrow a$ で **収束する** といい，
+
 $$
-\lim_{x \rightarrow a} f(x) = \alpha \qquad f(x) \rightarrow \alpha ~ (x \rightarrow a)
+\lim_{x \rightarrow a} f(x) = \alpha
 $$
-のように表す．
+
+と表す．
 ~~~
 
 しかし，これは非常に曖昧で，厳密な議論をするのに耐えられません．  
