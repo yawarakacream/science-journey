@@ -5,6 +5,8 @@ draft: true
 
 ~~~definition:関数の連続性
 
+実関数 $f(x)$ に対して
+
 $f(x)$ が $x = a$ で **右連続** $\overset{def}{\iff}$ $\displaystyle \lim_{x \rightarrow a + 0} f(x) = f(a)$
 
 $f(x)$ が $x = a$ で **左連続** $\overset{def}{\iff}$ $\displaystyle \lim_{x \rightarrow a - 0} f(x) = f(a)$
@@ -40,4 +42,4 @@ $\quad\implies$ $f(x)$ は $I$ で最大値・最小値をもつ
 ~~~
 
 開区間だと成り立たないことに注意します．  
-（反例：$f(x) = 1/x,\ I = [0,\ 1]$）
+（反例：$f(x) = x,\ I = (0,\ 1)$）

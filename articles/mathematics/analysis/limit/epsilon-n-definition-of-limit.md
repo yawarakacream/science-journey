@@ -6,11 +6,11 @@ description: "躓きやすい ε-N 論法のきもちとともに，数列の収
 数列の極限を定義します．  
 添字のおかげでどういう考え方をしているのかわかりやすいので，関数の極限を扱う準備としての側面が強いです．
 
-ここでは，初項 $n = 1$ から始まる無限実数列（実数の項が無限に続く数列）を単に数列と呼び，この数列について考えることにします．
+ここでは，初項 $n = 1$ から始まる無限実数列（実数の項が無限に続く数列）について考えることにします．
 
 ~~~definition:数列の収束
 
-数列 $\{a_{n}\}$ が $\alpha \in \R$ に **収束する**
+実数列 $\{a_{n}\}$ が $\alpha \in \R$ に **収束する**
 
 $\quad \overset{def}\iff {}^{\forall}\varepsilon > 0,\ {}^{\exists}N = N(\varepsilon) \in \N \quad \lbrack \ {}^{\forall}n \geq N \implies |a_{n} - \alpha| < \varepsilon \ \rbrack$
 
@@ -20,7 +20,7 @@ $\quad \iff$ 任意の $\varepsilon > 0$ に対して $\varepsilon$ に応じて
 
 ---
 
-数列が収束するとき
+$\{ a_{n} \}$ が収束するとき
 
 $$
 \textcolor{blue}{
@@ -36,29 +36,29 @@ $$
 
 ~~~definition:数列の発散
 
-数列 $\{a_{n}\}$ が **発散する**
+実数列 $\{a_{n}\}$ が **発散する**
 
-$\quad \overset{def}\iff$ 数列 $\{a_{n}\}$ が収束しない
+$\quad \overset{def}\iff$ $\{a_{n}\}$ が収束しない
 
-数列 $\{a_{n}\}$ が **正の無限大に発散する**
+実数列 $\{a_{n}\}$ が **正の無限大に発散する**
 
 $\quad \overset{def}\iff {}^{\forall}L > 0,\ {}^{\exists}N = N(L) \in \N \quad \lbrack \ {}^{\forall}n \geq N \implies a_{n} > L \ \rbrack$
 
 $\quad \iff$ 任意の $L > 0$ に対して $L$ に応じて決まる $N \in \N$ が存在し，任意の $n \geq N$ なる $n$ で $a_{n} > L$．
 
-数列 $\{a_{n}\}$ が **負の無限大に発散する**
+実数列 $\{a_{n}\}$ が **負の無限大に発散する**
 
 $\quad \overset{def}\iff {}^{\forall}L < 0,\ {}^{\exists}N = N(L) \in \N \quad \lbrack \ {}^{\forall}n \geq N \implies a_{n} < L \ \rbrack$
 
 $\quad \iff$ 任意の $L < 0$ に対して $L$ に応じて決まる $N \in \N$ が存在し，任意の $n \geq N$ なる $n$ で $a_{n} < L$．
 
-数列 $\{a_{n}\}$ が **振動する**
+実数列 $\{a_{n}\}$ が **振動する**
 
-$\quad \overset{def}\iff$ 数列 $\{a_{n}\}$ が発散するが無限大には発散しない
+$\quad \overset{def}\iff$ $\{a_{n}\}$ が発散するが無限大には発散しない
 
 ---
 
-数列が正の無限大に発散するとき
+正の無限大に発散するとき
 
 $$
 \textcolor{blue}{
@@ -68,7 +68,7 @@ $$
 }
 $$
 
-数列が負の無限大に発散するとき
+負の無限大に発散するとき
 
 $$
 \textcolor{blue}{

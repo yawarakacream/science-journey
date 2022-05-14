@@ -5,13 +5,13 @@ description: "収束列，Cauchy列（コーシー列）を定義し，これら
 
 ~~~definition:収束列
 
-数列 $\{a_{n}\}$ が **収束列**
+実数列 $\{a_{n}\}$ が **収束列**
 
 $\quad \overset{def}{\iff} \displaystyle {}^{\exists}\alpha \in \R ~ s.t. ~ \lim_{n \rightarrow \infty} a_{n} = \alpha$
 
 ```spoiler:close:参考：数列の収束
 
-数列 $\{a_{n}\}$ が $\alpha \in \R$ に **収束** する．
+実数列 $\{a_{n}\}$ が $\alpha \in \R$ に **収束** する．
 
 $\quad \overset{def}\iff {}^{\forall}\varepsilon > 0,\ {}^{\exists}N = N(\varepsilon) \in \N \quad \lbrack \ {}^{\forall}n \geq N \implies |a_{n} - \alpha| < \varepsilon \ \rbrack$
 
@@ -77,7 +77,7 @@ $n \geq N$ の分も纏めてしまうために $|\alpha - 1|,\ |\alpha + 1|$ �
 
 ~~~definition:Cauchy列
 
-数列 $\{a_{n}\}$ が **Cauchy 列**（コーシー列）
+実数列 $\{a_{n}\}$ が **Cauchy 列**（コーシー列）
 
 $\quad \overset{def}\iff {}^{\forall} \varepsilon > 0,\ {}^{\exists} N \in \N \quad \lbrack \ {}^{\forall}m,\ n \geq N \implies |a_{m} - a_{n}| < \varepsilon \ \rbrack$
 

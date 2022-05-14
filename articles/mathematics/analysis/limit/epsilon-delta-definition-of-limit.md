@@ -5,11 +5,11 @@ description: "ε-δ論法を用いて，関数の収束と発散を厳密に定�
 
 関数の極限を定義します．
 
-ここでは一変数関数を取り扱います．
+ここでは実数値一変数関数を取り扱います．
 
 ~~~definition:関数の収束
 
-関数 $f(x)$ が $x \rightarrow a$ で $\alpha \in \R$ に **収束する**
+実関数 $f(x)$ が $x \rightarrow a$ で $\alpha \in \R$ に **収束する**
 
 $\quad \overset{def}\iff {}^{\forall}\varepsilon > 0,\ {}^{\exists}\delta = \delta(\varepsilon) > 0 \quad \left\lbrack \ |x - a| \leq \delta \implies |f(x) - \alpha| < \varepsilon \ \right\rbrack$
 
@@ -19,7 +19,7 @@ $\quad \iff$ 任意の $\varepsilon > 0$ に対して $\varepsilon$ に応じて
 
 ---
 
-関数が収束するとき
+収束するとき
 
 $$
 \textcolor{blue}{
@@ -34,29 +34,29 @@ $$
 
 ~~~definition:関数の発散
 
-関数 $f(x)$ が $x \rightarrow a$ で **発散する**
+実関数 $f(x)$ が $x \rightarrow a$ で **発散する**
 
-$\quad \overset{def}\iff$ 関数 $f(x)$ が $x \rightarrow a$ で収束しない
+$\quad \overset{def}\iff$ $f(x)$ が $x \rightarrow a$ で収束しない
 
-関数 $f(x)$ が $x \rightarrow a$ で **正の無限大に発散する**
+実関数 $f(x)$ が $x \rightarrow a$ で **正の無限大に発散する**
 
 $\quad \overset{def}\iff {}^{\forall}L > 0,\ {}^{\exists}\delta = \delta(L) > 0 \quad \left\lbrack \ |x - a| < \delta \implies f(x) > L \ \right\rbrack$
 
 $\quad \iff$ 任意の $L > 0$ に対して $L$ に応じて決まる $\delta > 0$ が存在し，任意の $|x - a| < \delta$ なる $x$ で $f(x) > L$．
 
-関数 $f(x)$ が $x \rightarrow a$ で **負の無限大に発散する**
+実関数 $f(x)$ が $x \rightarrow a$ で **負の無限大に発散する**
 
 $\quad \overset{def}\iff {}^{\forall}L < 0,\ {}^{\exists}\delta = \delta(L) > 0 \quad \left\lbrack \ |x - a| < \delta \implies f(x) < L \ \right\rbrack$
 
 $\quad \iff$ 任意の $L < 0$ に対して $L$ に応じて決まる $\delta > 0$ が存在し，任意の $|x - a| < \delta$ なる $x$ で $f(x) < L$．
 
-関数 $f(x)$ が $x \rightarrow a$ で **振動する**
+実関数 $f(x)$ が $x \rightarrow a$ で **振動する**
 
-$\quad \overset{def}\iff$ 関数 $f(x)$ が発散するが無限大には発散しない
+$\quad \overset{def}\iff$ $f(x)$ が発散するが無限大には発散しない
 
 ---
 
-関数が正の無限大に発散するとき
+正の無限大に発散するとき
 
 $$
 \textcolor{blue}{
@@ -65,7 +65,7 @@ $$
 }
 $$
 
-関数が負の無限大に発散するとき
+負の無限大に発散するとき
 
 $$
 \textcolor{blue}{
@@ -87,10 +87,10 @@ $|x - a| < \delta$ は $x$ の範囲を左右から絞ることを意味して�
 
 ~~~definition:片側極限
 
-関数 $f(x)$ の $x \rightarrow a + 0$ の **右側極限** が $\alpha$ に収束する  
+実関数 $f(x)$ の $x \rightarrow a + 0$ の **右側極限** が $\alpha \in \R$ に収束する  
 $\quad \overset{def}\iff {}^{\forall}\varepsilon > 0,\ {}^{\exists}\delta = \delta(\varepsilon) > 0 \quad \left\lbrack \ 0 < x - a < \delta \implies |f(x) - \alpha| < \varepsilon \ \right\rbrack$
 
-関数 $f(x)$ の $x \rightarrow a - 0$ の **左側極限** が $\alpha$ に収束する  
+実関数 $f(x)$ の $x \rightarrow a - 0$ の **左側極限** が $\alpha \in \R$ に収束する  
 $\quad \overset{def}\iff {}^{\forall}\varepsilon > 0,\ {}^{\exists}\delta = \delta(\varepsilon) > 0 \quad \left\lbrack \ -\delta < x - a < 0 \implies |f(x) - \alpha| < \varepsilon \ \right\rbrack$
 
 ---

@@ -25,7 +25,7 @@ $$
 
 ~~~theorem:はさみうちの原理
 
-関数 $h(x)$ が $f(x) \leq h(x) \leq g(x)$ をみたすとする．このとき，
+実関数 $h(x)$ が $f(x) \leq h(x) \leq g(x)$ をみたすとする．このとき，
 
 $$
 \lim_{x \rightarrow a} f(x) = \lim_{x \rightarrow a} g(x) = \alpha ~ \implies ~ \lim_{x \rightarrow a} h(x) = \alpha

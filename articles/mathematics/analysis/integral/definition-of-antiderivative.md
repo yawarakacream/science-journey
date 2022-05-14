@@ -4,7 +4,7 @@ title: "原始関数・不定積分の定義"
 
 ~~~definition:原始関数
 
-関数 $f(x)$ に対し，
+実関数 $f(x)$ に対し，
 
 $\displaystyle \frac{d}{dx} F(x) = f(x)$ をみたす関数 $F(x)$ を $f(x)$ の **原始関数** という．
 
