@@ -28,6 +28,15 @@ interface Props {
   children: string;
 }
 
+const katexOptions = {
+  macros: {
+    "\\defiff": "\\overset{def}{\\iff}",
+    "\\C": "\\mathbb{C}",
+    "\\Re": "\\operatorname{Re}",
+    "\\Im": "\\operatorname{Im}",
+  },
+};
+
 export default function Markdown({ children }: Props) {
   return (
     <Container>
@@ -37,7 +46,7 @@ export default function Markdown({ children }: Props) {
         <ReactMarkdown
           components={components}
           remarkPlugins={[remarkMath, remarkGfm]}
-          rehypePlugins={[rehypeKatex]}
+          rehypePlugins={[rehypeKatex.bind(rehypeKatex, katexOptions)]}
           children={children}
         />
       )}
