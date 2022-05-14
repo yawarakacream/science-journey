@@ -8,6 +8,7 @@ units:
   - "analysis"
   - "linear-algebra"
   - "statistics"
+  - "complex-analysis"
   - "high-school-mathematics-1"
   - "high-school-mathematics-3"
   - "high-school-mathematics-b"
