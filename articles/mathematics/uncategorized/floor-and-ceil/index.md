@@ -24,7 +24,7 @@ $$
 \lceil x \rceil := \min \{ n \in \Z \mid n \geq x \}
 $$
 
-$\mathrm{ceil} (x)$ などとも表す．
+$\mathrm{ceiling} (x)$ などとも表す．
 ~~~
 
 床関数・天井関数は，それぞれ小数を切り捨て・切り上げて整数にする関数です．
