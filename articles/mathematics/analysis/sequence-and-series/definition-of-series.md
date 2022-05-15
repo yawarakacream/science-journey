@@ -50,9 +50,9 @@ $$
 
 ~~~definition:正項級数・交代級数
 
-$\displaystyle \sum_{n = 1}^{\infty} a_{n}$ が **正項級数** $\overset{def}{\iff}$ ${}^{\forall} n \in \N,\ a_{n} \geq 0$
+実級数 $\displaystyle \sum_{n = 1}^{\infty} a_{n}$ が **正項級数** $\overset{def}{\iff}$ ${}^{\forall} n \in \N,\ a_{n} \geq 0$
 
-$\displaystyle \sum_{n = 1}^{\infty} a_{n}$ が **交代級数** $\overset{def}{\iff}$ ${}^{\forall} n \in \N,\ \mathrm{sign}(a_{n + 1}) \neq \mathrm{sign}(a_{n})$
+実級数 $\displaystyle \sum_{n = 1}^{\infty} a_{n}$ が **交代級数** $\overset{def}{\iff}$ ${}^{\forall} n \in \N,\ \mathrm{sign}(a_{n + 1}) \neq \mathrm{sign}(a_{n})$
 
 ~~~
 
