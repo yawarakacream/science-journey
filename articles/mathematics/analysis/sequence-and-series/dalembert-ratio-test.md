@@ -6,7 +6,7 @@ draft: true
 
 ~~~theorem:d'Alembertの収束判定法
 
-$\displaystyle \sum_{n = 1}^{\infty} a_{n} :$ 級数
+$\displaystyle \sum_{n = 1}^{\infty} a_{n} :$ 実級数
 
 $\quad (1) ~ \displaystyle \lim_{n \rightarrow \infty} \left| \frac{a_{n + 1}}{a_{n}} \right| < 1 \implies \sum_{n = 1}^{\infty} a_{n}$ は収束する
 
