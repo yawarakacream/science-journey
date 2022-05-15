@@ -8,7 +8,9 @@ draft: true
 
 複素数列 $\{ \alpha_{n} \}$ が $\alpha \in \C$ に **収束する** $\defiff$ $\displaystyle \lim_{n \to \infty} |\alpha_{n} - \alpha| = 0$
 
-複素数列 $\{ \alpha_{n} \}$ が **発散する** $\defiff$ $\displaystyle \lim_{n \to \infty} |\alpha_{n}| = \infty$
+複素数列 $\{ \alpha_{n} \}$ が **発散する** $\defiff$ $\{ \alpha_{n} \}$ が収束しない
+
+複素数列 $\{ \alpha_{n} \}$ が **無限大に発散する** $\defiff$ $\displaystyle \lim_{n \to \infty} |\alpha_{n}| = \infty$
 
 実数列と同様に $\displaystyle \textcolor{blue}{\lim_{n \to \infty} \alpha_{n} = \alpha},\ \textcolor{blue}{\alpha_{n} \to \infty}$ のように表す．
 
@@ -17,6 +19,26 @@ draft: true
 ~~~
 
 複素数列の極限は，絶対値を取って実数の極限を使って定義します．
+
+```spoiler:close:例
+
+$(1) \displaystyle \lim_{n \to \infty} \left( \frac{1 + i}{2} \right)^{n}$
+
+$\hspace{5mm} \displaystyle \left| \left( \frac{1 + i}{2} \right)^{n} \right| = \left| \frac{1 + i}{2} \right|^{n} = \left( \frac{\sqrt{2}}{2} \right)^{n} \to 0$
+
+$\hspace{5mm} \therefore ~ \displaystyle \lim_{n \to \infty} \left( \frac{1 + i}{2} \right)^{n} = 0$．
+
+$(2) \displaystyle \lim_{n \to \infty} (1 + 2i) n$
+
+$\hspace{5mm} |(1 + 2i) n| = |1 + 2i| n = \sqrt{5} ~ n \to \infty$
+
+$\hspace{5mm} \displaystyle ~ \therefore \lim_{n \to \infty} (1 + 2i) n = \infty$
+
+$(3) \displaystyle \lim_{n \to \infty} i^{n}$
+
+$\hspace{5mm} i^{n}$ は $i,\ -1,\ -i,\ 1$ をぐるぐるし続けるので，発散．
+
+```
 
 ~~~theorem:複素数列の極限
 
@@ -35,7 +57,7 @@ $$
 ```spoiler:close:例
 $(-1)^{n} n$ は  
 $\quad$ 実数列 $\implies$ 振動  
-$\quad$ 複素数列 $\implies$ $\infty$
+$\quad$ 複素数列 $\implies$ 無限大
 ```
 
 ~~~theorem:極限の演算
