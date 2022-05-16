@@ -110,7 +110,7 @@ $\{ \alpha_{n} \}$ が Cauchy 列 $\iff$ $\{ \alpha_{n} \}$ が収束列
 ~~~
 
 ~~~theorem:絶対収束
-$\{ \alpha_{n} \}$ が絶対収束する $\implies$ $\{ \alpha_{n} \}$ が収束する
+$\displaystyle \sum_{n = 1}^{\infty} \alpha_{n}$ が絶対収束する $\implies$ $\displaystyle \sum_{n = 1}^{\infty} \alpha_{n}$ が収束する
 ~~~
 
 実数のときと同様です．
