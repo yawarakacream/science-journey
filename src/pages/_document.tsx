@@ -8,6 +8,7 @@ export default class _Document extends Document {
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
           {process.env.NODE_ENV === "production" && (
             <>
+              <meta name="theme-color" content="#b0c4de" />
               <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK8E6HH56L"></script>
               <script
                 dangerouslySetInnerHTML={{
