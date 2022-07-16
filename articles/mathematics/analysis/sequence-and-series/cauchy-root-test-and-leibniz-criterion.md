@@ -84,7 +84,7 @@ $\displaystyle a_{n} = (-1)^{n} \sin \frac{1}{n}$ とし，$\displaystyle \sum_{
 
 定義から $\displaystyle \sum_{n = 1}^{\infty} a_{n}$ は交代級数です．
 
-$\displaystyle |a_{n}| = \sin \frac{1}{n}$ は $\displaystyle 1 \leq \frac{1}{n} \leq \frac{\pi}{2} ~ (n \in \N)$ から単調に $0$ に収束します．
+$\displaystyle |a_{n}| = \sin \frac{1}{n}$ は $\displaystyle 0 < \frac{1}{n} < \frac{\pi}{2} ~ (n \in \N)$ から単調に $0$ に収束します．
 
 よって，Leibniz の収束判定法より $\displaystyle \sum_{n = 1}^{\infty} a_{n}$ は収束します．
 
